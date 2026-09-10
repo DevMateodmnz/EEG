@@ -1,62 +1,62 @@
-# Reproducible Motor-Imagery EEG Analysis and Decoding
+# Análisis y decodificación reproducible de EEG de imaginación motora
 
-[Versión en español](README_ES.md) · [Citation](CITATION.cff) · [Project overview](docs/project_overview.md)
+[English version](README_EN.md) · [Citación](CITATION.cff) · [Resumen del proyecto](docs/project_overview_es.md)
 
-An independent research/software project on public motor-imagery EEG at the intersection of signal processing, computational neuroscience, and BCI methods. The completed work uses PhysioNet EEG Motor Movement/Imagery Database recordings to replicate sensor-level task-related spectral effects and evaluate classical decoding under held-out-run and cross-participant designs. It does **not** make clinical, causal, or online-BCI claims. A separately frozen Lee2019/OpenBMI external cross-session protocol is acquiring data and is **IN PROGRESS**; it has no results yet.
+Proyecto independiente de investigación y software sobre EEG público de imaginación motora, en la intersección del procesamiento de señales, la neurociencia computacional y los métodos de interfaz cerebro-computadora (BCI). El trabajo terminado usa registros de la base de datos PhysioNet EEG Motor Movement/Imagery para replicar efectos espectrales relacionados con la tarea a nivel de sensor y evaluar decodificadores clásicos con diseños de *runs* retenidos y entre participantes. No hace afirmaciones clínicas, causales ni de BCI en línea. Un protocolo externo independiente Lee2019/OpenBMI entre sesiones está congelado y adquiriendo datos, y permanece **EN PROGRESO**; aún no tiene resultados.
 
-## Scientific questions
+## Preguntas científicas
 
-1. Do central sensor-level spectral changes associated with motor imagery replicate across the predeclared PhysioNet cohort?
-2. How well do fixed classical decoders distinguish fists from feet under held-out-run, cross-participant, and limited-calibration designs?
-3. Do findings remain credible under explicit quality-control, provenance, and leakage checks—and will they transfer across independent recording sessions?
+1. ¿Se replican, en la cohorte de PhysioNet predefinida, los cambios espectrales a nivel de sensores asociados con la imaginación motora?
+2. ¿Con qué precisión pueden decodificadores clásicos fijos distinguir imaginación de puños frente a pies en diseños de *runs* retenidos, entre participantes y con calibración limitada?
+3. ¿Siguen siendo creíbles los resultados bajo verificaciones explícitas de control de calidad, procedencia y ausencia de fuga de datos, y se transferirán a sesiones de registro independientes?
 
-## Project status
+## Estado del proyecto
 
-| Component | Status | Evidence |
+| Componente | Estado | Evidencia |
 | --- | --- | --- |
-| PhysioNet physiological replication | **COMPLETE / FROZEN** | [full-cohort report](docs/full_cohort_replication.md) |
-| Individualized-mu reliability and held-out comparison | **SECONDARY / COMPLETE** | [report](docs/individual_mu_reliability.md) |
-| Within-subject held-out-run decoding | **COMPLETE / FROZEN** | [report](docs/within_subject_decoding.md) |
-| Cross-subject, calibration, spatial, and Riemannian studies | **SECONDARY / COMPLETE** | [final report](docs/final_scientific_report.md) |
-| Lee2019/OpenBMI external cross-session validation | **IN PROGRESS — NOT YET EVALUATED** | [frozen protocol](docs/external_cross_session_lee2019.md) |
+| Replicación fisiológica de PhysioNet | **COMPLETA / CONGELADA** | [informe de cohorte completa](docs/full_cohort_replication.md) |
+| Fiabilidad de mu individual y comparación con datos retenidos | **SECUNDARIO / COMPLETO** | [informe](docs/individual_mu_reliability.md) |
+| Decodificación intra-participante con *runs* retenidos | **COMPLETA / CONGELADA** | [informe](docs/within_subject_decoding.md) |
+| Estudios entre participantes, de calibración, espaciales y riemannianos | **SECUNDARIO / COMPLETO** | [informe final](docs/final_scientific_report.md) |
+| Validación externa Lee2019/OpenBMI entre sesiones | **EN PROGRESO — AÚN NO EVALUADA** | [protocolo congelado](docs/external_cross_session_lee2019.md) |
 
-## Completed headline evidence
+## Evidencia principal completada
 
-These values are read from the frozen project summary [`docs/assets/final_results_summary.csv`](docs/assets/final_results_summary.csv). They describe this dataset and these evaluation designs only.
+Estos valores se leen del resumen congelado del proyecto [`docs/assets/final_results_summary.csv`](docs/assets/final_results_summary.csv). Describen únicamente este conjunto de datos y estos diseños de evaluación.
 
-| Finding | Cohort / design | Result |
+| Hallazgo | Cohorte / diseño | Resultado |
 | --- | --- | --- |
-| Fists-related 12–13 Hz task-versus-rest reduction at C4 | PhysioNet replication participants 2–109 | 87/105 negative participant estimates |
-| Same effect at C3 | PhysioNet replication participants 2–109 | 91/105 negative participant estimates |
-| Participant-specific CSP+LDA | 86 eligible evaluation participants; held-out runs | median balanced accuracy 0.658 |
-| Strict zero-shot CSP | Same evaluation cohort; held-out people | median balanced accuracy 0.570 |
-| Frozen 28-label target-calibration curve | Same evaluation cohort | median balanced accuracy 0.650 |
+| Reducción relacionada con puños de 12–13 Hz, tarea frente a reposo, en C4 | Participantes de replicación PhysioNet 2–109 | 87/105 estimaciones por participante negativas |
+| Mismo efecto en C3 | Participantes de replicación PhysioNet 2–109 | 91/105 estimaciones por participante negativas |
+| CSP+LDA específico por participante | 86 participantes elegibles; *runs* retenidos | mediana de exactitud balanceada 0.658 |
+| CSP estrictamente *zero-shot* | Misma cohorte de evaluación; personas retenidas | mediana de exactitud balanceada 0.570 |
+| Curva congelada de calibración objetivo con 28 etiquetas | Misma cohorte de evaluación | mediana de exactitud balanceada 0.650 |
 
-The physiological result is a sensor-level association, not direct measurement of individual neurons or a causal account of motor imagery. Decoding performance is an offline predictive result, not evidence of deployable BCI control.
+El resultado fisiológico es una asociación a nivel de sensor, no una medición directa de neuronas individuales ni una explicación causal de la imaginación motora. El rendimiento de decodificación es un resultado predictivo *offline*, no evidencia de control BCI desplegable.
 
-Frozen public artifacts use portable data-root-relative provenance; the completed PhysioNet results survived this provenance-only migration unchanged. The external cross-session study remains ongoing.
+Los artefactos públicos congelados usan procedencia portátil relativa a la raíz de datos; los resultados completados de PhysioNet no cambiaron durante esta migración exclusivamente de procedencia. El estudio externo entre sesiones sigue en progreso.
 
-![Participant-specific unilateral held-out-run decoding distribution](docs/assets/unilateral_motor_imagery_generalization_score_distribution.png)
+![Distribución de la decodificación unilateral por participante con runs retenidos](docs/assets/unilateral_motor_imagery_generalization_score_distribution.png)
 
-*Participant-level held-out-run balanced accuracy for the completed unilateral generalization analysis. Generated by [`scripts/evaluate_unilateral_motor_imagery_generalization.py`](scripts/evaluate_unilateral_motor_imagery_generalization.py).*
+*Exactitud balanceada por participante en el análisis completado de generalización unilateral con *runs* retenidos. Generada por [`scripts/evaluate_unilateral_motor_imagery_generalization.py`](scripts/evaluate_unilateral_motor_imagery_generalization.py).*
 
-## Analysis flow
+## Flujo de análisis
 
 ```mermaid
 flowchart LR
-  A[Public EEGMMIDB EDF recordings] --> B[Integrity and recording checks]
-  B --> C[Average reference and frozen FIR preprocessing]
-  C --> D[Event-aligned epochs and trial QC]
-  D --> E[Sensor-level ERD / band-power replication]
-  D --> F[CSP or spectral features]
-  F --> G[Held-out-run decoding]
-  G --> H[Cross-subject and calibration studies]
-  H --> I[Lee2019 external cross-session protocol: in progress]
+  A[Registros EDF públicos de EEGMMIDB] --> B[Comprobaciones de integridad y registro]
+  B --> C[Referencia promedio y preprocesamiento FIR congelado]
+  C --> D[Épocas alineadas a eventos y control de calidad de ensayos]
+  D --> E[Replicación de ERD / potencia de banda a nivel de sensor]
+  D --> F[Características CSP o espectrales]
+  F --> G[Decodificación con runs retenidos]
+  G --> H[Estudios entre participantes y de calibración]
+  H --> I[Protocolo externo Lee2019 entre sesiones: en progreso]
 ```
 
-## Reproduce a completed analysis
+## Reproducir un análisis completado
 
-Python 3.14 was used for the current environment. Create a clean virtual environment and install the pinned dependencies:
+Python 3.14 se usó en el entorno actual. Cree un entorno virtual limpio e instale las dependencias fijadas:
 
 ```bash
 python -m venv .venv
@@ -66,7 +66,7 @@ python -m pip install -r requirements.txt
 python -m unittest discover -s tests
 ```
 
-For a small completed workflow:
+Para un flujo pequeño ya completado:
 
 ```bash
 python scripts/inspect_raw_data.py
@@ -75,32 +75,32 @@ python scripts/create_epochs.py
 python scripts/analyze_event_related_spectrum.py
 ```
 
-See the [reproducibility guide](docs/reproducibility.md) for full-cohort commands, data locations, frozen-artifact checks, and the scope of what has and has not been rerun. Raw EEG belongs to its original providers, is downloaded into `data/`, and is intentionally excluded from Git.
+Consulte la [guía de reproducibilidad](docs/reproducibility.md) para comandos de cohorte completa, ubicaciones de datos, comprobaciones de artefactos congelados y el alcance de lo que se ha vuelto a ejecutar o no. El EEG crudo pertenece a sus proveedores originales, se descarga en `data/` y se excluye intencionalmente de Git.
 
-## Scientific safeguards
+## Salvaguardas científicas
 
-- Frozen configurations and hash-linked artifacts record completed analysis stages.
-- Held-out runs and explicit fit audits keep CSP, scaling, and LDA fitting separate from evaluation trials where the corresponding study supports decoding.
-- Technical exclusions are recorded as data/format incompatibilities rather than performance exclusions.
-- Participant-level aggregation and predeclared inference avoid treating repeated trials or runs as independent people.
-- Automated tests check artifact schemas, hashes, provenance, and leakage contracts.
+- Las configuraciones congeladas y los artefactos vinculados mediante *hashes* documentan las etapas de análisis completadas.
+- Los *runs* retenidos y las auditorías explícitas de ajuste separan el ajuste de CSP, escalado y LDA de los ensayos de evaluación cuando el estudio correspondiente incluye decodificación.
+- Las exclusiones técnicas se registran como incompatibilidades de datos o formato, no como exclusiones por rendimiento.
+- La agregación por participante y la inferencia predefinida evitan tratar ensayos o *runs* repetidos como personas independientes.
+- Las pruebas automatizadas comprueban esquemas de artefactos, *hashes*, procedencia y contratos de ausencia de fuga de datos.
 
-Details and scope are in the [validation strategy](docs/validation_strategy.md) and [limitations](docs/limitations.md).
+Los detalles y el alcance están en la [estrategia de validación](docs/validation_strategy.md) y las [limitaciones](docs/limitations.md).
 
-## Documentation map
+## Mapa de documentación
 
-- [Scientific overview and chronology](docs/project_overview.md)
-- [Methods](docs/methods.md) and [scientific decisions](docs/scientific_decisions.md)
-- [Results index](docs/results.md) and [final integrated report](docs/final_scientific_report.md)
-- [Datasets and provenance](docs/datasets.md)
-- [Reproducibility](docs/reproducibility.md), [repository guide](docs/repository_guide.md), and [public provenance](docs/public_provenance.md)
-- [External validation status](docs/external_validation.md)
-- [Collaboration](docs/collaboration.md)
+- [Resumen científico y cronología](docs/project_overview_es.md)
+- [Métodos](docs/methods.md) y [decisiones científicas](docs/scientific_decisions.md)
+- [Índice de resultados](docs/results_es.md) e [informe científico final](docs/final_scientific_report.md)
+- [Conjuntos de datos y procedencia](docs/datasets.md)
+- [Reproducibilidad](docs/reproducibility.md), [guía del repositorio](docs/repository_guide.md) y [procedencia pública](docs/public_provenance.md)
+- [Estado de la validación externa](docs/external_validation_es.md)
+- [Colaboración](docs/collaboration_es.md)
 
-## Citation and discussion
+## Citación y discusión
 
-Please use [CITATION.cff](CITATION.cff) when discussing or citing the software. Scientific criticism, reproducibility review, and collaboration on EEG/BCI methodology are welcome; see [Collaboration](docs/collaboration.md).
+Use [CITATION.cff](CITATION.cff) al comentar o citar el software. Se reciben con interés la crítica científica, la revisión de reproducibilidad y la colaboración sobre metodología EEG/BCI; consulte [Colaboración](docs/collaboration_es.md).
 
-## Important limits
+## Límites importantes
 
-This repository reports offline analyses of a public historical dataset. Its results do not establish clinical utility, causal neural mechanisms, real-time BCI utility, or universal cross-session/cross-laboratory generalization. The independent Lee2019/OpenBMI validation is intentionally not interpreted until its complete, hash-validated source cohort is available.
+Este repositorio informa análisis *offline* de un conjunto de datos público histórico. Sus resultados no establecen utilidad clínica, mecanismos neuronales causales, utilidad de BCI en tiempo real ni generalización universal entre sesiones o laboratorios. La validación independiente Lee2019/OpenBMI no se interpretará hasta que esté disponible su cohorte fuente completa y validada por *hashes*.
