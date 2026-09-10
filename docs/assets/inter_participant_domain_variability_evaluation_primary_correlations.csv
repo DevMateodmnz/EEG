@@ -1,0 +1,7 @@
+predictor,outcome,spearman_rho,p_unadjusted,observational_unit,n,p_holm_six_tests
+source_midpoint_offset,zero_shot_csp_ba,-0.015950070198675458,0.8841111131465714,participant,86,0.8841111131465714
+source_midpoint_offset,zero_shot_riemannian_ba,0.1131642832484853,0.29953885404268576,participant,86,0.5990777080853715
+source_direction_alignment,zero_shot_csp_ba,0.6456425988237078,1.924627335133635e-11,participant,86,1.154776401080181e-10
+source_direction_alignment,zero_shot_riemannian_ba,0.5784015171156006,5.465620473134056e-09,participant,86,2.7328102365670282e-08
+task_direction_magnitude,zero_shot_csp_ba,0.2580908339430434,0.01643042894199601,participant,86,0.04929128682598803
+task_direction_magnitude,zero_shot_riemannian_ba,0.2930323571733358,0.006179768455971631,participant,86,0.024719073823886523

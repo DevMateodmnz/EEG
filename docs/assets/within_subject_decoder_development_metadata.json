@@ -1,0 +1,58 @@
+{
+  "artifacts": {
+    "within_subject_decoder_development_candidate_summary.csv": "cc5841dbc06470a97f43e6600f0701b1bd4ab967a8e326689cb3d4388471b021",
+    "within_subject_decoder_development_fold_scores.csv": "e3cdd7efadd89f87913ae4507e681c0f76f851b0e4fa4b504e8ee2c8ac00205d",
+    "within_subject_decoder_development_representative_csp_patterns.png": "c5bebfce5c9ea932136a1fab07858e7aa95bdf3043b5bc41d84ee525d039c6e5",
+    "within_subject_decoder_development_subject_scores.csv": "b9c3fc2fd5c7b945b8c86e0e75fe0dea914956825c7a65fb2e4c6d6d3c19762f"
+  },
+  "candidate_count": 5,
+  "configuration_sha256": "756728ca1a88037b1d609f16e695303d1a00eaa1b6184d75fe567708629e76f9",
+  "development_subjects": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "evaluation_subject_classifier_outcomes_calculated": false,
+  "fitted_models_persisted": false,
+  "full_feature_arrays_persisted": false,
+  "representative_csp_pattern_selection_rule": "closest_to_development_cohort_median_then_lowest_subject_id",
+  "representative_csp_pattern_subject": 2,
+  "representative_csp_pattern_test_run": 6,
+  "schema_version": 1,
+  "selected_csp_model": "csp_4_empirical",
+  "selected_spectral_baseline": "spectral_baseline_6",
+  "selection_rule": {
+    "cohort_summary": "one_subject_score_per_development_participant",
+    "csp_tie_preference": [
+      "csp_4_ledoit_wolf",
+      "csp_4_empirical",
+      "csp_6_ledoit_wolf"
+    ],
+    "evaluation_subject_outcomes_forbidden": true,
+    "practical_tie_tolerance_balanced_accuracy": 0.01,
+    "primary_ranking": "highest_development_cohort_median_subject_score",
+    "spectral_tie_preference": [
+      "spectral_baseline_6",
+      "spectral_baseline_9"
+    ],
+    "subject_score": "unweighted_mean_of_three_held_out_run_balanced_accuracies"
+  },
+  "study_stage": "decoder_method_development_only"
+}

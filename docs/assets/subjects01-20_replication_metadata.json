@@ -1,0 +1,446 @@
+{
+  "artifacts": {
+    "audit": "docs/assets/subjects01-20_replication_cohort_audit.csv",
+    "band_figure": "docs/assets/subjects01-20_replication_narrow_vs_mu.png",
+    "cohort": "docs/assets/subjects01-20_replication_cohort_feature_summary.csv",
+    "eligibility": "docs/assets/subjects01-20_replication_subject_eligibility.csv",
+    "feet_figure": "docs/assets/subjects01-20_replication_feet_variability.png",
+    "paired_figure": "docs/assets/subjects01-20_replication_c3_c4_subject_scatter.png",
+    "peak_figure": "docs/assets/subjects01-20_replication_central_peak_exploration.png",
+    "peaks": "docs/assets/subjects01-20_replication_central_peak_summary.csv",
+    "primary": "docs/assets/subjects01-20_replication_replication_primary_features.csv",
+    "primary_figure": "docs/assets/subjects01-20_replication_primary_subject_results.png",
+    "qc": "docs/assets/subjects01-20_replication_subject_qc_summary.csv",
+    "relationship": "docs/assets/subjects01-20_replication_peak_feature_relationship.csv",
+    "run": "docs/assets/subjects01-20_replication_subject_run_summary.csv",
+    "subject": "docs/assets/subjects01-20_replication_subject_feature_summary.csv",
+    "trial": "docs/assets/subjects01-20_replication_trial_spectral_measurements.csv"
+  },
+  "cache_policy": "regenerate_three_sensor_tfr_and_persist_compact_summaries_only",
+  "classification_performed": false,
+  "configuration_hashes": {
+    "epoching": "5aea5629ec751a1e4a45b52cee1e62f029821996f554ddbcd202a27ffc3f076c",
+    "event_related_spectral": "4134542bd823a2105f26f536ba5a63b675484f2f7ec8468e5fe1766d389846eb",
+    "preprocessing": "c330847fafe0e9713c8c4f1b64723f81311334a0070fa4f182111216d195cbd2",
+    "trial_quality": "3215274385453251d6f5036107dec3181393ff81b4f09d16860c6849a91fe453"
+  },
+  "csp_performed": false,
+  "development_subject": 1,
+  "eligible_replication_subject_count": 19,
+  "frozen_config_fingerprint": "355bee22595ce796deda1c77f879b1fba5eee59bc5e820742cad5bacf7040c8e",
+  "full_tfr_arrays_persisted": false,
+  "outcome_based_subject_exclusions": 0,
+  "replication_analyzed_task_trials": 855,
+  "requested_replication_subjects": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "requested_subjects": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "schema_version": 1,
+  "source_hashes": {
+    "subject01_run06": "5369364f2c4e81ca141679d6dd2ba6ece61c7eb53d7fae31241b308876e1b6b3",
+    "subject01_run10": "20de1c7746c2349d16bda5e9f1b0ac7b7ad1581102a2e30dd2ac422696f62fb1",
+    "subject01_run14": "2110c48e3106898e3dbca47e39b330637afd3d3b8bc2da3ba1e44f4ac1118137",
+    "subject02_run06": "08b07a8495a51ddca66a91fcc1275651f2d3e6b0a7a56711f06769b4ecbb8d53",
+    "subject02_run10": "817961f28a7acfebc45c664f1a9e40dcf4a8e1e1e51dc089062d7e3e2cef44e9",
+    "subject02_run14": "21e20c72ae3f52cc95f6fd6d4b5b958e28fc85bc0d3886f494de97a82c2aa24d",
+    "subject03_run06": "8d48a46397416bbea19eb6b97474aaade72029364231202295bbda805ed79c97",
+    "subject03_run10": "99429f0075f59216a10b75eea4029a7ded7bccec34d17100b08a55770cf1f014",
+    "subject03_run14": "c80a7a0fab93074cdead76450b49ba8d27b7183f1baa406daf5207d2c1825194",
+    "subject04_run06": "2d9afd10462b0dc93c07e605ce6dd49ddf42c856c843a18a8236cbf08c9af7fa",
+    "subject04_run10": "8f8034251a5bc4bf8dd8ecc1869da6ffd9e61bb9d9f8a4ae0df9003d72d40e9f",
+    "subject04_run14": "06a3c88276f1db76214f8b1068878add45b22836327fe6b95d0231d415cce752",
+    "subject05_run06": "07260f0bc56394b88fc506823779ebaf9e0b6ab6286608b010900155a4d206dc",
+    "subject05_run10": "a5721f5a8229799b6323e26f5f2fa149c121ff87d4ba73b30fe9280602aee140",
+    "subject05_run14": "77d5b9b1f03074e96c0e42234f57363272fa90501661cbe038bd387f3ce922e0",
+    "subject06_run06": "fc5e1cc21df8b1de6a63fe1a063db27d14ac882d6105057c9d4f924365730a4d",
+    "subject06_run10": "d4a1d432d4c703decce7f7ce0a6d7c05a030fd19f562fe2be52d4c581ca24365",
+    "subject06_run14": "4fb5946ed7a29268af9b1770db80d4c6a3dbeacab4be573b6da9c095b8a5e68b",
+    "subject07_run06": "9f6e8d2367dd2965fe71380ad6d42c94e13848d589516fda86fa0eb93481998e",
+    "subject07_run10": "acd9571b0a6b1f864807e556d09d913592d1eff978e7469bb68a9fefed62e172",
+    "subject07_run14": "d6245b9bf35efde8522982146138e2f03fc352217579cb0c8f4d83eedd7d8c9c",
+    "subject08_run06": "c2afadf0b5cbc8764825fbe26ae358df677c46ce44c6e8622e4fa3d47d6abb14",
+    "subject08_run10": "6a7934c18466078caf899f724cf13b665d98e41fac9d978d9521f89021e0377c",
+    "subject08_run14": "19c943fb32f7749b7e37d8765f84a3bbf76c4ac7ea48ff29fa074322ebcad885",
+    "subject09_run06": "c6665f0c93288610a0f3cc379edb8064072e7b276722358912a76e899bd6b194",
+    "subject09_run10": "eeeeb3a1fad45ab52993a7696c8f86b0f4cb7de3aa68a62cb2b1379fe87b4084",
+    "subject09_run14": "e9ffb381cf76880a63c95ffe80106e9339a290f1fa9632e7575515b4900a820b",
+    "subject10_run06": "5f5c213f1f7db4bdb52d8d54e8074d7f5e73655b1e040d41a7916d3d0a00b666",
+    "subject10_run10": "693b0d9240095c01eb8ec5b2d0b3887cfbb8fbfeb85a04076b79c297b5b7d42c",
+    "subject10_run14": "138893d950405102e1536365290ac15255688eaab181170afbd5178e6714ae2e",
+    "subject11_run06": "05e960ac5207e35af7dc1fe492b78c7f473340aa88a6639a8e9d711d27c80270",
+    "subject11_run10": "f3941502e7692576978f24c14c837b07e760fb94cdc65f2358790375d5537d87",
+    "subject11_run14": "ba4007cd1ab12e9f87fb8a0d158b55e9b236cf29190db21709482290a05adbb9",
+    "subject12_run06": "fe617707aa63e902238e4de12cd8ec22c55822d05d09f60bccab9d08ac53055a",
+    "subject12_run10": "f70b4292ae24574f7f4835ae89e7d5fc6350c26d0d8da86b347ea0bf4956a17a",
+    "subject12_run14": "e1b65406fcdf9107d1cb5ec813b7dac9a074a212172d1f79fc403304125900ff",
+    "subject13_run06": "2e615fe7a657d7047f4fbe789b66968dbde9394c16cdb9d0995f1c0d376a94a6",
+    "subject13_run10": "14c0536c6a2bbc572cf7b4b7e128aa2f1bd5b3a65e84a16184fd4b382609459d",
+    "subject13_run14": "ebdbc2b8c8d86022a8f285bf4b42674364d91cc46eecc1e1abc04043ef12c17b",
+    "subject14_run06": "2effc21654d198aa9b98432717d66111358ee5795b929bb4c433d5d9ab066e97",
+    "subject14_run10": "c0fdc474a78421cc6048a9c8dfc8cafa8424dd4379135b60d68a77c4ee0b2b6a",
+    "subject14_run14": "dc0139288de0668975cfde05cce9663a186ba1b2ccb3fce71fbd4bbbb206b5ba",
+    "subject15_run06": "705c63ec04c0f9096cc6b4f32eec0bcea9a0bfa8d01aed7494b67a487e014afe",
+    "subject15_run10": "67233630176aa19faa4133355be20476cc8f571d9327943b9d35a73ecb96f519",
+    "subject15_run14": "3f57b464e13807f30aacbfc2f6780bc02bf8faecea883725683177416503c875",
+    "subject16_run06": "8ff4a1d19384bffce8524194507bdb42946fa06da83bdb75518c9a23f9677876",
+    "subject16_run10": "dd359a54e0811d4a08e82284cc251e1ce193f365079578f18d006cf7f1e3919c",
+    "subject16_run14": "80dafefa87cba873be315c21c9bc805c9f3c57b50cb9d0efa9a5b8b71037b1c7",
+    "subject17_run06": "0e32de926757e1a493c3df6d85955c30e0b45b0caa7f1ddac2a4cb483257891e",
+    "subject17_run10": "1cb81c247ff4d726beca43e0bd37d6ff1aacf0d0c63068c6d389af327a86484b",
+    "subject17_run14": "f95cb81454f050fc58c4d2bcb7698526e5a6cef17b157e601ec1d4abb96eb3ea",
+    "subject18_run06": "c63f23d980060ac721c705567e65603808dffd0af32391c6e2528072bdaf3cec",
+    "subject18_run10": "de1322a24dc7d95c29d64d91488cb1cf3ea30aa5953c7fbc80b1fa42d4ab44f2",
+    "subject18_run14": "33e7d70d1b51cb549dbe2785e85414e3c82b039c4dbfb71be40c2bcd48136dcc",
+    "subject19_run06": "1b0ad7d85228488fe95410bcb88108d41cd8bc2f9b078cf8c0641ed1e8656f42",
+    "subject19_run10": "809a866319f3dca5bc549d4ed8bb36a891ba270d4aee23950cb5e85c2819fdbe",
+    "subject19_run14": "f1c4268a5d230b83417494012193d3511dd8d4de5930a9ebbb03ad2e26a75dd2",
+    "subject20_run06": "6e127745b2b1031bb274f72063b954a79b584163e17c964aa8e859c878498145",
+    "subject20_run10": "aef44481a6fe1a8e732450ef594b3167bca2fbd01bb23a29d7ec79a670f0a658",
+    "subject20_run14": "1d9a26f8c38886fa4d700deb86100e56df958b2507875f45adbac7c98de15ed8"
+  },
+  "subject_tfr_shapes": {
+    "1": {
+      "rest_tfr": [
+        45,
+        3,
+        30,
+        161
+      ],
+      "task_tfr": [
+        45,
+        3,
+        30,
+        241
+      ]
+    },
+    "10": {
+      "rest_tfr": [
+        45,
+        3,
+        30,
+        161
+      ],
+      "task_tfr": [
+        45,
+        3,
+        30,
+        241
+      ]
+    },
+    "11": {
+      "rest_tfr": [
+        45,
+        3,
+        30,
+        161
+      ],
+      "task_tfr": [
+        45,
+        3,
+        30,
+        241
+      ]
+    },
+    "12": {
+      "rest_tfr": [
+        45,
+        3,
+        30,
+        161
+      ],
+      "task_tfr": [
+        45,
+        3,
+        30,
+        241
+      ]
+    },
+    "13": {
+      "rest_tfr": [
+        45,
+        3,
+        30,
+        161
+      ],
+      "task_tfr": [
+        45,
+        3,
+        30,
+        241
+      ]
+    },
+    "14": {
+      "rest_tfr": [
+        45,
+        3,
+        30,
+        161
+      ],
+      "task_tfr": [
+        45,
+        3,
+        30,
+        241
+      ]
+    },
+    "15": {
+      "rest_tfr": [
+        45,
+        3,
+        30,
+        161
+      ],
+      "task_tfr": [
+        45,
+        3,
+        30,
+        241
+      ]
+    },
+    "16": {
+      "rest_tfr": [
+        45,
+        3,
+        30,
+        161
+      ],
+      "task_tfr": [
+        45,
+        3,
+        30,
+        241
+      ]
+    },
+    "17": {
+      "rest_tfr": [
+        45,
+        3,
+        30,
+        161
+      ],
+      "task_tfr": [
+        45,
+        3,
+        30,
+        241
+      ]
+    },
+    "18": {
+      "rest_tfr": [
+        45,
+        3,
+        30,
+        161
+      ],
+      "task_tfr": [
+        45,
+        3,
+        30,
+        241
+      ]
+    },
+    "19": {
+      "rest_tfr": [
+        45,
+        3,
+        30,
+        161
+      ],
+      "task_tfr": [
+        45,
+        3,
+        30,
+        241
+      ]
+    },
+    "2": {
+      "rest_tfr": [
+        45,
+        3,
+        30,
+        161
+      ],
+      "task_tfr": [
+        45,
+        3,
+        30,
+        241
+      ]
+    },
+    "20": {
+      "rest_tfr": [
+        45,
+        3,
+        30,
+        161
+      ],
+      "task_tfr": [
+        45,
+        3,
+        30,
+        241
+      ]
+    },
+    "3": {
+      "rest_tfr": [
+        45,
+        3,
+        30,
+        161
+      ],
+      "task_tfr": [
+        45,
+        3,
+        30,
+        241
+      ]
+    },
+    "4": {
+      "rest_tfr": [
+        45,
+        3,
+        30,
+        161
+      ],
+      "task_tfr": [
+        45,
+        3,
+        30,
+        241
+      ]
+    },
+    "5": {
+      "rest_tfr": [
+        45,
+        3,
+        30,
+        161
+      ],
+      "task_tfr": [
+        45,
+        3,
+        30,
+        241
+      ]
+    },
+    "6": {
+      "rest_tfr": [
+        45,
+        3,
+        30,
+        161
+      ],
+      "task_tfr": [
+        45,
+        3,
+        30,
+        241
+      ]
+    },
+    "7": {
+      "rest_tfr": [
+        45,
+        3,
+        30,
+        161
+      ],
+      "task_tfr": [
+        45,
+        3,
+        30,
+        241
+      ]
+    },
+    "8": {
+      "rest_tfr": [
+        45,
+        3,
+        30,
+        161
+      ],
+      "task_tfr": [
+        45,
+        3,
+        30,
+        241
+      ]
+    },
+    "9": {
+      "rest_tfr": [
+        45,
+        3,
+        30,
+        161
+      ],
+      "task_tfr": [
+        45,
+        3,
+        30,
+        241
+      ]
+    }
+  },
+  "technically_eligible_subjects": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "technically_ineligible_subjects": [],
+  "total_analyzed_task_trials": 900
+}

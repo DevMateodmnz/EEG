@@ -1,0 +1,5 @@
+model,qc_sensitivity,true_fists_predicted_fists,true_fists_predicted_feet,true_feet_predicted_fists,true_feet_predicted_feet,fists_recall,feet_recall,trial_count
+csp_4_empirical,False,1260,663,591,1326,0.6552262090483619,0.6917057902973396,3840
+csp_4_empirical,True,1005,582,477,1177,0.6332703213610587,0.711608222490931,3241
+spectral_baseline_6,False,1107,816,748,1169,0.5756630265210608,0.6098069900886802,3840
+spectral_baseline_6,True,897,690,638,1016,0.5652173913043478,0.6142684401451027,3241

@@ -1,0 +1,415 @@
+{
+  "bands_hz_inclusive_centers": {
+    "beta": [
+      14.0,
+      30.0
+    ],
+    "central_12_13": [
+      12.0,
+      13.0
+    ],
+    "mu": [
+      8.0,
+      13.0
+    ]
+  },
+  "configuration_paths": {
+    "epoching": "config/epoching.json",
+    "event_related_spectral": "config/event_related_spectral.json",
+    "preprocessing": "config/preprocessing.json"
+  },
+  "frequency_centers_hz": [
+    6.0,
+    7.0,
+    8.0,
+    9.0,
+    10.0,
+    11.0,
+    12.0,
+    13.0,
+    14.0,
+    15.0,
+    16.0,
+    17.0,
+    18.0,
+    19.0,
+    20.0,
+    21.0,
+    22.0,
+    23.0,
+    24.0,
+    25.0,
+    26.0,
+    27.0,
+    28.0,
+    29.0,
+    30.0,
+    31.0,
+    32.0,
+    33.0,
+    34.0,
+    35.0
+  ],
+  "full_tfr_arrays_persisted": false,
+  "input_rest_shape": [
+    45,
+    64,
+    641
+  ],
+  "input_task_shape": [
+    45,
+    64,
+    961
+  ],
+  "quality": {
+    "confirmed_exclusions": 0,
+    "primary_analysis_uses_all_trials": true,
+    "statistical_candidates": 6
+  },
+  "reference": {
+    "interval_seconds_from_t0_onset": [
+      1.1,
+      3.1
+    ],
+    "normalization": "100 * (task_power - reference_power) / reference_power",
+    "strategy": "trial-paired immediately preceding T0"
+  },
+  "report_artifacts": [
+    "subject01_runs06-10-14_event_trial_band_power.csv",
+    "subject01_runs06-10-14_event_condition_band_summary.csv",
+    "subject01_runs06-10-14_event_run_band_summary.csv",
+    "subject01_runs06-10-14_event_condition_difference.csv",
+    "subject01_runs06-10-14_event_window_sensitivity.csv",
+    "subject01_runs06-10-14_event_band_time_courses.csv",
+    "subject01_runs06-10-14_event_sensorimotor_tfr.csv",
+    "subject01_runs06-10-14_event_spectral_metadata.json",
+    "subject01_runs06-10-14_event_sensorimotor_tfr.png",
+    "subject01_runs06-10-14_event_mu_time_courses.png",
+    "subject01_runs06-10-14_event_beta_time_courses.png",
+    "subject01_runs06-10-14_event_trial_distributions.png",
+    "subject01_runs06-10-14_event_run_qc_sensitivity.png",
+    "subject01_runs06-10-14_event_band_topographies.png"
+  ],
+  "rest_tfr_shape": [
+    45,
+    64,
+    30,
+    161
+  ],
+  "runs": [
+    6,
+    10,
+    14
+  ],
+  "schema_version": 1,
+  "sensorimotor_primary_summary": [
+    {
+      "analysis_set": "all_trials",
+      "channel": "C3",
+      "frequency_band": "beta",
+      "iqr_change_percentage_points": 30.110899387857717,
+      "maximum_change_percent": 64.20648077176735,
+      "mean_change_percent": 0.8237279686847643,
+      "median_change_percent": 1.0562486992987958,
+      "minimum_change_percent": -53.798047168227725,
+      "q25_change_percent": -17.925785310393742,
+      "q75_change_percent": 12.185114077463975,
+      "semantic_condition": "both_feet_imagery",
+      "standard_deviation_change_percent": 29.659812434530405,
+      "trial_count": 24
+    },
+    {
+      "analysis_set": "all_trials",
+      "channel": "C3",
+      "frequency_band": "central_12_13",
+      "iqr_change_percentage_points": 114.85176629235298,
+      "maximum_change_percent": 500.99961593156905,
+      "mean_change_percent": 74.01288862606786,
+      "median_change_percent": 30.292460642118655,
+      "minimum_change_percent": -54.42083551182318,
+      "q25_change_percent": -16.307597055519807,
+      "q75_change_percent": 98.54416923683317,
+      "semantic_condition": "both_feet_imagery",
+      "standard_deviation_change_percent": 138.1744622398498,
+      "trial_count": 24
+    },
+    {
+      "analysis_set": "all_trials",
+      "channel": "C3",
+      "frequency_band": "mu",
+      "iqr_change_percentage_points": 108.9261184470686,
+      "maximum_change_percent": 305.3016753410939,
+      "mean_change_percent": 45.836487099236116,
+      "median_change_percent": 22.397374610925645,
+      "minimum_change_percent": -57.31684615354879,
+      "q25_change_percent": -21.19410335516435,
+      "q75_change_percent": 87.73201509190424,
+      "semantic_condition": "both_feet_imagery",
+      "standard_deviation_change_percent": 97.74526408851419,
+      "trial_count": 24
+    },
+    {
+      "analysis_set": "all_trials",
+      "channel": "C4",
+      "frequency_band": "beta",
+      "iqr_change_percentage_points": 28.76028868620557,
+      "maximum_change_percent": 69.24821309933296,
+      "mean_change_percent": -1.36005500396252,
+      "median_change_percent": -6.494785911725927,
+      "minimum_change_percent": -51.824681633286914,
+      "q25_change_percent": -15.24531553496308,
+      "q75_change_percent": 13.514973151242492,
+      "semantic_condition": "both_feet_imagery",
+      "standard_deviation_change_percent": 29.86046873245562,
+      "trial_count": 24
+    },
+    {
+      "analysis_set": "all_trials",
+      "channel": "C4",
+      "frequency_band": "central_12_13",
+      "iqr_change_percentage_points": 120.815894011951,
+      "maximum_change_percent": 289.0238457941884,
+      "mean_change_percent": 48.32727011090253,
+      "median_change_percent": 22.313400255138223,
+      "minimum_change_percent": -52.62493656505364,
+      "q25_change_percent": -25.842586937236074,
+      "q75_change_percent": 94.97330707471492,
+      "semantic_condition": "both_feet_imagery",
+      "standard_deviation_change_percent": 92.77422743633281,
+      "trial_count": 24
+    },
+    {
+      "analysis_set": "all_trials",
+      "channel": "C4",
+      "frequency_band": "mu",
+      "iqr_change_percentage_points": 60.63218534021901,
+      "maximum_change_percent": 139.7532685952033,
+      "mean_change_percent": 16.386351263399586,
+      "median_change_percent": 3.792494111579183,
+      "minimum_change_percent": -41.56949035959617,
+      "q25_change_percent": -25.73794717523262,
+      "q75_change_percent": 34.89423816498639,
+      "semantic_condition": "both_feet_imagery",
+      "standard_deviation_change_percent": 52.87341457024956,
+      "trial_count": 24
+    },
+    {
+      "analysis_set": "all_trials",
+      "channel": "Cz",
+      "frequency_band": "beta",
+      "iqr_change_percentage_points": 70.98976687651344,
+      "maximum_change_percent": 125.6893395554582,
+      "mean_change_percent": 21.34658190568122,
+      "median_change_percent": 15.178388352704314,
+      "minimum_change_percent": -44.55337107316173,
+      "q25_change_percent": -18.477054925305904,
+      "q75_change_percent": 52.512711951207535,
+      "semantic_condition": "both_feet_imagery",
+      "standard_deviation_change_percent": 50.56455137167006,
+      "trial_count": 24
+    },
+    {
+      "analysis_set": "all_trials",
+      "channel": "Cz",
+      "frequency_band": "central_12_13",
+      "iqr_change_percentage_points": 43.22045215854111,
+      "maximum_change_percent": 173.82466137738945,
+      "mean_change_percent": 19.975190339827158,
+      "median_change_percent": 5.609364916038535,
+      "minimum_change_percent": -72.7773976999046,
+      "q25_change_percent": -8.286022034009351,
+      "q75_change_percent": 34.93443012453176,
+      "semantic_condition": "both_feet_imagery",
+      "standard_deviation_change_percent": 59.4354291386557,
+      "trial_count": 24
+    },
+    {
+      "analysis_set": "all_trials",
+      "channel": "Cz",
+      "frequency_band": "mu",
+      "iqr_change_percentage_points": 53.27570463333831,
+      "maximum_change_percent": 166.0407362795964,
+      "mean_change_percent": 14.342579718285668,
+      "median_change_percent": 2.245470772282591,
+      "minimum_change_percent": -70.92715203937553,
+      "q25_change_percent": -16.06448428615898,
+      "q75_change_percent": 37.21122034717933,
+      "semantic_condition": "both_feet_imagery",
+      "standard_deviation_change_percent": 50.61291183126432,
+      "trial_count": 24
+    },
+    {
+      "analysis_set": "all_trials",
+      "channel": "C3",
+      "frequency_band": "beta",
+      "iqr_change_percentage_points": 43.86677600190822,
+      "maximum_change_percent": 75.6345054060263,
+      "mean_change_percent": -9.618943574474198,
+      "median_change_percent": -16.683859836173994,
+      "minimum_change_percent": -53.78008329655994,
+      "q25_change_percent": -34.31842854607156,
+      "q75_change_percent": 9.548347455836662,
+      "semantic_condition": "both_fists_imagery",
+      "standard_deviation_change_percent": 34.7070200665225,
+      "trial_count": 21
+    },
+    {
+      "analysis_set": "all_trials",
+      "channel": "C3",
+      "frequency_band": "central_12_13",
+      "iqr_change_percentage_points": 38.691637317315056,
+      "maximum_change_percent": 62.43771657686413,
+      "mean_change_percent": -43.924219332836785,
+      "median_change_percent": -55.57490648782269,
+      "minimum_change_percent": -83.40008605444633,
+      "q25_change_percent": -69.55254471964943,
+      "q75_change_percent": -30.860907402334377,
+      "semantic_condition": "both_fists_imagery",
+      "standard_deviation_change_percent": 36.94310658263827,
+      "trial_count": 21
+    },
+    {
+      "analysis_set": "all_trials",
+      "channel": "C3",
+      "frequency_band": "mu",
+      "iqr_change_percentage_points": 39.802366281279454,
+      "maximum_change_percent": 58.02020698644673,
+      "mean_change_percent": -32.28302882060279,
+      "median_change_percent": -47.3283116991264,
+      "minimum_change_percent": -73.75546936930505,
+      "q25_change_percent": -54.47644452298941,
+      "q75_change_percent": -14.674078241709955,
+      "semantic_condition": "both_fists_imagery",
+      "standard_deviation_change_percent": 34.64110353891671,
+      "trial_count": 21
+    },
+    {
+      "analysis_set": "all_trials",
+      "channel": "C4",
+      "frequency_band": "beta",
+      "iqr_change_percentage_points": 29.539264174490622,
+      "maximum_change_percent": 28.84979345457029,
+      "mean_change_percent": -12.211919674104003,
+      "median_change_percent": -7.846635856945065,
+      "minimum_change_percent": -52.42066102217919,
+      "q25_change_percent": -26.78561091894349,
+      "q75_change_percent": 2.7536532555471314,
+      "semantic_condition": "both_fists_imagery",
+      "standard_deviation_change_percent": 22.141393991743254,
+      "trial_count": 21
+    },
+    {
+      "analysis_set": "all_trials",
+      "channel": "C4",
+      "frequency_band": "central_12_13",
+      "iqr_change_percentage_points": 65.27759292439073,
+      "maximum_change_percent": 84.35583691330302,
+      "mean_change_percent": -33.26977095701296,
+      "median_change_percent": -52.28373306890746,
+      "minimum_change_percent": -89.10892100292504,
+      "q25_change_percent": -65.15741030227593,
+      "q75_change_percent": 0.12018262211479869,
+      "semantic_condition": "both_fists_imagery",
+      "standard_deviation_change_percent": 50.714465440089235,
+      "trial_count": 21
+    },
+    {
+      "analysis_set": "all_trials",
+      "channel": "C4",
+      "frequency_band": "mu",
+      "iqr_change_percentage_points": 22.83612965842589,
+      "maximum_change_percent": 97.5375997726105,
+      "mean_change_percent": -27.10170585066818,
+      "median_change_percent": -47.19283683168655,
+      "minimum_change_percent": -84.57818167075621,
+      "q25_change_percent": -53.27556291065785,
+      "q75_change_percent": -30.439433252231957,
+      "semantic_condition": "both_fists_imagery",
+      "standard_deviation_change_percent": 49.146843134268074,
+      "trial_count": 21
+    },
+    {
+      "analysis_set": "all_trials",
+      "channel": "Cz",
+      "frequency_band": "beta",
+      "iqr_change_percentage_points": 41.99312684972899,
+      "maximum_change_percent": 141.18676080764604,
+      "mean_change_percent": -7.884803154155234,
+      "median_change_percent": -24.805140440841587,
+      "minimum_change_percent": -64.01690955166016,
+      "q25_change_percent": -33.80762222425217,
+      "q75_change_percent": 8.185504625476815,
+      "semantic_condition": "both_fists_imagery",
+      "standard_deviation_change_percent": 45.3645870279278,
+      "trial_count": 21
+    },
+    {
+      "analysis_set": "all_trials",
+      "channel": "Cz",
+      "frequency_band": "central_12_13",
+      "iqr_change_percentage_points": 58.60955106382352,
+      "maximum_change_percent": 171.3822526031993,
+      "mean_change_percent": 12.87928811703319,
+      "median_change_percent": 6.598981471027711,
+      "minimum_change_percent": -56.960194335407785,
+      "q25_change_percent": -28.3375960327702,
+      "q75_change_percent": 30.271955031053317,
+      "semantic_condition": "both_fists_imagery",
+      "standard_deviation_change_percent": 59.965858612506445,
+      "trial_count": 21
+    },
+    {
+      "analysis_set": "all_trials",
+      "channel": "Cz",
+      "frequency_band": "mu",
+      "iqr_change_percentage_points": 57.20908510212233,
+      "maximum_change_percent": 183.91894120350142,
+      "mean_change_percent": 9.52897289410666,
+      "median_change_percent": -4.800793756949533,
+      "minimum_change_percent": -45.21246994863995,
+      "q25_change_percent": -24.778693152797484,
+      "q75_change_percent": 32.43039194932485,
+      "semantic_condition": "both_fists_imagery",
+      "standard_deviation_change_percent": 50.92339333543084,
+      "trial_count": 21
+    }
+  ],
+  "software": {
+    "matplotlib": "3.11.1",
+    "mne": "1.12.1",
+    "numpy": "2.5.2",
+    "python": "3.14.7"
+  },
+  "subject": 1,
+  "task_interval_seconds": [
+    1.0,
+    3.0
+  ],
+  "task_tfr_shape": [
+    45,
+    64,
+    30,
+    241
+  ],
+  "task_tfr_times_seconds": {
+    "count": 241,
+    "start": -2.0,
+    "step": 0.02499999999999994,
+    "stop": 4.0
+  },
+  "trial_counts": {
+    "both_feet_imagery": 24,
+    "both_fists_imagery": 21
+  },
+  "wavelet": {
+    "combined_nominal_half_support_seconds": 2.0437499999999997,
+    "continuous_filter_half_support_seconds": 1.65,
+    "maximum_cycles": 17.5,
+    "minimum_cycles": 3.0,
+    "n_cycles_formula": "frequency_hz * 0.5",
+    "wavelet_half_support_seconds": 0.39375,
+    "wavelet_length_samples_unique": [
+      127
+    ]
+  }
+}

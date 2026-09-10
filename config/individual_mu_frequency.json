@@ -1,0 +1,388 @@
+{
+  "schema_version": 1,
+  "study_stage": "final_method_frozen",
+  "study_start_git_commit": "d322c58fc6474b7970eb113fe0448c4c5177b157",
+  "individualized_task_outcomes_inspected_at_initial_freeze": false,
+  "final_method_frozen_after_git_commit": "cd2376dac716f97e0f763980877e40616068f243",
+  "held_out_evaluation_individualized_task_outcomes_inspected_at_final_freeze": false,
+  "eligible_subject_source": "docs/assets/subjects01-109_full_replication_metadata.json#/cohort_definitions/combined_replication_eligible",
+  "eligible_subject_source_sha256": "3e9a1bb394ae95cdda689077ba69f40fe70cb1815f4e47d41d98af782669dcc9",
+  "partition": {
+    "rule": "eligible replication subjects with even IDs are method development; eligible replication subjects with odd IDs are held-out method evaluation",
+    "outcome_independent": true,
+    "development_subjects": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      18,
+      20,
+      22,
+      24,
+      26,
+      28,
+      30,
+      32,
+      34,
+      36,
+      38,
+      40,
+      42,
+      44,
+      46,
+      48,
+      50,
+      52,
+      54,
+      56,
+      58,
+      60,
+      62,
+      64,
+      66,
+      68,
+      70,
+      72,
+      74,
+      76,
+      78,
+      80,
+      82,
+      84,
+      86,
+      90,
+      94,
+      96,
+      98,
+      102,
+      104,
+      106,
+      108
+    ],
+    "evaluation_subjects": [
+      3,
+      5,
+      7,
+      9,
+      11,
+      13,
+      15,
+      17,
+      19,
+      21,
+      23,
+      25,
+      27,
+      29,
+      31,
+      33,
+      35,
+      37,
+      39,
+      41,
+      43,
+      45,
+      47,
+      49,
+      51,
+      53,
+      55,
+      57,
+      59,
+      61,
+      63,
+      65,
+      67,
+      69,
+      71,
+      73,
+      75,
+      77,
+      79,
+      81,
+      83,
+      85,
+      87,
+      89,
+      91,
+      93,
+      95,
+      97,
+      99,
+      101,
+      103,
+      105,
+      107,
+      109
+    ],
+    "development_individualized_outcomes_may_not_be_presented_as_held_out_evidence": true,
+    "evaluation_individualized_task_outcomes_locked_until_final_method_freeze": false
+  },
+  "frozen_historical_inputs": {
+    "preprocessing": {
+      "path": "config/preprocessing.json",
+      "sha256": "c330847fafe0e9713c8c4f1b64723f81311334a0070fa4f182111216d195cbd2"
+    },
+    "epoching": {
+      "path": "config/epoching.json",
+      "sha256": "6ff59b0bda51f8f86c5a583472818a829421d2d9f29f5b5bce7c5f16c9c7c652"
+    },
+    "event_related_spectral": {
+      "path": "config/event_related_spectral.json",
+      "sha256": "37538cd783115243a11e5e64591da937161eb352f230accbfd230428c3eec3fe"
+    },
+    "trial_quality": {
+      "path": "config/trial_quality.json",
+      "sha256": "7f2cc78c2cea2eb641df83d5455a3e7cbb559ac9ab0336b05881d80212032679"
+    },
+    "replication_policy": {
+      "path": "config/replication_cohort.json",
+      "sha256": "fc939b121c6b369475c08fd9b3d9e8aef0d75038570e745d35e7a931acfb87d7"
+    },
+    "full_cohort_policy": {
+      "path": "config/full_cohort_replication.json",
+      "sha256": "b3455e0f0607eb35f11016ccb8fef023c83c5e8b1b47ba8d100343d8316df9cb"
+    }
+  },
+  "validated_comparators": {
+    "primary_fixed_narrow": {
+      "frequency_centers_hz": [
+        12.0,
+        13.0
+      ],
+      "channels": [
+        "C4",
+        "C3"
+      ],
+      "condition": "both_fists_imagery"
+    },
+    "secondary_fixed_broad": {
+      "lower_hz": 8.0,
+      "upper_hz": 13.0,
+      "channels": [
+        "C4",
+        "C3"
+      ],
+      "condition": "both_fists_imagery"
+    },
+    "may_be_redefined": false
+  },
+  "candidate_peak_method": {
+    "frequency_estimation_data": "T0_rest_only",
+    "held_out_run_samples_forbidden_from_its_peak_estimate": true,
+    "task_labels_or_task_outcomes_may_define_peak": false,
+    "central_roi_candidates": [
+      "mean_log_psd_C3_Cz_C4"
+    ],
+    "candidate_search_ranges_hz": [
+      [
+        7.0,
+        14.0
+      ],
+      [
+        6.0,
+        14.0
+      ],
+      [
+        7.0,
+        15.0
+      ]
+    ],
+    "welch_window_seconds": 4.0,
+    "welch_frequency_resolution_hz": 0.25,
+    "candidate_prominence_thresholds_db": [
+      0.5,
+      1.0,
+      1.5
+    ],
+    "boundary_maximum_is_valid": false,
+    "candidate_quality_classes": [
+      "well_defined_interior",
+      "boundary_candidate",
+      "poorly_defined_no_peak"
+    ],
+    "development_selection_may_use": [
+      "coverage",
+      "boundary_rate",
+      "run_to_run_peak_reliability",
+      "synthetic_recovery"
+    ],
+    "development_selection_may_not_use": [
+      "fists_ERD_magnitude",
+      "feet_ERD_magnitude",
+      "task_label_separation",
+      "classification_performance"
+    ]
+  },
+  "candidate_individualized_band": {
+    "candidate_half_widths_hz": [
+      1.0
+    ],
+    "evaluation_frequency_step_hz": 0.5,
+    "may_be_selected_using_evaluation_outcomes": false,
+    "must_remain_within_existing_6_35_hz_morlet_grid": true
+  },
+  "candidate_no_peak_policy": {
+    "direct_individualized_comparison": "unavailable",
+    "manual_frequency_assignment_forbidden": true,
+    "fallback_fixed_band_reported_only_as_complete_population_baseline": true,
+    "all_three_leave_one_run_out_estimates_required_for_primary_matched_comparison": true
+  },
+  "final_method": {
+    "frequency_estimation_data": "T0_rest_only_from_training_runs",
+    "continuous_representation": "frozen_1_40_Hz_average_reference_preprocessing",
+    "central_roi": [
+      "C3",
+      "Cz",
+      "C4"
+    ],
+    "roi_aggregation": "mean_of_single_epoch_log10_welch_psd_across_epochs_and_channels",
+    "welch_window": "4_second_Hann_one_complete_window_per_rest_epoch",
+    "welch_overlap_samples": 0,
+    "welch_detrend": "constant",
+    "welch_scaling": "density_V2_per_Hz",
+    "frequency_resolution_hz": 0.25,
+    "search_range_hz": [
+      7.0,
+      14.0
+    ],
+    "peak_rule": "interior_local_maximum_with_scipy_prominence_at_least_1_dB",
+    "minimum_prominence_db": 1.0,
+    "boundary_policy": "unavailable_boundary_candidate",
+    "no_peak_policy": "individualized_measurement_unavailable_no_fallback_in_matched_comparison",
+    "leave_one_run_out": true,
+    "all_three_fold_peaks_required_for_primary_matched_comparison": true,
+    "individualized_band_half_width_hz": 1.0,
+    "individualized_morlet_frequency_step_hz": 0.5,
+    "individualized_frequency_center_count": 5,
+    "task_evaluation_channels": [
+      "C4",
+      "C3"
+    ],
+    "task_condition": "both_fists_imagery",
+    "task_interval_seconds": [
+      1.0,
+      3.0
+    ],
+    "paired_rest_interval_seconds": [
+      1.1,
+      3.1
+    ],
+    "primary_normalization": "percent_change",
+    "sensitivity_normalization": "10_log10_task_over_rest",
+    "qc_policy": "reuse_frozen_label_independent_task_candidate_status",
+    "unstable_peak_policy": "retain_if_all_fold_peaks_are_valid_and_report_reliability_without_outcome_based_exclusion",
+    "reliability_categories_by_three_fold_span_hz": {
+      "stable": "span <= 0.5",
+      "moderate": "0.5 < span <= 1.0",
+      "unstable": "span > 1.0"
+    }
+  },
+  "method_development_evidence": {
+    "subjects": 51,
+    "selected_method_valid_folds": 151,
+    "selected_method_total_folds": 153,
+    "selected_method_complete_subjects": 49,
+    "selected_method_median_three_fold_span_hz": 0.5,
+    "selected_method_complete_subjects_with_span_over_1_hz": 13,
+    "selection_used_individualized_task_outcome": false,
+    "candidate_table": {
+      "path": "docs/assets/individual_mu_method_development_peak_candidates.csv",
+      "sha256": "577ffa2ffa3f5c99f78bfc8f69d6a5dd4647847ec89146fc41540a09dac779bf"
+    },
+    "candidate_summary": {
+      "path": "docs/assets/individual_mu_method_development_candidate_summary.csv",
+      "sha256": "4b20703ae8e20a48364c587af1b177c5836d59d4bf7ff5926cfb19937c37098d"
+    }
+  },
+  "method_implementation": {
+    "module": {
+      "path": "eeg_project/individual_frequency.py",
+      "sha256": "77ae8e1cd856d08029a6085dbfdbd82a00ec133616c34d1f472f80e332354f10"
+    },
+    "cli": {
+      "path": "scripts/analyze_individual_mu_frequency.py",
+      "sha256": "ab343ce0956855073f918a00e86f158ea7a0789f73a17525ce3baac9ae2c8e4f"
+    },
+    "tests": {
+      "path": "tests/test_individual_mu_frequency_study.py",
+      "sha256": "a9a010abc0bd4a48d4069394fcd2aa0dd890dedd4b2c1f2d03565cd2ac476efe"
+    }
+  },
+  "leave_one_run_out": {
+    "runs": [
+      6,
+      10,
+      14
+    ],
+    "held_out_6_training_runs": [
+      10,
+      14
+    ],
+    "held_out_10_training_runs": [
+      6,
+      14
+    ],
+    "held_out_14_training_runs": [
+      6,
+      10
+    ]
+  },
+  "primary_method_questions": [
+    "Does the frozen rest-derived leave-one-run-out individualized band improve or preserve the negative-subject fraction relative to fixed 12-13 Hz in matched held-out evaluation subjects?",
+    "Does it improve or preserve the fraction of matched subjects with at least two of three negative held-out runs at C4 and C3?"
+  ],
+  "secondary_questions": [
+    "How much coverage and run-to-run peak reliability does the method achieve?",
+    "How does individualized performance compare with fixed broad 8-13 Hz?",
+    "Do subjects farther from 12.5 Hz show larger individualized-minus-fixed changes?",
+    "Are conclusions preserved in dB and QC sensitivity representations?"
+  ],
+  "evaluation_unit": "one_subject_after_aggregating_held_out_runs_and_trials",
+  "evaluation_metrics_to_freeze_before_evaluation": [
+    "coverage",
+    "negative_subject_fraction",
+    "at_least_two_of_three_negative_runs_fraction",
+    "paired_subject_median_difference",
+    "within_subject_run_dispersion",
+    "QC_direction_sensitivity",
+    "percent_and_db_direction_agreement"
+  ],
+  "primary_method_success_criteria_per_channel": {
+    "clear_improvement": {
+      "minimum_complete_subject_coverage_fraction": 0.8,
+      "minimum_negative_subject_fraction_gain": 0.05,
+      "minimum_at_least_two_negative_runs_fraction_gain": 0.05,
+      "requires_negative_median_paired_individualized_minus_fixed_percent": true,
+      "requires_negative_qc_sensitivity_median_paired_difference": true,
+      "requires_negative_median_paired_difference_db": true,
+      "requires_every_leave_one_subject_out_paired_median_difference_negative": true
+    },
+    "mixed_result": {
+      "minimum_complete_subject_coverage_fraction": 0.6,
+      "requires_negative_median_paired_individualized_minus_fixed_percent": true,
+      "requires_at_least_one_nonnegative_consistency_gain": true,
+      "maximum_allowed_loss_in_other_consistency_fraction": 0.05,
+      "requires_qc_and_db_direction_preserved": true
+    },
+    "no_improvement": "does_not_meet_clear_or_mixed_criteria"
+  },
+  "overall_method_category_rule": {
+    "clear_improvement": "both_C4_and_C3_are_clear_improvement",
+    "mixed_result": "at_least_one_channel_is_clear_or_mixed_and_neither_channel_is_no_improvement",
+    "no_improvement": "otherwise"
+  },
+  "paired_inference": {
+    "test": "one_sided_wilcoxon_signed_rank_individualized_less_than_fixed",
+    "unit": "subject_median",
+    "multiple_comparison_adjustment": "Holm_for_C4_and_C3",
+    "role": "supporting_not_method_category_defining"
+  },
+  "classification_performed": false,
+  "csp_performed": false,
+  "persist_full_tfr_arrays": false
+}

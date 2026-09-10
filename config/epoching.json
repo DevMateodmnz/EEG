@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "supported_runs": [
+    6,
+    10,
+    14
+  ],
+  "event_id": {
+    "T0": 1,
+    "T1": 2,
+    "T2": 3
+  },
+  "task_semantics": {
+    "T1": "both_fists_imagery",
+    "T2": "both_feet_imagery"
+  },
+  "rest_semantic": "rest",
+  "task_epoch": {
+    "tmin_seconds": -2.0,
+    "tmax_seconds": 4.0,
+    "baseline": null
+  },
+  "rest_epoch": {
+    "tmin_seconds": 0.0,
+    "tmax_seconds": 4.0,
+    "baseline": null
+  },
+  "provisional_task_analysis_interval_seconds": [
+    1.0,
+    3.0
+  ],
+  "filter_half_support_seconds": 1.65,
+  "trial_quality": {
+    "modified_robust_z_threshold": 3.5,
+    "frontal_channels": [
+      "Fp1",
+      "Fpz",
+      "Fp2",
+      "AF7",
+      "AF3",
+      "AF8"
+    ]
+  },
+  "persist_epoch_binaries": false
+}

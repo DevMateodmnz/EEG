@@ -1,0 +1,464 @@
+{
+  "schema_version": 1,
+  "study_stage": "initial_riemannian_methodology_frozen",
+  "parent_completed_milestone_git_commit": "51dad94",
+  "development_classifier_outcomes_inspected_at_freeze": false,
+  "evaluation_classifier_outcomes_inspected_at_freeze": false,
+  "evaluation_subject_EEG_loaded_at_freeze": false,
+  "evaluation_locked": true,
+  "question": "strict_zero_shot_fists_vs_feet_decoding_with_full_regularized_trial_covariance_geometry",
+  "cohorts": {
+    "development_subjects": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "evaluation_requested_subjects": [
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109
+    ],
+    "evaluation_eligible_subjects": [
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      89,
+      90,
+      91,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109
+    ],
+    "technically_incompatible_subjects": [
+      88,
+      92,
+      100
+    ]
+  },
+  "target": {
+    "classes": {
+      "both_fists_imagery": 0,
+      "both_feet_imagery": 1
+    },
+    "runs": [
+      6,
+      10,
+      14
+    ],
+    "task_interval_seconds": [
+      1.0,
+      3.0
+    ],
+    "trial_array_shape": [
+      64,
+      320
+    ],
+    "one_observation": "one_technically_valid_motor_imagery_task_trial"
+  },
+  "frozen_EEG_representation": {
+    "source": "existing_csp_task_data_volts",
+    "passband_hz": [
+      8.0,
+      30.0
+    ],
+    "filter_origin": "derived_continuously_filtered_copy_of_frozen_1_40_hz_average_referenced_run",
+    "target_interval_seconds": [
+      1.0,
+      3.0
+    ],
+    "channels": 64,
+    "samples_per_trial": 320,
+    "new_frequency_or_time_window_search": false,
+    "existing_label_independent_QC_policy_reused": true
+  },
+  "covariance": {
+    "estimator": "sklearn.covariance.LedoitWolf",
+    "assume_centered": false,
+    "regularization_reason": "average_reference_can_make_empirical_64_channel_trial_covariance_singular;_Ledoit_Wolf_yields_SPD_matrices",
+    "trace_normalization": true,
+    "trace_normalization_reason": "fixed_per_trial_global_scale_normalization_preserves_full_relative_spatial_covariance_without_fitting_any_target_distribution",
+    "matrix_shape": [
+      64,
+      64
+    ],
+    "must_be_symmetric_positive_definite": true
+  },
+  "tangent_space": {
+    "library": "pyriemann==0.12",
+    "reference_mean_metric": "riemann",
+    "mapping_metric": "riemann",
+    "reference_estimator": "affine_invariant_Riemannian_Karcher_mean_of_training_trial_covariances",
+    "mapping": "affine_invariant_logarithmic_map_at_frozen_training_reference",
+    "vectorization": "upper_triangle_with_sqrt_2_off_diagonal_weighting",
+    "feature_count": 2080,
+    "tsupdate": false,
+    "target_reference_or_tangent_basis_fit": false
+  },
+  "candidate_linear_classifiers": {
+    "shrinkage_lda": {
+      "pipeline": [
+        "training_only_StandardScaler",
+        "LinearDiscriminantAnalysis"
+      ],
+      "solver": "lsqr",
+      "shrinkage": "auto",
+      "priors": [
+        0.5,
+        0.5
+      ]
+    },
+    "l2_logistic_regression": {
+      "pipeline": [
+        "training_only_StandardScaler",
+        "LogisticRegression"
+      ],
+      "penalty": "l2",
+      "C": 1.0,
+      "solver": "lbfgs",
+      "max_iter": 5000,
+      "class_weight": null
+    }
+  },
+  "candidate_policy": {
+    "covariance_estimator_fixed_before_development": true,
+    "tangent_space_method_fixed_before_development": true,
+    "only_classifier_choice_developed": true,
+    "select_logistic_only_if_median_paired_gain_at_least": 0.01,
+    "and_fraction_logistic_better_at_least": 0.6,
+    "otherwise_select_simpler_shrinkage_lda": true,
+    "SVM_forbidden": true,
+    "random_forest_forbidden": true,
+    "neural_network_forbidden": true,
+    "new_frequency_or_time_window_search_forbidden": true
+  },
+  "development_cross_validation": {
+    "method": "leave_one_subject_out",
+    "fold_count": 20,
+    "training_subject_count_per_fold": 19,
+    "test_subject_count_per_fold": 1,
+    "training_trial_count_per_fold": 855,
+    "test_trial_count_per_fold": 45,
+    "all_three_runs_used_for_training_and_testing": true,
+    "one_primary_value_per_held_out_subject": true,
+    "primary_subject_score": "unweighted_mean_of_three_run_balanced_accuracies"
+  },
+  "final_evaluation_training": {
+    "fit_once_on_all_20_development_subjects": true,
+    "training_trial_count": 900,
+    "predict_each_evaluation_subject_independently": true,
+    "evaluation_subject_EEG_in_any_fit": false,
+    "evaluation_subject_labels_in_any_fit": false
+  },
+  "zero_shot_leakage_guards": {
+    "covariance_is_fixed_within_trial_only": true,
+    "reference_mean_fit_training_subjects_only": true,
+    "tangent_space_basis_fit_training_subjects_only": true,
+    "scaler_fit_training_subjects_only": true,
+    "classifier_fit_training_subjects_only": true,
+    "target_subject_feature_selection": false,
+    "target_subject_hyperparameter_selection": false,
+    "target_subject_centering": false,
+    "target_subject_scaling": false,
+    "target_subject_covariance_alignment": false,
+    "target_subject_transductive_normalization": false,
+    "target_subject_unlabeled_adaptation": false,
+    "target_tangent_space_update": false
+  },
+  "metrics": {
+    "primary": "unweighted_mean_of_three_run_balanced_accuracies_per_evaluation_subject",
+    "secondary": [
+      "pooled_accuracy",
+      "pooled_balanced_accuracy",
+      "fists_recall",
+      "feet_recall",
+      "confusion_matrix",
+      "run_balanced_accuracy",
+      "participant_run_range"
+    ],
+    "group_observational_unit": "participant",
+    "chance_balanced_accuracy": 0.5,
+    "useful_participant_descriptive_threshold": 0.6,
+    "high_participant_descriptive_threshold": 0.7
+  },
+  "success_criteria": {
+    "clear_representation_improvement": {
+      "minimum_Riemannian_median_balanced_accuracy": 0.6,
+      "minimum_median_Riemannian_minus_CSP": 0.03,
+      "minimum_fraction_Riemannian_better_than_CSP": 0.6,
+      "maximum_one_sided_exact_sign_p": 0.05,
+      "minimum_median_recall_each_class": 0.55,
+      "maximum_absolute_median_class_recall_difference": 0.1,
+      "minimum_QC_sensitive_median_Riemannian_minus_CSP": 0.02,
+      "maximum_increase_in_median_participant_run_range_vs_CSP": 0.03
+    },
+    "modest_improvement": {
+      "minimum_Riemannian_median_balanced_accuracy": 0.55,
+      "minimum_median_Riemannian_minus_CSP": 0.01,
+      "minimum_fraction_Riemannian_better_than_CSP": 0.55,
+      "minimum_median_recall_each_class": 0.5,
+      "maximum_absolute_median_class_recall_difference": 0.15,
+      "minimum_QC_sensitive_median_Riemannian_minus_CSP": 0.0
+    },
+    "otherwise": "no_improvement"
+  },
+  "group_inference": {
+    "bootstrap_median_confidence_interval": {
+      "resamples": 10000,
+      "confidence_level": 0.95,
+      "random_seed": 20260901
+    },
+    "paired_Riemannian_minus_CSP": "one_sided_exact_sign_test_supporting_only",
+    "paired_Riemannian_minus_spectral": "two_sided_wilcoxon_signed_rank_supporting_only",
+    "ties": "excluded_from_exact_sign_test"
+  },
+  "post_primary_exploration_only": [
+    "poor_historical_CSP_subgroup",
+    "historical_C3_fixed_fists_12_13_hz_ERD",
+    "historical_C4_fixed_fists_12_13_hz_ERD",
+    "central_peak_properties",
+    "participant_score_variability_vs_CSP",
+    "participant_run_range_vs_CSP"
+  ],
+  "persistence": {
+    "preserve_every_evaluation_prediction": true,
+    "persist_fit_audit_subject_identities": true,
+    "persist_compact_covariance_checkpoints": true,
+    "persist_full_EEG_arrays": false,
+    "persist_fitted_models": false,
+    "deterministic_report_regeneration_required": true
+  },
+  "historical_inputs": {
+    "preprocessing": {
+      "path": "config/preprocessing.json",
+      "sha256": "c330847fafe0e9713c8c4f1b64723f81311334a0070fa4f182111216d195cbd2"
+    },
+    "epoching": {
+      "path": "config/epoching.json",
+      "sha256": "6ff59b0bda51f8f86c5a583472818a829421d2d9f29f5b5bce7c5f16c9c7c652"
+    },
+    "within_final": {
+      "path": "config/within_subject_decoding_final.json",
+      "sha256": "72494d50c56ddcd0d1e10104c4e46fcacf1d92a1de0e181aca95d89f31bcecea"
+    },
+    "cross_initial": {
+      "path": "config/cross_subject_decoding.json",
+      "sha256": "b1b452900d952f126bad6557e98ce9dc79abb2de5e7a4f707fee2c1a09386277"
+    },
+    "cross_final": {
+      "path": "config/cross_subject_decoding_final.json",
+      "sha256": "010ebb002ef68616e1ef28cdd58b911d4e942079330f5eda1ae206831bba5518"
+    },
+    "spatial_final": {
+      "path": "config/spatial_personalization_final.json",
+      "sha256": "217af2f2dad3da5688b525d183b593fe4bf348e7e6335db2d5e2e0737949be5f"
+    },
+    "cross_core": {
+      "path": "eeg_project/cross_subject_decoding.py",
+      "sha256": "06d28f7e844e0f737dba94ecaa0a7b92f55ceeffa4d9b6e9e3e9ba8a1de62e28"
+    },
+    "cross_subject_scores": {
+      "path": "docs/assets/cross_subject_decoder_evaluation_subject_scores.csv",
+      "sha256": "446b3c70c9d67c60e6f4909af4fb73463c290ac3feee40fd734aa49cd351c201"
+    },
+    "cross_predictions": {
+      "path": "docs/assets/cross_subject_decoder_evaluation_predictions.csv",
+      "sha256": "5db8b9e0023daccc043cd4ac34ef8e7211587dd40f28173019e668f16e580ec8"
+    },
+    "cross_metadata": {
+      "path": "docs/assets/cross_subject_decoder_evaluation_metadata.json",
+      "sha256": "0f5d8fbc7cc3b310c0c952d079009ea98c3790eabf6406d6e62e15f66f23ba26"
+    },
+    "within_subject_scores": {
+      "path": "docs/assets/within_subject_decoder_evaluation_subject_scores.csv",
+      "sha256": "140759a27ae001d1f2b219ceef66815c75b5169f99a205c013d1e3837362633e"
+    },
+    "spatial_group_summary": {
+      "path": "docs/assets/spatial_personalization_evaluation_group_summary.csv",
+      "sha256": "a80293456866a9319cc1cacafcf0e6939b9f9c2b389c7db02f95882080255a9f"
+    },
+    "spatial_metadata": {
+      "path": "docs/assets/spatial_personalization_evaluation_metadata.json",
+      "sha256": "776ce39d5962902542a45938740c550d3eb344fa2b4edea70d3541aa70a8d3c3"
+    }
+  }
+}

@@ -1,0 +1,4 @@
+model,test_run,participant_count,median_balanced_accuracy,q25_balanced_accuracy,q75_balanced_accuracy
+riemannian_ledoit_wolf_tangent_lda,6,86,0.5625,0.5,0.6651785714285715
+riemannian_ledoit_wolf_tangent_lda,10,86,0.5714285714285714,0.484375,0.6651785714285715
+riemannian_ledoit_wolf_tangent_lda,14,86,0.5758928571428571,0.4933035714285714,0.6852678571428572

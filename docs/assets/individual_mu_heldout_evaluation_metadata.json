@@ -1,0 +1,29 @@
+{
+  "channel_method_categories": {
+    "C3": "no improvement",
+    "C4": "no improvement"
+  },
+  "classification_performed": false,
+  "configuration_sha256": "d6b8bd86cae9baa79d4addf65663944280bd5ec08240c202062d2c10de5005f9",
+  "csp_performed": false,
+  "evaluation_subject_count": 54,
+  "final_method_freeze_commit": "9eb3989",
+  "fixed_baseline_redefined": false,
+  "fixed_trial_artifact_sha256": {
+    "subjects01_20": "0c5a3df480468e8b96382ad39236518d7198d1f9e21d7ea4f6226f74960dfa9d",
+    "subjects21_109": "e58a97d84b2f4cd3f30fd6331750696b28faed9002bbb4e4b8ef592c5a22166a"
+  },
+  "full_tfr_arrays_persisted": false,
+  "held_out_run_used_for_its_peak_estimation": false,
+  "individualizable_fraction": 0.9259259259259259,
+  "individualizable_subject_count": 50,
+  "outcome_used_for_peak_estimation": false,
+  "overall_method_category": "no improvement",
+  "peak_reliability_counts": {
+    "moderate": 9,
+    "stable": 27,
+    "unstable": 14
+  },
+  "schema_version": 1,
+  "study_start_commit": "d322c58fc6474b7970eb113fe0448c4c5177b157"
+}

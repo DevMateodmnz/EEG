@@ -1,0 +1,6 @@
+scope,participant_count,median_fists_recall,median_feet_recall,median_feet_minus_fists_recall,fists_higher_count,feet_higher_count,tie_count,paired_test,paired_test_statistic,paired_test_p,analysis_role,pooled_fists_recall,pooled_feet_recall,both_class_recalls_at_or_below_0_5_count,only_fists_recall_at_or_below_0_5_count,only_feet_recall_at_or_below_0_5_count
+all_runs_subject_out_of_fold,86,0.6666666666666666,0.6666666666666666,0.03861989459815546,38,46,2,wilcoxon_two_sided_subject_recalls,1477.0,0.16954857270490342,post_hoc_class_asymmetry_diagnostic,,,,,
+held_out_run_6,86,0.75,0.75,0.0,40,38,8,descriptive_only,,,post_hoc_class_asymmetry_diagnostic,0.65527950310559,0.6933962264150944,,,
+held_out_run_10,86,0.7321428571428572,0.7142857142857143,0.008928571428571452,38,43,5,descriptive_only,,,post_hoc_class_asymmetry_diagnostic,0.6396255850234009,0.672926447574335,,,
+held_out_run_14,86,0.7321428571428572,0.75,0.008928571428571452,37,43,6,descriptive_only,,,post_hoc_class_asymmetry_diagnostic,0.670846394984326,0.7087227414330218,,,
+subjects_with_mean_balanced_accuracy_at_or_below_0_5,11,0.4090909090909091,0.45454545454545453,0.06324110671936756,,,,descriptive_only,,,post_hoc_poor_subject_class_pattern,,,2,5,4

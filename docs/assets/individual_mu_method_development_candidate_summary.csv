@@ -1,0 +1,10 @@
+method,search_low_hz,search_high_hz,minimum_prominence_db,development_subject_count,fold_count,well_defined_fold_count,boundary_fold_count,no_peak_fold_count,fold_coverage_fraction,subjects_with_all_three_estimates,complete_subject_coverage_fraction,complete_subjects_exact_three_fold_agreement,median_within_subject_peak_range_hz,median_pairwise_fold_peak_difference_hz,task_outcome_used_for_method_selection
+search_6_14Hz_prom_0.5dB,6.0,14.0,0.5,51,153,153,0,0,1.0,51,1.0,12,0.5,0.25,False
+search_6_14Hz_prom_1.5dB,6.0,14.0,1.5,51,153,142,8,3,0.9281045751633987,44,0.8627450980392157,12,0.25,0.25,False
+search_6_14Hz_prom_1dB,6.0,14.0,1.0,51,153,152,1,0,0.9934640522875817,50,0.9803921568627451,12,0.5,0.25,False
+search_7_14Hz_prom_0.5dB,7.0,14.0,0.5,51,153,153,0,0,1.0,51,1.0,12,0.5,0.25,False
+search_7_14Hz_prom_1.5dB,7.0,14.0,1.5,51,153,140,5,8,0.9150326797385621,43,0.8431372549019608,12,0.25,0.25,False
+search_7_14Hz_prom_1dB,7.0,14.0,1.0,51,153,151,0,2,0.9869281045751634,49,0.9607843137254902,12,0.5,0.25,False
+search_7_15Hz_prom_0.5dB,7.0,15.0,0.5,51,153,153,0,0,1.0,51,1.0,12,0.5,0.25,False
+search_7_15Hz_prom_1.5dB,7.0,15.0,1.5,51,153,142,4,7,0.9281045751633987,44,0.8627450980392157,11,0.375,0.25,False
+search_7_15Hz_prom_1dB,7.0,15.0,1.0,51,153,152,0,1,0.9934640522875817,50,0.9803921568627451,12,0.5,0.25,False

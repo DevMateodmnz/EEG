@@ -1,0 +1,3 @@
+model,true_fists_predicted_fists,true_fists_predicted_feet,true_feet_predicted_fists,true_feet_predicted_feet,fists_recall,feet_recall,trial_count
+spectral_baseline_6,993,930,819,1098,0.516380655226209,0.5727699530516432,3840
+csp_4_empirical,1198,725,814,1103,0.6229849193967759,0.575378195096505,3840

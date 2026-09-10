@@ -1,0 +1,2 @@
+participant_count,median_CSP_minus_spectral,q25_CSP_minus_spectral,q75_CSP_minus_spectral,CSP_better_count,spectral_better_count,tie_count,CSP_better_fraction,spectral_better_fraction,paired_wilcoxon_two_sided_p,group_observational_unit
+20,0.02827380952380959,-0.07142857142857148,0.12946428571428573,11,9,0,0.55,0.45,0.26109886169433594,participant

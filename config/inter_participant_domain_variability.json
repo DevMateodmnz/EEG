@@ -1,0 +1,190 @@
+{
+  "schema_version": 1,
+  "study_stage": "initial_inter_participant_geometry_frozen",
+  "parent_completed_milestone_git_commit": "d6102a6",
+  "evaluation_locked": true,
+  "cohorts": {
+    "development_subjects": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "evaluation_eligible_subjects": [
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      89,
+      90,
+      91,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109
+    ],
+    "technically_incompatible_subjects": [
+      88,
+      92,
+      100
+    ]
+  },
+  "representation": {
+    "source": "frozen_riemannian_decoding_final",
+    "passband_hz": [
+      8.0,
+      30.0
+    ],
+    "task_interval_seconds": [
+      1.0,
+      3.0
+    ],
+    "covariance": "LedoitWolf_assume_centered_false_trace_normalized_SPD",
+    "channels": 64
+  },
+  "geometry": {
+    "tangent_reference_fit_subjects": "development_subjects_only",
+    "metric": "riemann",
+    "tsupdate": false,
+    "prototype": "Riemannian_class_mean_per_subject_run",
+    "coordinate_definitions": {
+      "midpoint": "(fists + feet) / 2",
+      "task_direction": "fists - feet"
+    },
+    "source_summary": "mean_of_participant_mean_run_tangent_vectors_equal_participant_weight"
+  },
+  "outcomes": {
+    "historical_zero_shot_models": [
+      "csp_4_empirical",
+      "shrinkage_lda"
+    ],
+    "poor_zero_shot_definition": "historical_CSP_primary_mean_run_balanced_accuracy <= 0.50"
+  },
+  "primary_analyses": {
+    "identity_distances": [
+      "same_participant_different_task",
+      "different_participant_same_task",
+      "different_participant_different_task",
+      "same_participant_same_task_across_runs"
+    ],
+    "participant_direction": [
+      "magnitude",
+      "source_cosine_alignment",
+      "participant_mean_pairwise_cosine"
+    ],
+    "run_stability": "mean_of_three_pairwise_run_direction_cosines_per_participant",
+    "spearman_predictors": [
+      "source_midpoint_offset",
+      "source_direction_alignment",
+      "task_direction_magnitude"
+    ],
+    "multiplicity": "Holm correction across 3 predictors x 2 frozen zero-shot outcomes"
+  },
+  "inference": {
+    "observational_unit": "participant",
+    "correlation": "two_sided_Spearman",
+    "qc_sensitivity": "exclude_existing_QC_candidate_trials_only"
+  },
+  "prohibitions": [
+    "no_new_decoder",
+    "no_embedding_search",
+    "no_target_fitted_tangent_reference",
+    "no_outcome_driven_variable_search"
+  ],
+  "historical_inputs": {
+    "riemannian_scores": "docs/assets/riemannian_decoder_evaluation_subject_scores.csv",
+    "csp_scores": "docs/assets/cross_subject_decoder_evaluation_subject_scores.csv",
+    "riemannian_metadata": "docs/assets/riemannian_decoder_evaluation_metadata.json"
+  }
+}

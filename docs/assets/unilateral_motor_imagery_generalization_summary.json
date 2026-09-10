@@ -1,0 +1,102 @@
+{
+  "classification": "GENERALIZATION_REPLICATION",
+  "comparisons": {
+    "csp_minus_baseline": {
+      "bootstrap_median_95": [
+        0.022321428571428603,
+        0.0684523809523809
+      ],
+      "holm_adjusted_p": 0.0036919254613181065,
+      "median_difference": 0.0416666666666666,
+      "paired_n": 86,
+      "wilcoxon_p": 0.0036919254613181065,
+      "wilcoxon_statistic": 1134.0
+    },
+    "unilateral_minus_bilateral_csp": {
+      "bootstrap_median_95": [
+        -0.13095238095238088,
+        -0.026785714285714246
+      ],
+      "holm_adjusted_p": 2.5822103758866005e-06,
+      "median_difference": -0.07142857142857145,
+      "paired_n": 86,
+      "wilcoxon_p": 1.2911051879433002e-06,
+      "wilcoxon_statistic": 699.5
+    }
+  },
+  "config_sha256": "a3ac9a10a3083b0c678554c8f9b9329e8f5a22860b7e5dd1588f81ce24615446",
+  "matched_bilateral_subject_count": 86,
+  "median_csp_fold_range": 0.17410714285714282,
+  "model_summaries": [
+    {
+      "bootstrap_median_95": [
+        0.5238095238095237,
+        0.5610119047619047
+      ],
+      "chance_test": {
+        "above_count": 59,
+        "below_count": 27,
+        "one_sided_exact_sign_p": 0.00036585503265620435,
+        "tie_count": 0
+      },
+      "fold_count": 258,
+      "iqr_balanced_accuracy": [
+        0.4761904761904762,
+        0.6063988095238095
+      ],
+      "mean_balanced_accuracy": 0.543500830564784,
+      "median_balanced_accuracy": 0.5476190476190476,
+      "model": "spectral_baseline_6",
+      "participant_count": 86,
+      "performance_bins": {
+        "0_5_to_lt_0_6": 33,
+        "0_6_to_lt_0_7": 21,
+        "0_7_to_lt_0_8": 4,
+        "ge_0_8": 1,
+        "lt_0_5": 27
+      },
+      "range_balanced_accuracy": [
+        0.2857142857142857,
+        0.8690476190476191
+      ],
+      "sd_balanced_accuracy": 0.10044747883531344
+    },
+    {
+      "bootstrap_median_95": [
+        0.5223214285714286,
+        0.5982142857142857
+      ],
+      "chance_test": {
+        "above_count": 58,
+        "below_count": 23,
+        "one_sided_exact_sign_p": 6.330557598223764e-05,
+        "tie_count": 5
+      },
+      "fold_count": 258,
+      "iqr_balanced_accuracy": [
+        0.4970238095238095,
+        0.6488095238095238
+      ],
+      "mean_balanced_accuracy": 0.5898740310077518,
+      "median_balanced_accuracy": 0.5491071428571428,
+      "model": "csp_4_empirical",
+      "participant_count": 86,
+      "performance_bins": {
+        "0_5_to_lt_0_6": 29,
+        "0_6_to_lt_0_7": 18,
+        "0_7_to_lt_0_8": 9,
+        "ge_0_8": 7,
+        "lt_0_5": 23
+      },
+      "range_balanced_accuracy": [
+        0.40178571428571425,
+        1.0
+      ],
+      "sd_balanced_accuracy": 0.1320545195869534
+    }
+  ],
+  "parent_bilateral_config_sha256": "ab7770beedb35e7c3bcc74902966fdc1874bbafd624fe40bf8aca1da5518234b",
+  "schema_version": 1,
+  "study_id": "unilateral_motor_imagery_generalization",
+  "unilateral_eligible_subject_count": 86
+}

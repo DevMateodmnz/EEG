@@ -1,0 +1,5 @@
+previous_calibration_size,current_calibration_size,added_labeled_trials,participant_count,median_incremental_gain,q25_incremental_gain,q75_incremental_gain,improved_count,worsened_count,tie_count,improved_fraction,analysis_role
+0,4,4,86,0.007440476190476164,-0.03497023809523808,0.06956845238095244,46,39,1,0.5348837209302325,post_primary_exploratory_saturation
+4,8,4,86,0.0,-0.016369047619047644,0.01599702380952378,33,37,16,0.38372093023255816,post_primary_exploratory_saturation
+8,12,4,86,0.0,-0.011904761904761973,0.01934523809523811,38,34,14,0.4418604651162791,post_primary_exploratory_saturation
+12,14,2,86,0.0,-0.013020833333333287,0.005208333333333343,25,34,27,0.29069767441860467,post_primary_exploratory_saturation

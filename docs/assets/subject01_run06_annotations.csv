@@ -1,0 +1,31 @@
+index,description,condition,onset_seconds,duration_seconds,sample_index
+0,T0,Rest,0.0,4.2,0
+1,T2,Both feet imagery,4.2,4.1,672
+2,T0,Rest,8.3,4.2,1328
+3,T1,Both fists imagery,12.5,4.1,2000
+4,T0,Rest,16.6,4.2,2656
+5,T1,Both fists imagery,20.8,4.1,3328
+6,T0,Rest,24.9,4.2,3984
+7,T2,Both feet imagery,29.1,4.1,4656
+8,T0,Rest,33.2,4.2,5312
+9,T1,Both fists imagery,37.4,4.1,5984
+10,T0,Rest,41.5,4.2,6640
+11,T2,Both feet imagery,45.7,4.1,7312
+12,T0,Rest,49.8,4.2,7968
+13,T2,Both feet imagery,54.0,4.1,8640
+14,T0,Rest,58.1,4.2,9296
+15,T1,Both fists imagery,62.3,4.1,9968
+16,T0,Rest,66.4,4.2,10624
+17,T1,Both fists imagery,70.6,4.1,11296
+18,T0,Rest,74.7,4.2,11952
+19,T2,Both feet imagery,78.9,4.1,12624
+20,T0,Rest,83.0,4.2,13280
+21,T2,Both feet imagery,87.2,4.1,13952
+22,T0,Rest,91.3,4.2,14608
+23,T1,Both fists imagery,95.5,4.1,15280
+24,T0,Rest,99.6,4.2,15936
+25,T1,Both fists imagery,103.8,4.1,16608
+26,T0,Rest,107.9,4.2,17264
+27,T2,Both feet imagery,112.1,4.1,17936
+28,T0,Rest,116.2,4.2,18592
+29,T2,Both feet imagery,120.4,4.1,19264

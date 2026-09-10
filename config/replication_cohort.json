@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "development_subject": 1,
+  "replication_subjects": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "runs": [
+    6,
+    10,
+    14
+  ],
+  "frozen_configuration_paths": {
+    "preprocessing": "config/preprocessing.json",
+    "epoching": "config/epoching.json",
+    "event_related_spectral": "config/event_related_spectral.json",
+    "trial_quality": "config/trial_quality.json"
+  },
+  "primary_replication_features": [
+    [
+      "both_fists_imagery",
+      "C4",
+      "central_12_13"
+    ],
+    [
+      "both_fists_imagery",
+      "C3",
+      "central_12_13"
+    ]
+  ],
+  "secondary_features": [
+    [
+      "both_fists_imagery",
+      "C3",
+      "mu"
+    ],
+    [
+      "both_fists_imagery",
+      "C4",
+      "mu"
+    ],
+    [
+      "both_fists_imagery",
+      "Cz",
+      "mu"
+    ],
+    [
+      "both_fists_imagery",
+      "Cz",
+      "beta"
+    ],
+    [
+      "both_feet_imagery",
+      "C3",
+      "central_12_13"
+    ],
+    [
+      "both_feet_imagery",
+      "C4",
+      "central_12_13"
+    ],
+    [
+      "both_feet_imagery",
+      "C3",
+      "mu"
+    ],
+    [
+      "both_feet_imagery",
+      "Cz",
+      "mu"
+    ],
+    [
+      "both_feet_imagery",
+      "C4",
+      "mu"
+    ],
+    [
+      "both_feet_imagery",
+      "Cz",
+      "beta"
+    ]
+  ],
+  "technical_eligibility": {
+    "required_sampling_frequency_hz": 160.0,
+    "required_channel_count": 64,
+    "required_annotation_count_per_run": 30,
+    "required_rest_annotation_count_per_run": 15,
+    "required_total_task_annotation_count_per_run": 15,
+    "allowed_T1_counts_per_run": [
+      7,
+      8
+    ],
+    "allowed_T2_counts_per_run": [
+      7,
+      8
+    ],
+    "required_all_runs_for_primary_replication": true,
+    "allow_deterministic_channel_name_standardization": true,
+    "confirmed_flat_channel_standard_deviation_uV": 0.0,
+    "scientifically_unusual_outcomes_remain_eligible": true,
+    "outcome_based_exclusion_forbidden": true
+  },
+  "replication_success_criteria": {
+    "predicted_direction": "negative",
+    "strong_minimum_subject_fraction_in_direction": 0.6666666666666666,
+    "strong_requires_cohort_median_in_direction": true,
+    "strong_minimum_fraction_with_at_least_two_of_three_runs_in_direction": 0.5,
+    "strong_requires_qc_sensitivity_direction": true,
+    "strong_requires_leave_one_subject_out_direction": true,
+    "mixed_minimum_subject_fraction_in_direction": 0.5,
+    "mixed_requires_cohort_median_in_direction": true
+  },
+  "central_peak_exploration": {
+    "channels": [
+      "C3",
+      "Cz",
+      "C4"
+    ],
+    "integer_frequency_centers_hz": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "welch_window_seconds": 3.0,
+    "welch_overlap_fraction": 0.5,
+    "minimum_peak_prominence_db_over_band_median": 1.0,
+    "may_redefine_primary_replication_band": false
+  },
+  "group_inference": {
+    "primary_test": "one_sided_exact_sign_test",
+    "null_negative_direction_probability": 0.5,
+    "multiple_comparison_adjustment": "holm_for_two_primary_features",
+    "direction_proportion_interval": "wilson_95_percent",
+    "bootstrap_subject_median_resamples": 20000,
+    "bootstrap_seed": 20260828
+  },
+  "cache_policy": "regenerate_three_sensor_tfr_and_persist_compact_summaries_only",
+  "persist_full_tfr_arrays": false
+}

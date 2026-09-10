@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "stage": "final_alignment_adaptation_frozen",
+  "initial_commit": "b705eda",
+  "development_commit": "139d8a8",
+  "evaluation_unlocked_after_commit": true,
+  "initial_policy": {
+    "path": "config/domain_vs_direction_alignment.json",
+    "sha256": "91d128b2dfaa8e39789e1588b20ff4e2bd61bcf2539c731af881a2eda55dde56"
+  },
+  "implementation": {
+    "path": "eeg_project/domain_vs_direction_alignment.py",
+    "sha256": "af37795fb41904957aec0e402d1058f9a872a3072b037c700554ee3ca3fd5bfb"
+  },
+  "reference": {
+    "path": "docs/assets/inter_participant_domain_variability_development_tangent_reference.npy",
+    "sha256": "06dc76587e653cfc1c279712c9faa01059ded8073ec0c3a1a96c72a288c475fd"
+  },
+  "source_vectors": {
+    "path": "docs/assets/inter_participant_domain_variability_development_source_vectors.npy",
+    "sha256": "c975e5b2deb7ca463c4df3cc7290fb10550aa4f74f46fbf2df2668b1f790376e"
+  },
+  "practical_gate": {
+    "minimum_median_gain": 0.02,
+    "minimum_improved_fraction": 0.6
+  },
+  "inference": "two_sided_Wilcoxon_Holm_three"
+}

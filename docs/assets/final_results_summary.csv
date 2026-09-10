@@ -1,0 +1,7 @@
+result,cohort,value,provenance
+Fists_C4_12_13Hz_negative,replication_2_109,87/105,docs/full_cohort_replication.md
+Fists_C3_12_13Hz_negative,replication_2_109,91/105,docs/full_cohort_replication.md
+Within_subject_CSP_median_BA,evaluation_21_109,0.658,docs/within_subject_decoding.md
+Zero_shot_CSP_median_BA,evaluation_21_109,0.570,docs/cross_subject_decoding.md
+Target_CSP_all_two_run_median_BA,evaluation_21_109,0.661,docs/calibration_quantity_and_diversity.md
+Final_28_label_median_BA,evaluation_21_109,0.650,docs/final_calibration_learning_curve.md

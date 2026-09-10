@@ -1,0 +1,2 @@
+subgroup,participant_count,median_C_minus_B,q25_C_minus_B,q75_C_minus_B,C_better_count,B_better_count,tie_count,median_C_balanced_accuracy,analysis_role,regression_to_mean_caution
+historical_zero_shot_CSP_at_or_below_0_50,21,0.0267857142857143,-0.017857142857142794,0.06250000000000011,14,7,0,0.5833333333333334,post_primary_exploratory_subgroup,True

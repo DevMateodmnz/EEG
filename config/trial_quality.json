@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "quality_metrics": [
+    "maximum_peak_to_peak",
+    "median_channel_peak_to_peak",
+    "frontal_maximum_peak_to_peak",
+    "maximum_absolute_sample_step",
+    "minimum_channel_standard_deviation",
+    "median_channel_standard_deviation"
+  ],
+  "robust_z_threshold": 3.5,
+  "strong_review_robust_z_threshold": 6.0,
+  "strong_review_minimum_independent_scalar_flags": 2,
+  "candidate_policy": "retain_primary_flag_metadata_sensitivity_only",
+  "absolute_amplitudes_are_review_evidence_only": true,
+  "normalizations": [
+    "percent_change",
+    "db_ratio"
+  ],
+  "sensitivity_sets": [
+    "all_trials",
+    "exclude_all_task_candidates",
+    "exclude_strong_review_candidates",
+    "exclude_first_pair_per_run",
+    "configured_timing_grid"
+  ],
+  "trimmed_mean_fraction_each_tail": 0.2,
+  "stability_criteria": {
+    "same_direction_all_three_runs": true,
+    "qc_sensitivity_preserves_direction": true,
+    "minimum_timing_combinations_same_direction": 10,
+    "minimum_trial_direction_fraction": 0.6666666666666666,
+    "normalization_preserves_direction": true,
+    "maximum_absolute_denominator_spearman_rho": 0.5,
+    "maximum_leave_one_candidate_median_shift_percentage_points": 10.0
+  },
+  "stability_grades": {
+    "high_minimum_passed_criteria": 7,
+    "moderate_minimum_passed_criteria": 5
+  },
+  "primary_features": [
+    [
+      "both_fists_imagery",
+      "C3",
+      "central_12_13"
+    ],
+    [
+      "both_fists_imagery",
+      "C4",
+      "central_12_13"
+    ],
+    [
+      "both_fists_imagery",
+      "C3",
+      "mu"
+    ],
+    [
+      "both_fists_imagery",
+      "C4",
+      "mu"
+    ],
+    [
+      "both_fists_imagery",
+      "Cz",
+      "mu"
+    ],
+    [
+      "both_fists_imagery",
+      "Cz",
+      "beta"
+    ],
+    [
+      "both_feet_imagery",
+      "C3",
+      "central_12_13"
+    ],
+    [
+      "both_feet_imagery",
+      "C4",
+      "central_12_13"
+    ],
+    [
+      "both_feet_imagery",
+      "C3",
+      "mu"
+    ],
+    [
+      "both_feet_imagery",
+      "Cz",
+      "mu"
+    ],
+    [
+      "both_feet_imagery",
+      "C4",
+      "mu"
+    ],
+    [
+      "both_feet_imagery",
+      "Cz",
+      "beta"
+    ]
+  ],
+  "quality_decisions_must_not_use_condition_labels": true,
+  "ica_policy": "defer_pending_dedicated_evidence_milestone"
+}

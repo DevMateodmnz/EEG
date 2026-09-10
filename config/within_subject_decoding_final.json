@@ -1,0 +1,463 @@
+{
+  "schema_version": 1,
+  "study_stage": "final_decoder_method_frozen",
+  "study_start_git_commit": "4dcbc16ce12703db03569f407c7bf75a851b22ee",
+  "initial_decoder_freeze_git_commit": "14e32ae",
+  "decoder_implementation_git_commit": "49a51bc",
+  "decoder_development_git_commit": "bf27724",
+  "evaluation_classifier_outcomes_inspected_at_final_freeze": false,
+  "evaluation_unlocked_after_this_freeze_commit": true,
+  "initial_policy": {
+    "path": "config/within_subject_decoding.json",
+    "sha256": "756728ca1a88037b1d609f16e695303d1a00eaa1b6184d75fe567708629e76f9"
+  },
+  "cohorts": {
+    "decoder_development_subjects": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "decoder_evaluation_requested_subjects": [
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109
+    ],
+    "decoder_evaluation_eligible_subjects": [
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      89,
+      90,
+      91,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109
+    ],
+    "technically_incompatible_subjects": [
+      88,
+      92,
+      100
+    ]
+  },
+  "target": {
+    "classes": {
+      "both_fists_imagery": 0,
+      "both_feet_imagery": 1
+    },
+    "T0_included": false,
+    "runs": [
+      6,
+      10,
+      14
+    ],
+    "task_interval_seconds": [
+      1.0,
+      3.0
+    ],
+    "interval_endpoint_policy": "start_inclusive_stop_exclusive_320_samples_at_160_hz"
+  },
+  "cross_validation": {
+    "method": "leave_one_run_out",
+    "folds": [
+      {
+        "test_run": 6,
+        "training_runs": [
+          10,
+          14
+        ]
+      },
+      {
+        "test_run": 10,
+        "training_runs": [
+          6,
+          14
+        ]
+      },
+      {
+        "test_run": 14,
+        "training_runs": [
+          6,
+          10
+        ]
+      }
+    ],
+    "random_trial_split_forbidden": true,
+    "subject_isolation_required": true,
+    "fit_CSP_scaler_and_LDA_on_training_runs_only": true,
+    "each_trial_predicted_exactly_once_out_of_run": true
+  },
+  "selected_spectral_baseline": {
+    "candidate_name": "spectral_baseline_6",
+    "input": "frozen_1_40_hz_average_referenced_task_epoch",
+    "channels": [
+      "C3",
+      "Cz",
+      "C4"
+    ],
+    "bands_hz": {
+      "mu": [
+        8.0,
+        13.0
+      ],
+      "beta": [
+        14.0,
+        30.0
+      ]
+    },
+    "welch": {
+      "window": "hann",
+      "window_samples": 320,
+      "overlap_samples": 0,
+      "detrend": "constant",
+      "scaling": "density",
+      "frequency_resolution_hz": 0.5
+    },
+    "feature": "mean_10log10_psd_across_inclusive_band_bins",
+    "feature_count": 6
+  },
+  "selected_csp_decoder": {
+    "candidate_name": "csp_4_empirical",
+    "input": "derived_continuously_filtered_copy_of_frozen_1_40_hz_run",
+    "feature_filter": {
+      "passband_hz": [
+        8.0,
+        30.0
+      ],
+      "transition_bandwidth_hz": [
+        4.0,
+        10.0
+      ],
+      "method": "fir",
+      "fir_design": "firwin",
+      "fir_window": "hamming",
+      "filter_length_samples": 133,
+      "phase": "zero",
+      "pad": "reflect_limited"
+    },
+    "n_components": 4,
+    "covariance_regularization": null,
+    "cov_est": "concat",
+    "transform_into": "average_power",
+    "log": true,
+    "norm_trace": false,
+    "component_order": "mutual_info",
+    "rank": "MNE_automatic_estimation"
+  },
+  "shared_classifier": {
+    "scaler": {
+      "class": "StandardScaler",
+      "with_mean": true,
+      "with_std": true,
+      "fit_training_fold_only": true
+    },
+    "lda": {
+      "class": "LinearDiscriminantAnalysis",
+      "solver": "lsqr",
+      "shrinkage": "auto",
+      "priors": [
+        0.5,
+        0.5
+      ],
+      "fit_training_fold_only": true
+    }
+  },
+  "development_evidence": {
+    "selection_rule": "highest_cohort_median_subject_mean_fold_balanced_accuracy_with_predefined_0_01_tie_preferences",
+    "selected_baseline_median_balanced_accuracy": 0.5699404761904762,
+    "selected_csp_median_balanced_accuracy": 0.6755952380952381,
+    "evaluation_subject_outcome_used": false,
+    "artifacts": {
+      "candidate_summary": {
+        "path": "docs/assets/within_subject_decoder_development_candidate_summary.csv",
+        "sha256": "cc5841dbc06470a97f43e6600f0701b1bd4ab967a8e326689cb3d4388471b021"
+      },
+      "fold_scores": {
+        "path": "docs/assets/within_subject_decoder_development_fold_scores.csv",
+        "sha256": "e3cdd7efadd89f87913ae4507e681c0f76f851b0e4fa4b504e8ee2c8ac00205d"
+      },
+      "subject_scores": {
+        "path": "docs/assets/within_subject_decoder_development_subject_scores.csv",
+        "sha256": "b9c3fc2fd5c7b945b8c86e0e75fe0dea914956825c7a65fb2e4c6d6d3c19762f"
+      },
+      "metadata": {
+        "path": "docs/assets/within_subject_decoder_development_metadata.json",
+        "sha256": "fd843b12edb1abac5a1a28a08457e8233afd83db94621215cf640e9553c89d4e"
+      },
+      "representative_patterns": {
+        "path": "docs/assets/within_subject_decoder_development_representative_csp_patterns.png",
+        "sha256": "c5bebfce5c9ea932136a1fab07858e7aa95bdf3043b5bc41d84ee525d039c6e5"
+      }
+    }
+  },
+  "frozen_method_implementation": {
+    "core": {
+      "path": "eeg_project/decoding.py",
+      "sha256": "7b03ce4778e92525bba0797411e36fe11ec5777c53ddc1337bc0aab93d1b4ca9"
+    },
+    "synthetic_and_leakage_tests": {
+      "path": "tests/test_decoding.py",
+      "sha256": "d29a17332201db63e2f8cbf10704daf032694ddb01360bcc6f0ced7922431636"
+    }
+  },
+  "metrics": {
+    "primary": "unweighted_mean_of_three_held_out_run_balanced_accuracies_per_subject",
+    "chance_balanced_accuracy": 0.5,
+    "secondary": [
+      "accuracy",
+      "macro_f1",
+      "roc_auc",
+      "fists_recall",
+      "feet_recall",
+      "confusion_matrix"
+    ],
+    "group_observational_unit": "participant"
+  },
+  "quality_policy": {
+    "primary": "all_technically_valid_trials",
+    "sensitivity": "refit_and_evaluate_copied_folds_after_excluding_predefined_QC_candidates",
+    "classifier_outcome_never_defines_QC": true,
+    "misclassified_trials_never_deleted": true,
+    "master_epochs_mutated": false
+  },
+  "evaluation_success_criteria": {
+    "useful_decoding_signal": {
+      "minimum_cohort_median_balanced_accuracy": 0.6,
+      "minimum_fraction_subjects_above_0_5": 0.65,
+      "minimum_fraction_subjects_with_at_least_two_folds_above_0_5": 0.55,
+      "minimum_median_recall_each_class": 0.55,
+      "maximum_absolute_difference_between_median_class_recalls": 0.1,
+      "minimum_qc_cohort_median_minus_primary_cohort_median": -0.02,
+      "minimum_csp_minus_baseline_paired_median": -0.02,
+      "minimum_leave_one_subject_out_cohort_median": 0.58
+    },
+    "mixed_decoding_evidence": {
+      "minimum_cohort_median_balanced_accuracy": 0.55,
+      "minimum_fraction_subjects_above_0_5": 0.55,
+      "minimum_median_recall_each_class": 0.5,
+      "maximum_absolute_difference_between_median_class_recalls": 0.15,
+      "minimum_qc_cohort_median_minus_primary_cohort_median": -0.03
+    },
+    "otherwise": "no_convincing_decoding"
+  },
+  "csp_added_value_criteria": {
+    "clear_added_value": {
+      "minimum_paired_median_difference": 0.03,
+      "minimum_fraction_csp_better": 0.6,
+      "minimum_qc_paired_median_difference": 0.02
+    },
+    "modest_added_value": {
+      "minimum_paired_median_difference_exclusive": 0.0,
+      "minimum_fraction_csp_better_exclusive": 0.5
+    },
+    "otherwise": "no_added_value"
+  },
+  "group_inference": {
+    "primary": "one_sided_exact_sign_test_subject_balanced_accuracy_above_0_5",
+    "ties_at_0_5": "excluded",
+    "paired_model_test": "two_sided_wilcoxon_signed_rank_supporting_only",
+    "bootstrap_median_confidence_interval": {
+      "resamples": 10000,
+      "confidence_level": 0.95,
+      "random_seed": 20260829
+    },
+    "real_data_permutation_test": "not_planned",
+    "rationale": "group inference is participant-level and valid permutation would require full CSP refits; synthetic full-pipeline permutation already verifies supervision"
+  },
+  "post_evaluation_exploration_only": [
+    "C3_fixed_ERD_vs_CSP_balanced_accuracy",
+    "C4_fixed_ERD_vs_CSP_balanced_accuracy",
+    "central_peak_frequency_vs_CSP_balanced_accuracy",
+    "individual_mu_availability_and_reliability_vs_CSP_balanced_accuracy",
+    "run_difficulty",
+    "QC_candidate_error_rate",
+    "trial_counterbalance"
+  ],
+  "persistence": {
+    "preserve_every_primary_and_QC_out_of_fold_prediction": true,
+    "persist_compact_fold_subject_group_tables": true,
+    "persist_full_feature_arrays": false,
+    "persist_fitted_models": false,
+    "cross_subject_classifier_performed": false,
+    "deep_learning_performed": false
+  }
+}

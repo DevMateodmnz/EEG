@@ -1,0 +1,7 @@
+relationship,subject_count,spearman_rho,two_sided_unadjusted_p,analysis_role,available_count,available_median_balanced_accuracy,unavailable_count,unavailable_median_balanced_accuracy
+C4_fixed_ERD,86,-0.5357198484555793,1.0657948102110687e-07,post_evaluation_exploratory_only,,,,
+C3_fixed_ERD,86,-0.5889540480572978,2.4516043812936374e-09,post_evaluation_exploratory_only,,,,
+historical_central_peak_frequency,69,0.38334501123174564,0.0011487967067198971,post_evaluation_exploratory_only,,,,
+IMF_peak_frequency,43,0.0705768544580726,0.652906967035252,post_evaluation_exploratory_only,,,,
+IMF_peak_span_reliability,43,-0.46119034716782015,0.0018544006218319292,post_evaluation_exploratory_only,,,,
+IMF_availability_group_medians,45,,,post_evaluation_exploratory_only,43,0.6577380952380952,2,0.6413690476190476

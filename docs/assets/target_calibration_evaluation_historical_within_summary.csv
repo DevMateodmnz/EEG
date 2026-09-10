@@ -1,0 +1,6 @@
+calibration_size,participant_count,median_historical_within_subject_balanced_accuracy,median_calibrated_balanced_accuracy,difference_of_medians_calibrated_minus_within,median_paired_calibrated_minus_within,calibrated_better_count,within_better_count,tie_count,analysis_role
+0,86,0.6577380952380952,0.5699404761904762,-0.08779761904761907,-0.041666666666666796,23,61,2,post_primary_descriptive_nonidentical_designs
+4,86,0.6577380952380952,0.6063988095238095,-0.0513392857142857,-0.0424107142857143,27,58,1,post_primary_descriptive_nonidentical_designs
+8,86,0.6577380952380952,0.6168154761904763,-0.04092261904761896,-0.031994047619047616,30,53,3,post_primary_descriptive_nonidentical_designs
+12,86,0.6577380952380952,0.6145833333333334,-0.04315476190476186,-0.03348214285714288,28,56,2,post_primary_descriptive_nonidentical_designs
+14,86,0.6577380952380952,0.613095238095238,-0.044642857142857206,-0.03348214285714293,27,57,2,post_primary_descriptive_nonidentical_designs

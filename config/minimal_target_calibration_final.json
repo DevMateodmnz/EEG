@@ -1,0 +1,433 @@
+{
+  "schema_version": 1,
+  "study_stage": "final_minimal_target_calibration_method_frozen",
+  "parent_completed_milestone_git_commit": "6dca561",
+  "initial_calibration_freeze_git_commit": "d4cff9a",
+  "calibration_implementation_git_commit": "c81388c",
+  "calibration_development_git_commit": "b918cb4",
+  "evaluation_calibration_outcomes_inspected_at_final_freeze": false,
+  "evaluation_subject_EEG_loaded_for_calibration_at_final_freeze": false,
+  "evaluation_unlocked_after_this_freeze_commit": true,
+  "initial_policy": {
+    "path": "config/minimal_target_calibration.json",
+    "sha256": "832281b8da62dac8ac8073df16b2018b145cfb89036a69d747d55c7dc19b399b"
+  },
+  "frozen_calibration_implementation": {
+    "path": "eeg_project/target_calibration.py",
+    "sha256": "1665635d912f76f2c027af41c41969548ae43df2d194db31ecfa8d0ce4cc8fc9"
+  },
+  "cohorts": {
+    "source_training_subjects": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "evaluation_requested_subjects": [
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109
+    ],
+    "evaluation_eligible_subjects": [
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      89,
+      90,
+      91,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109
+    ],
+    "technically_incompatible_subjects": [
+      88,
+      92,
+      100
+    ]
+  },
+  "selected_calibration_method": {
+    "name": "threshold",
+    "source_CSP_frozen": true,
+    "source_scaler_frozen": true,
+    "source_LDA_coefficients_frozen": true,
+    "target_operation": "select_decision_threshold_maximizing_calibration_balanced_accuracy",
+    "threshold_candidates": "midpoints_between_sorted_unique_source_LDA_scores_plus_outer_boundaries",
+    "tie_breaking": "minimum_absolute_threshold_then_lower_numeric_threshold",
+    "target_LDA_evaluated": false
+  },
+  "source_model": {
+    "name": "csp_4_empirical",
+    "training_subject_count": 20,
+    "expected_training_trial_count": 900,
+    "fit_once": true,
+    "passband_hz": [
+      8.0,
+      30.0
+    ],
+    "task_interval_seconds": [
+      1.0,
+      3.0
+    ],
+    "CSP_components": 4,
+    "CSP_covariance_regularization": null,
+    "source_CSP_fit_target_EEG": false,
+    "source_scaler_fit_target_EEG": false
+  },
+  "calibration_curve": {
+    "ordered_total_trials": [
+      0,
+      4,
+      8,
+      12,
+      14
+    ],
+    "trials_per_class": {
+      "0": 0,
+      "4": 2,
+      "8": 4,
+      "12": 6,
+      "14": 7
+    },
+    "selection": "first_n_trials_per_class_by_annotation_chronology_within_calibration_run",
+    "balanced": true,
+    "nested": true,
+    "report_every_size": true
+  },
+  "evaluation_scenarios": [
+    {
+      "calibration_run": 6,
+      "test_runs": [
+        10,
+        14
+      ]
+    },
+    {
+      "calibration_run": 10,
+      "test_runs": [
+        6,
+        14
+      ]
+    },
+    {
+      "calibration_run": 14,
+      "test_runs": [
+        6,
+        10
+      ]
+    }
+  ],
+  "target_operations": {
+    "labeled_calibration_scores_used_for_threshold": true,
+    "test_run_labels_used": false,
+    "test_run_EEG_used_for_calibration": false,
+    "unlabeled_test_EEG_used_for_adaptation": false,
+    "target_CSP_refit": false,
+    "target_scaler_refit": false,
+    "target_covariance_alignment": false,
+    "target_specific_preprocessing": false
+  },
+  "primary_evaluation": {
+    "metric": "participant_mean_test_run_balanced_accuracy",
+    "participant_aggregation": "unweighted_mean_of_six_calibration_scenario_test_run_balanced_accuracies",
+    "size_zero_aggregation": "unweighted_mean_of_three_unique_run_balanced_accuracies_equivalent_to_six_repeats",
+    "matched_zero_comparison": true,
+    "group_observational_unit": "participant",
+    "secondary": [
+      "accuracy",
+      "fists_recall",
+      "feet_recall",
+      "confusion_matrix",
+      "calibration_run_balanced_accuracy",
+      "QC_sensitivity"
+    ]
+  },
+  "primary_comparisons": {
+    "sizes_vs_matched_zero": [
+      4,
+      8,
+      12,
+      14
+    ],
+    "report_improved_worsened_tied": true,
+    "report_threshold_counts": [
+      0.5,
+      0.6,
+      0.7
+    ],
+    "historical_within_subject_is_descriptive_only": true
+  },
+  "convincing_benefit_criteria": {
+    "minimum_median_balanced_accuracy": 0.6,
+    "minimum_median_gain_over_matched_zero": 0.03,
+    "minimum_fraction_subjects_improved": 0.6,
+    "minimum_median_recall_each_class": 0.55,
+    "maximum_absolute_median_class_recall_difference": 0.1,
+    "minimum_median_paired_QC_minus_primary_balanced_accuracy": -0.02,
+    "maximum_one_sided_exact_sign_test_p_improvement": 0.05,
+    "smallest_size_meeting_every_criterion_is_minimal_convincing_burden": true
+  },
+  "group_inference": {
+    "bootstrap_resamples": 10000,
+    "bootstrap_confidence_level": 0.95,
+    "bootstrap_random_seed": 20260901,
+    "improvement_test": "one_sided_exact_sign_test_positive_vs_negative_matched_gain_ties_excluded"
+  },
+  "QC_sensitivity": {
+    "primary_retains_all_technically_valid_candidates": true,
+    "exclude_statistical_candidate_test_trials_from_scoring_only": true,
+    "calibration_trials_unchanged": true,
+    "complete_participant_coverage_required": true
+  },
+  "development_evidence": {
+    "threshold_median_accuracy_by_size": {
+      "0": 0.5684523809523809,
+      "4": 0.6153273809523809,
+      "8": 0.5855654761904763,
+      "12": 0.6235119047619048,
+      "14": 0.6369047619047619
+    },
+    "target_LDA_median_accuracy_by_size": {
+      "0": 0.5684523809523809,
+      "4": 0.5483630952380953,
+      "8": 0.5959821428571429,
+      "12": 0.6123511904761905,
+      "14": 0.6019345238095238
+    },
+    "median_target_LDA_minus_threshold_utility": -0.010044642857142905,
+    "target_LDA_better_count": 9,
+    "threshold_better_count": 11,
+    "evaluation_outcomes_used": false,
+    "artifacts": {
+      "curve_summary": {
+        "path": "docs/assets/target_calibration_development_curve_summary.csv",
+        "sha256": "9f1bd93e9f0810abfdaae7bd2b8b6d6d87c4746292595d6613e828f9c0572652"
+      },
+      "fit_audit": {
+        "path": "docs/assets/target_calibration_development_fit_audit.csv",
+        "sha256": "e6213512b9418b01828d3c6c6601f2652f7032f6310443a9b9c5c1fd43939aa3"
+      },
+      "metadata": {
+        "path": "docs/assets/target_calibration_development_metadata.json",
+        "sha256": "b59a1c9e2c4e741f719f5c38d1cc6985afedcbe246d796db595df5bae55585ad"
+      },
+      "method_comparison": {
+        "path": "docs/assets/target_calibration_development_method_comparison_subjects.csv",
+        "sha256": "658c6ceed1689873f5b2fadc5316dbf744adf515767ad7599655ba0da914d59a"
+      },
+      "method_selection": {
+        "path": "docs/assets/target_calibration_development_method_selection.csv",
+        "sha256": "47908455067be9c4cf110f6ed8649d2898ce6b8619501ec6215f7721a3e8c5ba"
+      },
+      "participant_scores": {
+        "path": "docs/assets/target_calibration_development_participant_scores.csv",
+        "sha256": "5921fe82fc2d711e1040b6fd58a162a18505fc6d2f85b375b98554f75d3d8f05"
+      },
+      "predictions": {
+        "path": "docs/assets/target_calibration_development_predictions.csv",
+        "sha256": "3b30fbd8a5d5eddf40479a138385d01d3e11995929e6a78ee0f022ac902d1c6b"
+      },
+      "test_run_scores": {
+        "path": "docs/assets/target_calibration_development_test_run_scores.csv",
+        "sha256": "5c77b00f30972b751b6ca6b37bde78b71defa0c561b46f346376e0e335328cfa"
+      }
+    }
+  },
+  "post_primary_exploration_only": {
+    "poor_zero_shot_definition": "historical_zero_shot_CSP_balanced_accuracy_at_or_below_0_50",
+    "persistent_low_performer_definition": "historical_within_subject_CSP_balanced_accuracy_at_or_below_0_50",
+    "relationships": [
+      "historical_zero_shot_accuracy_vs_gain",
+      "historical_C3_C4_ERD_vs_gain",
+      "persistent_low_performer_gain",
+      "calibration_run_identity",
+      "incremental_gain_and_saturation"
+    ]
+  },
+  "persistence": {
+    "preserve_trial_predictions_with_calibration_provenance": true,
+    "persist_source_fit_audit": true,
+    "checkpoint_target_transformed_features_labels_and_provenance": true,
+    "persist_fitted_models": false,
+    "new_classifier_family_performed": false,
+    "deep_learning_performed": false
+  }
+}

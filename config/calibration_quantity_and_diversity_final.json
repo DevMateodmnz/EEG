@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "stage": "final_quantity_diversity_frozen",
+  "initial_commit": "a5b6529",
+  "development_commit": "d6ddb0a",
+  "evaluation_unlocked_after_commit": true,
+  "initial_policy": {
+    "path": "config/calibration_quantity_and_diversity.json",
+    "sha256": "d8a95833d3a95a353671078d7de856b340b1e0a75c903cbef3ff2d4b437813be"
+  },
+  "implementation": {
+    "path": "eeg_project/calibration_quantity_and_diversity.py",
+    "sha256": "4ad5d43d6914e99d52343e6ec3a47dc23dc20e82bee1a5f0a147ab4469751f88"
+  },
+  "primary_inference": "two_sided_Wilcoxon_Holm_two",
+  "practical": {
+    "median_gain": 0.02,
+    "improved_fraction": 0.55
+  }
+}

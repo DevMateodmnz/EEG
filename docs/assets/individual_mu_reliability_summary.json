@@ -1,0 +1,194 @@
+{
+  "agreement": {
+    "0.25": 0.39365079365079364,
+    "0.5": 0.526984126984127,
+    "1.0": 0.6666666666666666,
+    "same_grid_bin": 0.13968253968253969
+  },
+  "availability_counts": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": 105
+  },
+  "availability_percent": {
+    "0": 0.0,
+    "1": 0.0,
+    "2": 0.0,
+    "3": 1.0
+  },
+  "availability_wilson_95": {
+    "0": [
+      0.0,
+      0.035294076929109894
+    ],
+    "1": [
+      0.0,
+      0.035294076929109894
+    ],
+    "2": [
+      0.0,
+      0.035294076929109894
+    ],
+    "3": [
+      0.9647059230708901,
+      1.0
+    ]
+  },
+  "bootstrap_median_95": [
+    0.5,
+    0.75
+  ],
+  "classification": "RELIABILITY",
+  "config_sha256": "97381ca02e643ad8f04da2ce2bea43208298ad316308717d80fd35ed13028cec",
+  "eligible_subject_count": 105,
+  "pair_count": 315,
+  "pairwise": {
+    "count": 315,
+    "iqr_hz": [
+      0.25,
+      1.5
+    ],
+    "max_hz": 5.5,
+    "mean_hz": 1.092063492063492,
+    "median_hz": 0.5,
+    "min_hz": 0.0,
+    "p90_hz": 3.0,
+    "sd_hz": 1.2532825164421684
+  },
+  "parent_v1_0_config_sha256": "d6b8bd86cae9baa79d4addf65663944280bd5ec08240c202062d2c10de5005f9",
+  "peak_frequency_distribution": {
+    "count": 315,
+    "fixed_12_13_hz": {
+      "above": 8,
+      "below": 263,
+      "inside": 44
+    },
+    "iqr_hz": [
+      9.25,
+      11.5
+    ],
+    "max_hz": 13.5,
+    "mean_hz": 10.386507936507936,
+    "median_hz": 10.5,
+    "min_hz": 7.25,
+    "p90_hz": 12.25,
+    "sd_hz": 1.4663205812206734
+  },
+  "per_run_available": {
+    "10": 105,
+    "14": 105,
+    "6": 105
+  },
+  "prominence_sensitivity": [
+    {
+      "agreement_le_0_5": 0.526984126984127,
+      "agreement_le_1_0": 0.6666666666666666,
+      "classification": "ROBUSTNESS_DIAGNOSTIC",
+      "pairwise": {
+        "count": 315,
+        "iqr_hz": [
+          0.25,
+          1.5
+        ],
+        "max_hz": 5.5,
+        "mean_hz": 1.092063492063492,
+        "median_hz": 0.5,
+        "min_hz": 0.0,
+        "p90_hz": 3.0,
+        "sd_hz": 1.2532825164421684
+      },
+      "peak_frequency": {
+        "count": 315,
+        "iqr_hz": [
+          9.25,
+          11.5
+        ],
+        "max_hz": 13.5,
+        "mean_hz": 10.386507936507936,
+        "median_hz": 10.5,
+        "min_hz": 7.25,
+        "p90_hz": 12.25,
+        "sd_hz": 1.4663205812206734
+      },
+      "prominence_threshold_db": 0.5,
+      "valid_run_peaks": 315,
+      "valid_subject_run_fraction": 1.0
+    },
+    {
+      "agreement_le_0_5": 0.526984126984127,
+      "agreement_le_1_0": 0.6666666666666666,
+      "classification": "ROBUSTNESS_DIAGNOSTIC",
+      "pairwise": {
+        "count": 315,
+        "iqr_hz": [
+          0.25,
+          1.5
+        ],
+        "max_hz": 5.5,
+        "mean_hz": 1.092063492063492,
+        "median_hz": 0.5,
+        "min_hz": 0.0,
+        "p90_hz": 3.0,
+        "sd_hz": 1.2532825164421684
+      },
+      "peak_frequency": {
+        "count": 315,
+        "iqr_hz": [
+          9.25,
+          11.5
+        ],
+        "max_hz": 13.5,
+        "mean_hz": 10.386507936507936,
+        "median_hz": 10.5,
+        "min_hz": 7.25,
+        "p90_hz": 12.25,
+        "sd_hz": 1.4663205812206734
+      },
+      "prominence_threshold_db": 1.0,
+      "valid_run_peaks": 315,
+      "valid_subject_run_fraction": 1.0
+    },
+    {
+      "agreement_le_0_5": 0.5303514376996805,
+      "agreement_le_1_0": 0.670926517571885,
+      "classification": "ROBUSTNESS_DIAGNOSTIC",
+      "pairwise": {
+        "count": 313,
+        "iqr_hz": [
+          0.25,
+          1.5
+        ],
+        "max_hz": 5.5,
+        "mean_hz": 1.084664536741214,
+        "median_hz": 0.5,
+        "min_hz": 0.0,
+        "p90_hz": 3.0,
+        "sd_hz": 1.2532092006386042
+      },
+      "peak_frequency": {
+        "count": 314,
+        "iqr_hz": [
+          9.3125,
+          11.5
+        ],
+        "max_hz": 13.5,
+        "mean_hz": 10.39092356687898,
+        "median_hz": 10.5,
+        "min_hz": 7.25,
+        "p90_hz": 12.25,
+        "sd_hz": 1.4665619443553437
+      },
+      "prominence_threshold_db": 1.5,
+      "valid_run_peaks": 314,
+      "valid_subject_run_fraction": 0.9968253968253968
+    }
+  ],
+  "runs": [
+    6,
+    10,
+    14
+  ],
+  "schema_version": 2,
+  "study": "v1.1_RELIABILITY"
+}

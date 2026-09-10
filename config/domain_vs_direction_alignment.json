@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "study_stage": "initial_alignment_adaptation_frozen",
+  "parent_commit": "6826b67",
+  "evaluation_locked": true,
+  "development_subjects": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "evaluation_exclusions": [
+    88,
+    92,
+    100
+  ],
+  "representation": "frozen_8_30Hz_1_3s_LedoitWolf_trace_normalized_tangent",
+  "calibration": {
+    "runs": [
+      6,
+      10,
+      14
+    ],
+    "first_fists": 7,
+    "first_feet": 7,
+    "trial_count": 14,
+    "scenarios": "calibrate_each_run_test_other_two"
+  },
+  "conditions": {
+    "A": "frozen_source_model",
+    "B": "translation_z_minus_target_mean_plus_source_midpoint",
+    "C": "B_plus_minimal_orthogonal_rotation_target_direction_to_source_direction"
+  },
+  "primary": {
+    "unit": "participant_mean_of_three_scenarios_BA",
+    "comparisons": [
+      "B-A",
+      "C-B",
+      "C-A"
+    ],
+    "inference": "two_sided_Wilcoxon_Holm_three",
+    "practical_success": "median_gain_at_least_0.02_and_at_least_60_percent_improved"
+  },
+  "prohibitions": [
+    "no_classifier_change",
+    "no_test_EEG_in_transform_fit",
+    "no_tuned_alignment",
+    "no_new_decoder"
+  ]
+}

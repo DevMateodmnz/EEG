@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "sampling_frequency_hz": 160.0,
+  "tail_policy": "exclude_trailing_all_channel_zeros",
+  "reference": "average",
+  "excluded_reference_channels": [],
+  "filter": {
+    "l_freq_hz": 1.0,
+    "h_freq_hz": 40.0,
+    "l_trans_bandwidth_hz": 1.0,
+    "h_trans_bandwidth_hz": 10.0,
+    "method": "fir",
+    "fir_design": "firwin",
+    "fir_window": "hamming",
+    "filter_length_samples": 529,
+    "phase": "zero",
+    "pad": "reflect_limited"
+  },
+  "notch_frequencies_hz": []
+}

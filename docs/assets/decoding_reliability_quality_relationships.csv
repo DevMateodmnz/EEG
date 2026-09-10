@@ -1,0 +1,8 @@
+relationship,n,statistic,p_value,median_effect_or_difference,analysis_role,q25,q75
+subject_task_qc_fraction_vs_mean_balanced_accuracy,86,0.08227967824212316,0.4513638554197701,,post_hoc_qc_diagnostic,,
+subject_task_qc_fraction_vs_run_accuracy_range,86,-0.05234603978074757,0.6321789848151803,,post_hoc_qc_diagnostic,,
+qc_sensitivity_minus_primary_subject_accuracy,86,,,0.0031746031746031633,already_generated_qc_sensitivity,-0.030257936507936428,0.04017857142857151
+within_subject_run_qc_fraction_vs_fold_accuracy,258,0.1311302492829198,,,post_hoc_descriptive_participant_centered_correlation,,
+qc_sensitivity_minus_primary_run_6,86,,,0.0,already_generated_qc_sensitivity,-0.05208333333333337,0.0625
+qc_sensitivity_minus_primary_run_10,86,,,0.0,already_generated_qc_sensitivity,-0.04389880952380956,0.0625
+qc_sensitivity_minus_primary_run_14,86,,,0.0,already_generated_qc_sensitivity,-0.0714285714285714,0.061755952380952384

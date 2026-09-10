@@ -1,0 +1,14 @@
+category,participant_count,participant_fraction,interpretation,median,q25,q75,minimum,maximum,denominator
+3_of_3_runs_above_0_5,55,0.6395348837209303,descriptive_reliability_category_not_biological_label,,,,,,
+2_of_3_runs_above_0_5,15,0.1744186046511628,descriptive_reliability_category_not_biological_label,,,,,,
+1_of_3_runs_above_0_5,11,0.12790697674418605,descriptive_reliability_category_not_biological_label,,,,,,
+0_of_3_runs_above_0_5,5,0.05813953488372093,descriptive_reliability_category_not_biological_label,,,,,,
+run_range_distribution,86,1.0,balanced_accuracy_points,0.1473214285714286,0.09151785714285715,0.2410714285714285,0.0,0.4285714285714286,
+run_population_sd_distribution,86,1.0,balanced_accuracy_points,0.06734350297014735,0.03788308950520683,0.10126644111751847,0.0,0.17802495748497837,
+run_range_at_or_above_0_25,21,0.2441860465116279,predefined_descriptive_high_spread_threshold,,,,,,
+all_three_runs_at_or_above_0_6,28,0.32558139534883723,predefined_descriptive_consistently_high_threshold,,,,,,
+mean_at_or_below_0_5_with_two_runs_above_0_5,0,0.0,one_bad_run_explanation_for_low_overall_score,,,,,,
+mean_at_or_below_0_5_with_0_of_3_runs_above_0_5,5,0.45454545454545453,pattern_within_low_overall_subjects,,,,,,11
+mean_at_or_below_0_5_with_1_of_3_runs_above_0_5,6,0.5454545454545454,pattern_within_low_overall_subjects,,,,,,11
+mean_at_or_below_0_5_with_2_of_3_runs_above_0_5,0,0.0,pattern_within_low_overall_subjects,,,,,,11
+mean_at_or_below_0_5_with_3_of_3_runs_above_0_5,0,0.0,pattern_within_low_overall_subjects,,,,,,11

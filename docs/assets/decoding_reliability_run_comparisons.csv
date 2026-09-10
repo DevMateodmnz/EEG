@@ -1,0 +1,6 @@
+comparison,test,participant_count,statistic,unadjusted_p,holm_adjusted_p,median_paired_difference_first_minus_second,q25_paired_difference,q75_paired_difference,run_10_lower_count,run_10_higher_count,tie_count,run_10_strictly_lowest_of_three_count
+runs_6_10_14_omnibus,friedman_two_sided_matched_subjects,86,4.553459119496804,0.10261926870374355,,,,,,,,
+run_6_vs_run_10,wilcoxon_two_sided_matched_subjects,86,1367.5,0.16763888213626155,0.3352777642725231,0.017857142857142905,,,,,,
+run_6_vs_run_14,wilcoxon_two_sided_matched_subjects,86,1267.0,0.4039101609911131,0.4039101609911131,0.0,,,,,,
+run_10_vs_run_14,wilcoxon_two_sided_matched_subjects,86,1177.5,0.049105880389411626,0.14731764116823487,-0.031249999999999972,,,,,,
+run_10_vs_mean_of_runs_6_and_14,descriptive_matched_profile,86,,,,-0.020089285714285643,-0.09598214285714285,0.04575892857142859,46,32,8,33

@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "study_stage": "v1_1_reliability_frozen",
+  "parent_v1_0": {
+    "config": "config/individual_mu_frequency.json",
+    "sha256": "97bada48545665e2f27648bf08808eecb7bffd85f0f84c4488cb78cd9f9afff8"
+  },
+  "cohort": {
+    "eligible_subjects": "inherit_v1_0_combined_105",
+    "technical_exclusions": [
+      88,
+      92,
+      100
+    ],
+    "runs": [
+      6,
+      10,
+      14
+    ]
+  },
+  "primary": {
+    "classification": "RELIABILITY",
+    "rest_only": true,
+    "prominence_db": 1.0,
+    "search_range_hz": [
+      7.0,
+      14.0
+    ],
+    "central_roi": [
+      "C3",
+      "Cz",
+      "C4"
+    ],
+    "welch_window_seconds": 4.0,
+    "bootstrap_resamples": 10000,
+    "bootstrap_seed": 20260908,
+    "agreement_hz": [
+      0.25,
+      0.5,
+      1.0
+    ],
+    "fixed_comparator_range_hz": [
+      12.0,
+      13.0
+    ]
+  },
+  "robustness": {
+    "classification": "ROBUSTNESS_DIAGNOSTIC",
+    "prominence_db": [
+      0.5,
+      1.0,
+      1.5
+    ]
+  },
+  "artifacts": {
+    "run_peaks": "docs/assets/individual_mu_reliability_run_peaks.csv",
+    "subject_summary": "docs/assets/individual_mu_reliability_subject_summary.csv",
+    "summary": "docs/assets/individual_mu_reliability_summary.json",
+    "provenance": "docs/assets/individual_mu_reliability_provenance.json"
+  },
+  "prohibitions": [
+    "no_task_outcomes_for_peak_or_sensitivity",
+    "no_v1_0_artifact_mutation",
+    "no_peak_imputation",
+    "no_parameter_tuning"
+  ]
+}

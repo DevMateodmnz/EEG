@@ -1,0 +1,5 @@
+cohort,channel,subject_count,spearman_candidate_burden_vs_absolute_primary_change,analysis_role
+replication_2,C4,86,-0.13390112872096918,exploratory_no_exclusion
+replication_2,C3,86,-0.012208021395868927,exploratory_no_exclusion
+combined_replication,C4,105,-0.0706837265178094,exploratory_no_exclusion
+combined_replication,C3,105,-0.02575929992373192,exploratory_no_exclusion

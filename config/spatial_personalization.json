@@ -1,0 +1,488 @@
+{
+  "schema_version": 1,
+  "study_stage": "initial_spatial_personalization_methodology_frozen",
+  "parent_completed_milestone_git_commit": "5d11ed1",
+  "development_outcomes_inspected_at_freeze": false,
+  "evaluation_target_CSP_outcomes_inspected_at_freeze": false,
+  "evaluation_target_CSP_fitted_at_freeze": false,
+  "evaluation_locked": true,
+  "evaluation_EEG_is_not_broadly_untouched": true,
+  "protected_new_outcome": "target_specific_CSP_performance_and_spatial_subspace_stability",
+  "question": "does_target_spatial_CSP_add_value_beyond_target_decision_layer_personalization",
+  "cohorts": {
+    "development_subjects": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "evaluation_requested_subjects": [
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109
+    ],
+    "evaluation_eligible_subjects": [
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      89,
+      90,
+      91,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109
+    ],
+    "technically_incompatible_subjects": [
+      88,
+      92,
+      100
+    ]
+  },
+  "calibration_geometry": {
+    "runs": [
+      6,
+      10,
+      14
+    ],
+    "scenarios": [
+      {
+        "calibration_run": 6,
+        "test_runs": [
+          10,
+          14
+        ]
+      },
+      {
+        "calibration_run": 10,
+        "test_runs": [
+          6,
+          14
+        ]
+      },
+      {
+        "calibration_run": 14,
+        "test_runs": [
+          6,
+          10
+        ]
+      }
+    ],
+    "total_calibration_trials": 14,
+    "trials_per_class": 7,
+    "selection": "first_7_trials_per_class_by_annotation_chronology_within_calibration_run",
+    "balanced": true,
+    "same_test_trials_required_for_all_methods": true,
+    "test_labels_enter_fitting": false,
+    "unlabeled_test_EEG_enters_adaptation": false,
+    "test_covariance_alignment": false
+  },
+  "fixed_signal_representation": {
+    "input": "derived_continuously_filtered_copy_of_frozen_1_40_hz_run",
+    "passband_hz": [
+      8.0,
+      30.0
+    ],
+    "task_interval_seconds": [
+      1.0,
+      3.0
+    ],
+    "interval_endpoint_policy": "start_inclusive_stop_exclusive_320_samples_at_160_hz",
+    "channels": 64,
+    "target_CSP_components": 4,
+    "CSP_cov_est": "concat",
+    "CSP_transform_into": "average_power",
+    "CSP_log": true,
+    "CSP_norm_trace": false,
+    "CSP_component_order": "mutual_info"
+  },
+  "representation_A_source_zero_shot": {
+    "source_training_development": "other_19_development_subjects_all_runs",
+    "source_training_evaluation": "all_20_development_subjects_all_runs",
+    "source_CSP": "four_component_empirical",
+    "source_scaler": "frozen_source_scaler",
+    "source_LDA": "frozen_source_equal_prior_shrinkage_LDA",
+    "target_fitting": false
+  },
+  "representation_B_source_CSP_target_classifier": {
+    "source_CSP_frozen": true,
+    "source_CSP_fit_target_EEG": false,
+    "target_LDA": {
+      "class": "LinearDiscriminantAnalysis",
+      "solver": "lsqr",
+      "shrinkage": "auto",
+      "priors": [
+        0.5,
+        0.5
+      ],
+      "fit_calibration_trials_only": true
+    },
+    "development_scaler_candidates": [
+      "retain_source_scaler",
+      "fit_target_scaler"
+    ],
+    "target_scaler_when_candidate_enabled": {
+      "class": "StandardScaler",
+      "with_mean": true,
+      "with_std": true,
+      "fit_calibration_trials_only": true
+    },
+    "scaler_selection_rule": {
+      "paired_difference": "target_scaler_minus_retained_source_scaler_participant_accuracy",
+      "select_target_scaler_only_if_median_difference_at_least": 0.01,
+      "and_fraction_participants_target_scaler_better_at_least": 0.6,
+      "otherwise": "retain_source_scaler"
+    }
+  },
+  "representation_C_target_CSP_target_classifier": {
+    "target_CSP_fit_calibration_trials_only": true,
+    "target_scaler_fit_calibration_trials_only": true,
+    "target_LDA_fit_calibration_trials_only": true,
+    "target_CSP_component_count": 4,
+    "covariance_candidates": {
+      "empirical": null,
+      "ledoit_wolf": "ledoit_wolf"
+    },
+    "covariance_selection_rule": {
+      "paired_difference": "ledoit_wolf_minus_empirical_participant_accuracy",
+      "practical_tie_absolute_median_difference": 0.01,
+      "tie_preference": "ledoit_wolf_for_small_sample_regularization",
+      "outside_tie_select": "sign_of_median_paired_difference"
+    },
+    "scaler": {
+      "class": "StandardScaler",
+      "with_mean": true,
+      "with_std": true
+    },
+    "lda": {
+      "class": "LinearDiscriminantAnalysis",
+      "solver": "lsqr",
+      "shrinkage": "auto",
+      "priors": [
+        0.5,
+        0.5
+      ]
+    }
+  },
+  "participant_aggregation": {
+    "primary_metric": "balanced_accuracy",
+    "participant_score": "unweighted_mean_of_six_calibration_scenario_test_run_balanced_accuracies",
+    "group_observational_unit": "participant",
+    "repeated_scenarios_are_not_independent": true,
+    "secondary": [
+      "accuracy",
+      "fists_recall",
+      "feet_recall",
+      "scenario_and_test_run_balanced_accuracy"
+    ]
+  },
+  "primary_comparisons": [
+    "B_minus_A",
+    "C_minus_B",
+    "C_minus_A"
+  ],
+  "convincing_paired_gain_criteria": {
+    "minimum_candidate_median_balanced_accuracy": 0.6,
+    "minimum_median_paired_gain": 0.03,
+    "minimum_fraction_participants_improved": 0.6,
+    "maximum_one_sided_exact_sign_test_p": 0.05,
+    "minimum_median_recall_each_class": 0.55,
+    "maximum_absolute_median_class_recall_difference": 0.1,
+    "minimum_QC_median_paired_gain": 0.02
+  },
+  "interpretation_gate": {
+    "decision_boundary_bottleneck": "B_minus_A_convincing_and_C_minus_B_not_convincing",
+    "spatial_representation_bottleneck": "C_minus_B_convincing_and_B_minus_A_not_convincing",
+    "both_matter": "B_minus_A_and_C_minus_B_convincing_or_C_minus_A_convincing_with_both_incremental_medians_positive",
+    "one_run_personalization_insufficient": "B_minus_A_and_C_minus_B_and_C_minus_A_all_not_convincing",
+    "evaluation_outcomes_cannot_redefine_rules": true
+  },
+  "group_inference": {
+    "bootstrap_resamples": 10000,
+    "bootstrap_confidence_level": 0.95,
+    "bootstrap_random_seed": 20260902,
+    "paired_test": "one_sided_exact_sign_test_positive_vs_negative_ties_excluded"
+  },
+  "QC_sensitivity": {
+    "primary_retains_all_technically_valid_candidates": true,
+    "exclude_predefined_statistical_candidates_from_test_scoring_only": true,
+    "calibration_trials_unchanged": true,
+    "complete_participant_coverage_required": true
+  },
+  "CSP_stability": {
+    "object": "four_dimensional_target_CSP_filter_subspace",
+    "comparison": "mean_squared_cosine_of_principal_angles_for_each_pair_of_calibration_run_subspaces",
+    "participant_value": "mean_across_three_calibration_run_pairs",
+    "sign_order_and_within_subspace_rotation_invariant": true,
+    "descriptive_categories": {
+      "low_below": 0.5,
+      "moderate_below": 0.75,
+      "high_at_or_above": 0.75
+    }
+  },
+  "post_primary_exploration_only": {
+    "poor_zero_shot_definition": "historical_zero_shot_CSP_balanced_accuracy_at_or_below_0_50",
+    "relationships": [
+      "historical_zero_shot_accuracy_vs_C_minus_B",
+      "historical_C3_C4_ERD_vs_C_minus_B",
+      "historical_within_subject_CSP_accuracy_vs_C_minus_B",
+      "calibration_run_identity",
+      "target_CSP_subspace_stability_vs_C_minus_B"
+    ],
+    "unadjusted": true,
+    "may_not_modify_frozen_method_or_gate": true
+  },
+  "historical_context": {
+    "zero_shot_A_is_exact_same_geometry": true,
+    "historical_14_label_threshold_is_same_geometry_but_not_primary": true,
+    "historical_within_subject_is_descriptive_only_and_uses_two_training_runs": true
+  },
+  "persistence": {
+    "preserve_trial_predictions_with_fit_provenance": true,
+    "persist_fit_audit": true,
+    "checkpoint_target_8_30_Hz_trial_arrays_after_final_freeze": true,
+    "persist_fitted_models": false,
+    "new_classifier_family_performed": false,
+    "deep_learning_performed": false
+  },
+  "historical_inputs": {
+    "cross_final": {
+      "path": "config/cross_subject_decoding_final.json",
+      "sha256": "010ebb002ef68616e1ef28cdd58b911d4e942079330f5eda1ae206831bba5518"
+    },
+    "cross_core": {
+      "path": "eeg_project/cross_subject_decoding.py",
+      "sha256": "06d28f7e844e0f737dba94ecaa0a7b92f55ceeffa4d9b6e9e3e9ba8a1de62e28"
+    },
+    "cross_metadata": {
+      "path": "docs/assets/cross_subject_decoder_evaluation_metadata.json",
+      "sha256": "0f5d8fbc7cc3b310c0c952d079009ea98c3790eabf6406d6e62e15f66f23ba26"
+    },
+    "cross_subject_scores": {
+      "path": "docs/assets/cross_subject_decoder_evaluation_subject_scores.csv",
+      "sha256": "446b3c70c9d67c60e6f4909af4fb73463c290ac3feee40fd734aa49cd351c201"
+    },
+    "within_final": {
+      "path": "config/within_subject_decoding_final.json",
+      "sha256": "72494d50c56ddcd0d1e10104c4e46fcacf1d92a1de0e181aca95d89f31bcecea"
+    },
+    "within_correction": {
+      "path": "config/within_subject_decoding_correction.json",
+      "sha256": "82ec24e3c1c2f4ee9bd8469b99123652da87b6709d488a262309937292974552"
+    },
+    "within_core": {
+      "path": "eeg_project/decoding.py",
+      "sha256": "7b03ce4778e92525bba0797411e36fe11ec5777c53ddc1337bc0aab93d1b4ca9"
+    },
+    "within_metadata": {
+      "path": "docs/assets/within_subject_decoder_evaluation_metadata.json",
+      "sha256": "cd1119285b90096b282bfeeb70a51f8b8beabd7ebdffef8b74971a34538535da"
+    },
+    "within_subject_scores": {
+      "path": "docs/assets/within_subject_decoder_evaluation_subject_scores.csv",
+      "sha256": "140759a27ae001d1f2b219ceef66815c75b5169f99a205c013d1e3837362633e"
+    },
+    "calibration_final": {
+      "path": "config/minimal_target_calibration_final.json",
+      "sha256": "32615348aed70232202acbae2301ef6f076f822c5b4af06182e2c7447f41e57c"
+    },
+    "calibration_core": {
+      "path": "eeg_project/target_calibration.py",
+      "sha256": "1665635d912f76f2c027af41c41969548ae43df2d194db31ecfa8d0ce4cc8fc9"
+    },
+    "calibration_metadata": {
+      "path": "docs/assets/target_calibration_evaluation_metadata.json",
+      "sha256": "5daf92202e208dc414f599dca12fb600822cc745a7c4a3b6d1ea7412979013d8"
+    },
+    "calibration_participant_scores": {
+      "path": "docs/assets/target_calibration_evaluation_participant_scores.csv",
+      "sha256": "39c8fc63970c999c9f24ad45dc2b7c2baf75b1dc8a9e7664ea25119a8efa165c"
+    },
+    "calibration_predictions": {
+      "path": "docs/assets/target_calibration_evaluation_predictions.csv",
+      "sha256": "f326c63fc663cd9f52a7f2ca1f0444d1071e30efd073f87710f67f79790758ca"
+    },
+    "physiology_context": {
+      "path": "docs/assets/within_subject_decoder_evaluation_exploratory_subject_context.csv",
+      "sha256": "85b09f177072bf7a4c92e634d9ae5fc4fb3e23283781b61e7e1eee36565d2456"
+    }
+  }
+}

@@ -1,0 +1,3 @@
+analysis,participant_count,median_Riemannian_minus_CSP,Riemannian_better_count,CSP_better_count,analysis_role,median_Riemannian_run_range,median_CSP_run_range,median_Riemannian_minus_CSP_run_range,Spearman_CSP_range_vs_gain_rho,Spearman_CSP_range_vs_gain_p
+poor_historical_CSP_subjects,21,0.06547619047619047,17,4,post_primary_exploratory,,,,,
+participant_run_range,86,,,,post_primary_exploratory_unadjusted,0.17410714285714288,0.13839285714285718,0.05357142857142866,-0.3603591008285068,0.0006539268920390212

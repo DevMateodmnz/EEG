@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this software or its frozen analysis artifacts, please cite it using this metadata."
+title: "Reproducible Motor-Imagery EEG Analysis and Decoding"
+type: software
+authors:
+  - family-names: "Domínguez"
+    given-names: "Mateo Gabriel"
+abstract: "An independent research/software project for reproducible analysis of public motor-imagery EEG, with frozen PhysioNet analyses and an ongoing external validation protocol."
+license: BSD-3-Clause

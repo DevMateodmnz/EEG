@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "study_stage": "final_inter_participant_geometry_frozen",
+  "initial_freeze_commit": "07af058",
+  "development_geometry_commit": "8fb732f",
+  "evaluation_geometry_opened_after_this_freeze": true,
+  "initial_policy": {
+    "path": "config/inter_participant_domain_variability.json",
+    "sha256": "26ed3bc639bf8de86c19937e4103fe7f4c0261dd9b378d3f0574584180dca3a8"
+  },
+  "implementation": {
+    "path": "eeg_project/inter_participant_domain_variability.py",
+    "sha256": "c7cb5d14253543c74620054d710ce586c74067bebfbc9591902d7da7cdb67ade"
+  },
+  "development_reference": {
+    "subjects": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "reference": {
+      "path": "docs/assets/inter_participant_domain_variability_development_tangent_reference.npy",
+      "sha256": "06dc76587e653cfc1c279712c9faa01059ded8073ec0c3a1a96c72a288c475fd"
+    },
+    "source_vectors": {
+      "path": "docs/assets/inter_participant_domain_variability_development_source_vectors.npy",
+      "sha256": "c975e5b2deb7ca463c4df3cc7290fb10550aa4f74f46fbf2df2668b1f790376e"
+    },
+    "metadata": {
+      "path": "docs/assets/inter_participant_domain_variability_development_metadata.json",
+      "sha256": "e1ef5e772ad9a89903632d63431457c2a215bf25ce729c82cffa54ca78dbf391"
+    },
+    "fit_uses_evaluation_EEG": false,
+    "tsupdate": false
+  },
+  "evaluation": {
+    "eligible_subject_count": 86,
+    "runs": [
+      6,
+      10,
+      14
+    ],
+    "prototype_labels": {
+      "fists": 0,
+      "feet": 1
+    },
+    "participant_weighting": "equal"
+  },
+  "primary_correlations": {
+    "predictors": [
+      "source_midpoint_offset",
+      "source_direction_alignment",
+      "task_direction_magnitude"
+    ],
+    "outcomes": [
+      "historical_zero_shot_CSP_balanced_accuracy",
+      "frozen_zero_shot_Riemannian_balanced_accuracy"
+    ],
+    "test": "two_sided_Spearman",
+    "multiplicity": "Holm_across_six"
+  },
+  "historical_artifacts": {
+    "riemannian_scores": {
+      "path": "docs/assets/riemannian_decoder_evaluation_subject_scores.csv",
+      "sha256": "d1c3abb7c366db0a5b647ad3e268f91b2acb6b7dde69a99da5f6e80d0e127654"
+    },
+    "csp_scores": {
+      "path": "docs/assets/cross_subject_decoder_evaluation_subject_scores.csv",
+      "sha256": "446b3c70c9d67c60e6f4909af4fb73463c290ac3feee40fd734aa49cd351c201"
+    },
+    "riemannian_metadata": {
+      "path": "docs/assets/riemannian_decoder_evaluation_metadata.json",
+      "sha256": "1681b85e47828dced1bbd24f3e5c43ddd9bcf881378e5361833ca758e5737e31"
+    }
+  },
+  "prohibitions": [
+    "no_decoder_refit",
+    "no_evaluation_reference_fit",
+    "no_embedding_search",
+    "no_post_hoc_primary_predictor"
+  ]
+}

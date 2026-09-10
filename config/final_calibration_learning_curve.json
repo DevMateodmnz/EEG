@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "stage": "initial_final_learning_curve_frozen",
+  "parent_commit": "3bf3322",
+  "development_subjects": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "evaluation_exclusions": [
+    88,
+    92,
+    100
+  ],
+  "model": "fixed_4_component_LedoitWolf_CSP_target_scaler_equal_prior_shrinkage_LDA",
+  "sizes": [
+    14,
+    18,
+    22,
+    26,
+    28
+  ],
+  "per_class": [
+    7,
+    9,
+    11,
+    13,
+    14
+  ],
+  "allocations": {
+    "14": [
+      [
+        4,
+        3
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "18": [
+      [
+        5,
+        4
+      ],
+      [
+        4,
+        5
+      ]
+    ],
+    "22": [
+      [
+        6,
+        5
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    "26": [
+      [
+        7,
+        6
+      ],
+      [
+        6,
+        7
+      ]
+    ],
+    "28": [
+      [
+        7,
+        7
+      ]
+    ]
+  },
+  "aggregation": "average_variants_then_equal_three_test_runs_then_participant",
+  "inference": "Wilcoxon_Holm_four_adjacent_increments",
+  "near_full": {
+    "within_28_median": 0.01,
+    "matched_no_worse_than": -0.01,
+    "next_increment_under": 0.01,
+    "no_minority_driven_gain": true
+  },
+  "prohibitions": [
+    "no_test_training",
+    "no_model_change",
+    "no_tuning",
+    "no_random_resampling"
+  ]
+}

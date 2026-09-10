@@ -1,0 +1,7 @@
+cohort,channel,subjects_with_well_defined_peak,spearman_peak_frequency_vs_change,spearman_distance_from_12_5_hz_vs_change,primary_band_redefined,analysis_role
+replication_1,C4,14,-0.2998219561442476,0.2998219561442476,False,exploratory
+replication_1,C3,14,-0.48153223259530686,0.48153223259530686,False,exploratory
+replication_2,C4,69,-0.3277060250169509,0.325231729211891,False,exploratory
+replication_2,C3,69,-0.3375669390578883,0.33601694715496716,False,exploratory
+combined_replication,C4,83,-0.31586758331597997,0.31319120024115094,False,exploratory
+combined_replication,C3,83,-0.35259762823113894,0.35098939298347587,False,exploratory

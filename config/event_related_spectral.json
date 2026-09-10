@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "method": "morlet",
+  "frequency_grid_hz": {
+    "start": 6.0,
+    "stop": 35.0,
+    "step": 1.0
+  },
+  "wavelet": {
+    "cycles_per_hz": 0.5,
+    "zero_mean": true,
+    "use_fft": true,
+    "decimation": 4
+  },
+  "task_analysis_interval_seconds": [
+    1.0,
+    3.0
+  ],
+  "paired_rest_reference_interval_seconds": [
+    1.1,
+    3.1
+  ],
+  "display_interval_seconds": [
+    -1.5,
+    3.5
+  ],
+  "normalization": "percent_change",
+  "bands_hz": {
+    "mu": [
+      8.0,
+      13.0
+    ],
+    "beta": [
+      14.0,
+      30.0
+    ],
+    "central_12_13": [
+      12.0,
+      13.0
+    ]
+  },
+  "sensorimotor_channels": [
+    "C3",
+    "Cz",
+    "C4"
+  ],
+  "task_window_sensitivity_seconds": [
+    [
+      0.5,
+      2.5
+    ],
+    [
+      1.0,
+      3.0
+    ],
+    [
+      1.5,
+      3.5
+    ],
+    [
+      1.65,
+      2.45
+    ]
+  ],
+  "rest_window_sensitivity_seconds": [
+    [
+      0.5,
+      2.5
+    ],
+    [
+      1.1,
+      3.1
+    ],
+    [
+      1.5,
+      3.5
+    ]
+  ],
+  "continuous_filter_half_support_seconds": 1.65,
+  "primary_trials": "all_retained",
+  "qc_sensitivity": "exclude_statistical_candidates_without_mutating_primary_data",
+  "persist_full_tfr_arrays": false
+}

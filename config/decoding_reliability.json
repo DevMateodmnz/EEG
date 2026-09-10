@@ -1,0 +1,168 @@
+{
+  "schema_version": 1,
+  "study_stage": "post_evaluation_reliability_diagnostics_frozen",
+  "parent_completed_milestone_git_commit": "4a39b4f",
+  "historical_decoder_result_may_not_change": true,
+  "analysis_role": "post_hoc_explanation_of_completed_held_out_study",
+  "new_run_shift_results_inspected_at_freeze": false,
+  "cohort": {
+    "eligible_subject_count": 86,
+    "runs": [
+      6,
+      10,
+      14
+    ],
+    "model": "csp_4_empirical",
+    "qc_sensitivity": false
+  },
+  "immutable_boundaries": {
+    "preprocessing": true,
+    "epochs": true,
+    "csp_passband_hz": [
+      8.0,
+      30.0
+    ],
+    "csp_component_count": 4,
+    "csp_covariance_method": "empirical_concat",
+    "lda": "lsqr_auto_shrinkage_equal_priors",
+    "scaling": "training_fold_standard_scaler",
+    "task_interval_seconds": [
+      1.0,
+      3.0
+    ],
+    "cross_validation": "leave_one_run_out",
+    "quality_policy": "unchanged",
+    "primary_metric": "unweighted_mean_of_three_held_out_run_balanced_accuracies_per_subject",
+    "classifier_refit_planned": false,
+    "cross_subject_decoding": false,
+    "new_classifier": false,
+    "hyperparameter_search": false,
+    "individualized_frequency": false,
+    "deep_learning": false
+  },
+  "reliability_descriptives": {
+    "fold_statistics": [
+      "minimum",
+      "maximum",
+      "range",
+      "population_standard_deviation",
+      "above_0_5_count",
+      "fists_recall",
+      "feet_recall"
+    ],
+    "above_chance_categories": [
+      "3_of_3",
+      "2_of_3",
+      "1_of_3",
+      "0_of_3"
+    ],
+    "high_spread_descriptive_threshold": 0.25,
+    "all_runs_at_or_above_0_6_descriptive_threshold": 0.6,
+    "one_bad_run_pattern": "subject_mean_at_or_below_0_5_and_exactly_two_runs_above_0_5"
+  },
+  "run_comparison": {
+    "summaries": [
+      "median",
+      "q25",
+      "q75",
+      "minimum",
+      "maximum",
+      "fists_recall",
+      "feet_recall"
+    ],
+    "omnibus_test": "friedman_two_sided_matched_subjects",
+    "pairwise_tests": "two_sided_wilcoxon_signed_rank_matched_subjects",
+    "pairwise_contrasts": [
+      "run_6_vs_run_10",
+      "run_6_vs_run_14",
+      "run_10_vs_run_14"
+    ],
+    "multiplicity": "holm_three_tests"
+  },
+  "class_asymmetry": {
+    "primary_descriptive_unit": "participant",
+    "test": "two_sided_wilcoxon_subject_out_of_fold_fists_vs_feet_recall",
+    "run_specific_recall": "descriptive_only"
+  },
+  "quality_diagnostics": {
+    "task_qc_source": "existing_label_independent_decoder_qc_candidate_flag",
+    "subject_relationship": "spearman_task_qc_fraction_vs_subject_balanced_accuracy",
+    "primary_vs_existing_qc_sensitivity": true,
+    "additional_trial_deletion": false,
+    "misclassification_defines_artifact": false,
+    "rest_qc": "not_used_because_decoder_is_task_only_and_rest_does_not_enter_predictions"
+  },
+  "label_independent_run_shift": {
+    "input": "existing_continuously_filtered_8_30_hz_task_copy",
+    "array_shape": "trials_by_64_channels_by_320_samples",
+    "labels_used": false,
+    "trial_channel_demeaning": true,
+    "observations": "concatenated_trial_time_samples_by_channels",
+    "covariance": "LedoitWolf_shrinkage_separately_for_pooled_training_runs_and_held_out_run",
+    "trace_normalization": false,
+    "distance": "affine_invariant_Riemannian_SPD_distance",
+    "distance_equation": "sqrt(sum(log(generalized_eigenvalues(test_covariance,train_covariance))^2))",
+    "fold_rows": 258,
+    "primary_relationship": "participant_centered_Pearson_correlation_distance_vs_balanced_accuracy",
+    "primary_p_value": "10000_within_subject_accuracy_permutations_fixed_seed",
+    "permutation_seed": 20260830,
+    "secondary_relationship": "Spearman_subject_mean_distance_vs_subject_mean_balanced_accuracy"
+  },
+  "predefined_historical_relationships": [
+    "C3_fixed_fists_12_13_hz_ERD_vs_subject_accuracy",
+    "C4_fixed_fists_12_13_hz_ERD_vs_subject_accuracy",
+    "historical_central_peak_availability_and_frequency_vs_subject_accuracy",
+    "held_out_IMF_peak_span_vs_subject_accuracy"
+  ],
+  "csp_stability": {
+    "status": "deferred",
+    "reason": "fitted_fold_models_were_intentionally_not_persisted_and_three_overlapping_training_solutions_do_not_support_a_clean_independent_subspace_stability_claim",
+    "raw_filter_element_correlation_forbidden": true
+  },
+  "historical_inputs": {
+    "active_decoder_config": {
+      "path": "config/within_subject_decoding_correction.json",
+      "sha256": "82ec24e3c1c2f4ee9bd8469b99123652da87b6709d488a262309937292974552"
+    },
+    "final_decoder_config": {
+      "path": "config/within_subject_decoding_final.json",
+      "sha256": "72494d50c56ddcd0d1e10104c4e46fcacf1d92a1de0e181aca95d89f31bcecea"
+    },
+    "frozen_decoder_core": {
+      "path": "eeg_project/decoding.py",
+      "sha256": "7b03ce4778e92525bba0797411e36fe11ec5777c53ddc1337bc0aab93d1b4ca9"
+    },
+    "predictions": {
+      "path": "docs/assets/within_subject_decoder_evaluation_predictions.csv",
+      "sha256": "75aa39ceb6d9d8516a3d82e5c4e93b804658cfc9f71a2038b25726e6de6a5136"
+    },
+    "fold_scores": {
+      "path": "docs/assets/within_subject_decoder_evaluation_fold_scores.csv",
+      "sha256": "8f170e8ba340d298166770fbbc8ac8f76524d3c167c1537f9207932ac8d567b9"
+    },
+    "subject_scores": {
+      "path": "docs/assets/within_subject_decoder_evaluation_subject_scores.csv",
+      "sha256": "140759a27ae001d1f2b219ceef66815c75b5169f99a205c013d1e3837362633e"
+    },
+    "evaluation_metadata": {
+      "path": "docs/assets/within_subject_decoder_evaluation_metadata.json",
+      "sha256": "cd1119285b90096b282bfeeb70a51f8b8beabd7ebdffef8b74971a34538535da"
+    },
+    "historical_context": {
+      "path": "docs/assets/within_subject_decoder_evaluation_exploratory_subject_context.csv",
+      "sha256": "85b09f177072bf7a4c92e634d9ae5fc4fb3e23283781b61e7e1eee36565d2456"
+    },
+    "full_cohort_primary": {
+      "path": "docs/assets/subjects01-109_full_replication_subject_primary_table.csv",
+      "sha256": "472e0f3b152fc2b9d7acf18176721540063cd3c036b876042057c471e8ee9266"
+    },
+    "historical_central_peaks": {
+      "path": "docs/assets/subjects01-109_full_replication_central_peak_summary.csv",
+      "sha256": "5d0019c02b3e0d3c2e6a7cd7fb42b80ed41adc79ee01db2af59b416ad8a6b2b6"
+    },
+    "held_out_IMF_peaks": {
+      "path": "docs/assets/individual_mu_heldout_evaluation_peak_subject_summary.csv",
+      "sha256": "40b97228abf29658108459e3d5d8c3008ac58472d81c8ef0fdf1fbc4055ccd3d"
+    }
+  }
+}

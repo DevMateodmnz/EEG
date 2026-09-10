@@ -1,0 +1,102 @@
+{
+  "artifacts": {
+    "detailed": "docs/assets/subject01_runs06-10-14_trial_quality_detailed.csv",
+    "evidence": "docs/assets/subject01_runs06-10-14_artifact_evidence.csv",
+    "gallery_figure": "docs/assets/subject01_runs06-10-14_candidate_trial_gallery.png",
+    "influence": "docs/assets/subject01_runs06-10-14_candidate_influence.csv",
+    "normalization": "docs/assets/subject01_runs06-10-14_normalization_sensitivity.csv",
+    "normalization_figure": "docs/assets/subject01_runs06-10-14_normalization_diagnostics.png",
+    "paired": "docs/assets/subject01_runs06-10-14_paired_reference_quality.csv",
+    "qc_figure": "docs/assets/subject01_runs06-10-14_quality_metric_distributions.png",
+    "reference": "docs/assets/subject01_runs06-10-14_rest_pair_influence.csv",
+    "review": "docs/assets/subject01_runs06-10-14_candidate_trial_review.csv",
+    "stability": "docs/assets/subject01_runs06-10-14_feature_stability.csv",
+    "stability_figure": "docs/assets/subject01_runs06-10-14_feature_stability_matrix.png",
+    "timing": "docs/assets/subject01_runs06-10-14_quality_timing_sensitivity.csv"
+  },
+  "condition_counts": {
+    "both_feet_imagery": 24,
+    "both_fists_imagery": 21
+  },
+  "config_paths": {
+    "epoching": "config/epoching.json",
+    "preprocessing": "config/preprocessing.json",
+    "spectral": "config/event_related_spectral.json",
+    "trial_quality": "config/trial_quality.json"
+  },
+  "ica_policy": "defer_pending_dedicated_evidence_milestone",
+  "master_rest_shape": [
+    45,
+    64,
+    641
+  ],
+  "master_task_shape": [
+    45,
+    64,
+    961
+  ],
+  "paired_rest_candidate_count": 5,
+  "permanent_trial_rejection_count": 0,
+  "primary_trial_count": 45,
+  "quality_decisions_used_condition_labels": false,
+  "rest_tfr_shape": [
+    45,
+    64,
+    30,
+    161
+  ],
+  "runs": [
+    6,
+    10,
+    14
+  ],
+  "schema_version": 1,
+  "source_sha256_by_run": {
+    "10": "20de1c7746c2349d16bda5e9f1b0ac7b7ad1581102a2e30dd2ac422696f62fb1",
+    "14": "2110c48e3106898e3dbca47e39b330637afd3d3b8bc2da3ba1e44f4ac1118137",
+    "6": "5369364f2c4e81ca141679d6dd2ba6ece61c7eb53d7fae31241b308876e1b6b3"
+  },
+  "strong_review_candidate_identities": [
+    [
+      6,
+      8
+    ],
+    [
+      10,
+      8
+    ]
+  ],
+  "subject": 1,
+  "task_candidate_identities": [
+    [
+      6,
+      1
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      6,
+      8
+    ],
+    [
+      6,
+      12
+    ],
+    [
+      10,
+      8
+    ],
+    [
+      14,
+      9
+    ]
+  ],
+  "task_tfr_shape": [
+    45,
+    64,
+    30,
+    241
+  ]
+}

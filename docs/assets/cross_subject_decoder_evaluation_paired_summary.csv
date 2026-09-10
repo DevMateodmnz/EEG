@@ -1,0 +1,2 @@
+participant_count,median_CSP_minus_spectral,q25_CSP_minus_spectral,q75_CSP_minus_spectral,CSP_better_count,spectral_better_count,tie_count,CSP_better_fraction,spectral_better_fraction,paired_wilcoxon_two_sided_p,group_observational_unit,transfer_category
+86,0.03869047619047619,-0.023065476190476136,0.10491071428571425,59,26,1,0.686046511627907,0.3023255813953488,0.00039265206389224664,participant,CSP transfers better

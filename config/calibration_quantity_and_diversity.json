@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "stage": "initial_quantity_diversity_frozen",
+  "parent_commit": "913d043",
+  "development_subjects": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "evaluation_exclusions": [
+    88,
+    92,
+    100
+  ],
+  "fixed_model": {
+    "passband": [
+      8,
+      30
+    ],
+    "interval": [
+      1,
+      3
+    ],
+    "csp_components": 4,
+    "csp_reg": "ledoit_wolf",
+    "scaler": "target_training_only_standard",
+    "lda": "equal_prior_shrinkage"
+  },
+  "conditions": {
+    "A": "one_run_7_plus_7_each_available_run_variant_average",
+    "B": "two_runs_7_plus_7_total_4_3_and_3_4_variant_average",
+    "C": "two_runs_all_retained_trials"
+  },
+  "primary": [
+    "B-A",
+    "C-B"
+  ],
+  "practical": {
+    "median_gain": 0.02,
+    "improved_fraction": 0.55,
+    "no_material_recall_asymmetry": true
+  },
+  "prohibitions": [
+    "no_test_run_training",
+    "no_model_tuning",
+    "no_source_mixing"
+  ]
+}

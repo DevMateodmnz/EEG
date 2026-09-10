@@ -1,0 +1,521 @@
+{
+  "schema_version": 1,
+  "study_stage": "initial_methodology_frozen",
+  "study_start_git_commit": "4dcbc16ce12703db03569f407c7bf75a851b22ee",
+  "decoder_development_outcomes_inspected_at_initial_freeze": false,
+  "evaluation_classifier_outcomes_inspected_at_initial_freeze": false,
+  "evaluation_locked": true,
+  "scientific_history": {
+    "fixed_band_physiology_known": true,
+    "individualized_mu_result_known": true,
+    "individualized_mu_conclusion": "no_improvement",
+    "evaluation_subject_eeg_untouched_in_broad_sense": false,
+    "evaluation_subject_classifier_outcomes_prospectively_protected": true
+  },
+  "cohorts": {
+    "decoder_development_subjects": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "decoder_evaluation_requested_subjects": [
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109
+    ],
+    "decoder_evaluation_eligible_subjects": [
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      89,
+      90,
+      91,
+      93,
+      94,
+      95,
+      96,
+      97,
+      98,
+      99,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109
+    ],
+    "technically_incompatible_subjects": [
+      88,
+      92,
+      100
+    ],
+    "technical_eligibility_source": "config/full_cohort_replication.json and its frozen audit"
+  },
+  "prediction_target": {
+    "classes": {
+      "both_fists_imagery": 0,
+      "both_feet_imagery": 1
+    },
+    "excluded_class": "T0_rest",
+    "runs": [
+      6,
+      10,
+      14
+    ],
+    "task_interval_seconds": [
+      1.0,
+      3.0
+    ],
+    "one_observation": "one technically valid motor-imagery task trial"
+  },
+  "cross_validation": {
+    "method": "leave_one_run_out",
+    "folds": [
+      {
+        "test_run": 6,
+        "training_runs": [
+          10,
+          14
+        ]
+      },
+      {
+        "test_run": 10,
+        "training_runs": [
+          6,
+          14
+        ]
+      },
+      {
+        "test_run": 14,
+        "training_runs": [
+          6,
+          10
+        ]
+      }
+    ],
+    "random_trial_split_forbidden": true,
+    "every_trial_predicted_once_out_of_run": true,
+    "within_subject_only": true,
+    "supervised_transforms_fit_on_training_fold_only": true
+  },
+  "candidate_models": {
+    "spectral_baseline_6": {
+      "family": "spectral_log_psd_standard_scaler_lda",
+      "channels": [
+        "C3",
+        "Cz",
+        "C4"
+      ],
+      "bands_hz": {
+        "mu": [
+          8.0,
+          13.0
+        ],
+        "beta": [
+          14.0,
+          30.0
+        ]
+      },
+      "feature_count": 6
+    },
+    "spectral_baseline_9": {
+      "family": "spectral_log_psd_standard_scaler_lda",
+      "channels": [
+        "C3",
+        "Cz",
+        "C4"
+      ],
+      "bands_hz": {
+        "mu": [
+          8.0,
+          13.0
+        ],
+        "central_12_13": [
+          12.0,
+          13.0
+        ],
+        "beta": [
+          14.0,
+          30.0
+        ]
+      },
+      "feature_count": 9
+    },
+    "csp_4_empirical": {
+      "family": "continuous_bandpass_csp_standard_scaler_lda",
+      "frequency_band_hz": [
+        8.0,
+        30.0
+      ],
+      "csp_components": 4,
+      "csp_covariance_regularization": null
+    },
+    "csp_4_ledoit_wolf": {
+      "family": "continuous_bandpass_csp_standard_scaler_lda",
+      "frequency_band_hz": [
+        8.0,
+        30.0
+      ],
+      "csp_components": 4,
+      "csp_covariance_regularization": "ledoit_wolf"
+    },
+    "csp_6_ledoit_wolf": {
+      "family": "continuous_bandpass_csp_standard_scaler_lda",
+      "frequency_band_hz": [
+        8.0,
+        30.0
+      ],
+      "csp_components": 6,
+      "csp_covariance_regularization": "ledoit_wolf"
+    }
+  },
+  "fixed_feature_methods": {
+    "spectral": {
+      "input": "frozen_1_40_hz_average_referenced_task_epochs",
+      "estimator": "single_2_second_hann_welch_density",
+      "window_samples_at_160_hz": 320,
+      "overlap_samples": 0,
+      "detrend": "constant",
+      "frequency_resolution_hz": 0.5,
+      "feature": "mean_log10_psd_within_each_channel_band"
+    },
+    "csp_feature_filter": {
+      "input": "copy_of_frozen_1_40_hz_average_referenced_continuous_run",
+      "passband_hz": [
+        8.0,
+        30.0
+      ],
+      "transition_bandwidth_hz": [
+        4.0,
+        10.0
+      ],
+      "method": "fir",
+      "fir_design": "firwin",
+      "fir_window": "hamming",
+      "filter_length_samples": 133,
+      "phase": "zero",
+      "pad": "reflect_limited",
+      "filter_before_epoch_interval_extraction": true,
+      "main_preprocessed_representation_overwritten": false
+    }
+  },
+  "supervised_pipeline": {
+    "csp": {
+      "transform_into": "average_power",
+      "log": true,
+      "cov_est": "concat",
+      "norm_trace": false,
+      "component_order": "mutual_info",
+      "fit_training_fold_only": true
+    },
+    "scaler": {
+      "class": "sklearn.preprocessing.StandardScaler",
+      "with_mean": true,
+      "with_std": true,
+      "fit_training_fold_only": true
+    },
+    "lda": {
+      "class": "sklearn.discriminant_analysis.LinearDiscriminantAnalysis",
+      "solver": "lsqr",
+      "shrinkage": "auto",
+      "priors": [
+        0.5,
+        0.5
+      ],
+      "fit_training_fold_only": true
+    }
+  },
+  "development_selection": {
+    "subject_score": "unweighted_mean_of_three_held_out_run_balanced_accuracies",
+    "cohort_summary": "one_subject_score_per_development_participant",
+    "primary_ranking": "highest_development_cohort_median_subject_score",
+    "practical_tie_tolerance_balanced_accuracy": 0.01,
+    "spectral_tie_preference": [
+      "spectral_baseline_6",
+      "spectral_baseline_9"
+    ],
+    "csp_tie_preference": [
+      "csp_4_ledoit_wolf",
+      "csp_4_empirical",
+      "csp_6_ledoit_wolf"
+    ],
+    "evaluation_subject_outcomes_forbidden": true
+  },
+  "metrics": {
+    "primary": "balanced_accuracy",
+    "subject_aggregation": "unweighted_mean_of_three_fold_balanced_accuracies",
+    "secondary": [
+      "accuracy",
+      "macro_f1",
+      "roc_auc",
+      "fists_recall",
+      "feet_recall",
+      "confusion_matrix"
+    ],
+    "chance_balanced_accuracy": 0.5,
+    "group_observational_unit": "participant"
+  },
+  "quality_policy": {
+    "primary": "all_technically_valid_task_trials_retained",
+    "sensitivity": "copy_predictions_excluding_predefined_statistical_candidates",
+    "quality_candidates_defined_without_condition_or_classifier_outcome": true,
+    "misclassification_never_justifies_trial_deletion": true,
+    "master_epochs_mutated": false
+  },
+  "evaluation_success_criteria": {
+    "useful_decoding_signal": {
+      "minimum_cohort_median_balanced_accuracy": 0.6,
+      "minimum_fraction_subjects_above_0_5": 0.65,
+      "minimum_fraction_subjects_with_at_least_two_folds_above_0_5": 0.55,
+      "minimum_median_recall_each_class": 0.55,
+      "maximum_absolute_difference_between_median_class_recalls": 0.1,
+      "minimum_qc_minus_primary_cohort_median": -0.02,
+      "minimum_csp_minus_baseline_paired_median": -0.02,
+      "minimum_leave_one_subject_out_cohort_median": 0.58
+    },
+    "mixed_decoding_evidence": {
+      "minimum_cohort_median_balanced_accuracy": 0.55,
+      "minimum_fraction_subjects_above_0_5": 0.55,
+      "minimum_median_recall_each_class": 0.5,
+      "maximum_absolute_difference_between_median_class_recalls": 0.15,
+      "minimum_qc_minus_primary_cohort_median": -0.03
+    },
+    "otherwise": "no_convincing_decoding"
+  },
+  "csp_added_value_criteria": {
+    "clear_added_value": {
+      "minimum_paired_median_difference": 0.03,
+      "minimum_fraction_csp_better": 0.6,
+      "minimum_qc_paired_median_difference": 0.02
+    },
+    "modest_added_value": {
+      "minimum_paired_median_difference_exclusive": 0.0,
+      "minimum_fraction_csp_better_exclusive": 0.5
+    },
+    "otherwise": "no_added_value"
+  },
+  "group_inference": {
+    "primary": "one_sided_exact_sign_test_subject_balanced_accuracy_above_0_5",
+    "ties_at_0_5": "excluded_from_sign_test",
+    "paired_model_test": "two_sided_wilcoxon_signed_rank_supporting_only",
+    "bootstrap_median_confidence_interval": {
+      "resamples": 10000,
+      "confidence_level": 0.95,
+      "random_seed": 20260829
+    },
+    "real_data_permutation_test": "not_planned_due_to_cost_and_predefined_run_held_out_group_design",
+    "synthetic_full_pipeline_label_permutation_test_required": true
+  },
+  "persistence": {
+    "preserve_every_out_of_fold_prediction": true,
+    "persist_fold_metrics": true,
+    "persist_subject_metrics": true,
+    "persist_full_feature_arrays": false,
+    "persist_fitted_models": false,
+    "persist_csp_patterns_for_representative_development_examples_only": true
+  },
+  "historical_files": {
+    "preprocessing": {
+      "path": "config/preprocessing.json",
+      "sha256": "c330847fafe0e9713c8c4f1b64723f81311334a0070fa4f182111216d195cbd2"
+    },
+    "epoching": {
+      "path": "config/epoching.json",
+      "sha256": "6ff59b0bda51f8f86c5a583472818a829421d2d9f29f5b5bce7c5f16c9c7c652"
+    },
+    "event_related_spectral": {
+      "path": "config/event_related_spectral.json",
+      "sha256": "37538cd783115243a11e5e64591da937161eb352f230accbfd230428c3eec3fe"
+    },
+    "trial_quality": {
+      "path": "config/trial_quality.json",
+      "sha256": "7f2cc78c2cea2eb641df83d5455a3e7cbb559ac9ab0336b05881d80212032679"
+    },
+    "full_cohort_policy": {
+      "path": "config/full_cohort_replication.json",
+      "sha256": "b3455e0f0607eb35f11016ccb8fef023c83c5e8b1b47ba8d100343d8316df9cb"
+    },
+    "individual_mu_policy": {
+      "path": "config/individual_mu_frequency.json",
+      "sha256": "97bada48545665e2f27648bf08808eecb7bffd85f0f84c4488cb78cd9f9afff8"
+    },
+    "full_cohort_metadata": {
+      "path": "docs/assets/subjects01-109_full_replication_metadata.json",
+      "sha256": "3e9a1bb394ae95cdda689077ba69f40fe70cb1815f4e47d41d98af782669dcc9"
+    },
+    "individual_mu_metadata": {
+      "path": "docs/assets/individual_mu_heldout_evaluation_metadata.json",
+      "sha256": "162f41f5274e4d52085af785be3e9908326ba484df1250d6575f5683600b6a01"
+    }
+  }
+}

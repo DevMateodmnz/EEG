@@ -1,0 +1,11 @@
+.venv/
+data/
+outputs/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.DS_Store
+
+# Local learning scratchpad; its durable content is incorporated into public docs.
+/.md

@@ -1,0 +1,3 @@
+comparison,participant_count,median_paired_difference,q25_paired_difference,q75_paired_difference,improved_count,worsened_count,tie_count,one_sided_exact_sign_p,QC_median_paired_difference,group_observational_unit
+riemannian_minus_csp_4_empirical,86,-0.023809523809523836,-0.09449404761904753,0.04761904761904777,33,52,1,0.9852718191071106,-0.027281746031746046,participant
+riemannian_minus_spectral_baseline_6,86,0.029761904761904767,-0.043898809523809604,0.08928571428571434,49,35,2,0.07782823185699853,,participant

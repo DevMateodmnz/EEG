@@ -1,0 +1,380 @@
+{
+  "canonicalization_rule": "portable-source-id/v1",
+  "headline_result_invariants": {
+    "Final_28_label_median_BA": "0.650",
+    "Fists_C3_12_13Hz_negative": "91/105",
+    "Fists_C4_12_13Hz_negative": "87/105",
+    "Target_CSP_all_two_run_median_BA": "0.661",
+    "Within_subject_CSP_median_BA": "0.658",
+    "Zero_shot_CSP_median_BA": "0.570"
+  },
+  "migrated_artifacts": [
+    {
+      "canonicalization_rule": "portable-source-id/v1",
+      "changed_provenance_fields": [
+        "source_hashes"
+      ],
+      "dependency_hash_changes": [
+        "config/cross_subject_decoding_final.json"
+      ],
+      "migration_reason": "machine-local source provenance canonicalized without changing scientific content",
+      "path": "docs/assets/cross_subject_decoder_development_metadata.json",
+      "post_migration_sha256": "56c2cadbdee41163bf22f01b3755bf980cfcc6f31da3becfb5b9d52aa451a7aa",
+      "pre_migration_sha256": "d3a5d98aa8ebe6c4276bbb556ce75ea463f188bab34f4e47b65a720e56f307e0",
+      "scientific_equivalence_verified": true
+    },
+    {
+      "canonicalization_rule": "portable-source-id/v1",
+      "changed_provenance_fields": [
+        "source_file"
+      ],
+      "dependency_hash_changes": [
+        "config/cross_subject_decoding_final.json"
+      ],
+      "migration_reason": "machine-local source provenance canonicalized without changing scientific content",
+      "path": "docs/assets/cross_subject_decoder_development_predictions.csv",
+      "post_migration_sha256": "fb65c24670d8d40d8e07921fe47030f3cc7ef29b386439dde3d2b22578261678",
+      "pre_migration_sha256": "70cefa63e3759f20b32bb5aecfe1ca1b73a6869cdadc6805854a73d02951c00c",
+      "scientific_equivalence_verified": true
+    },
+    {
+      "canonicalization_rule": "portable-source-id/v1",
+      "changed_provenance_fields": [
+        "evaluation_source_hashes",
+        "source_hashes",
+        "training_source_hashes"
+      ],
+      "dependency_hash_changes": [
+        "config/minimal_target_calibration.json",
+        "config/riemannian_decoding.json",
+        "config/spatial_personalization.json"
+      ],
+      "migration_reason": "machine-local source provenance canonicalized without changing scientific content",
+      "path": "docs/assets/cross_subject_decoder_evaluation_metadata.json",
+      "post_migration_sha256": "0f5d8fbc7cc3b310c0c952d079009ea98c3790eabf6406d6e62e15f66f23ba26",
+      "pre_migration_sha256": "30fa4eba4243106ac245fc493bb8451429ee3fe7dfa0fb78929b5831cb4cc8a3",
+      "scientific_equivalence_verified": true
+    },
+    {
+      "canonicalization_rule": "portable-source-id/v1",
+      "changed_provenance_fields": [
+        "source_file"
+      ],
+      "dependency_hash_changes": [
+        "config/minimal_target_calibration.json",
+        "config/riemannian_decoding.json"
+      ],
+      "migration_reason": "machine-local source provenance canonicalized without changing scientific content",
+      "path": "docs/assets/cross_subject_decoder_evaluation_predictions.csv",
+      "post_migration_sha256": "5db8b9e0023daccc043cd4ac34ef8e7211587dd40f28173019e668f16e580ec8",
+      "pre_migration_sha256": "a9efd7c76048222369c8c6d9312d0efdb825827d071d60b58b2836117776d3c5",
+      "scientific_equivalence_verified": true
+    },
+    {
+      "canonicalization_rule": "portable-source-id/v1",
+      "changed_provenance_fields": [
+        "source_hashes"
+      ],
+      "dependency_hash_changes": [
+        "config/cross_subject_decoding.json"
+      ],
+      "migration_reason": "machine-local source provenance canonicalized without changing scientific content",
+      "path": "docs/assets/decoding_reliability_metadata.json",
+      "post_migration_sha256": "d2bdeaa19c8c428382f9506177fbd131bf993014ff650507e204ec18afed2712",
+      "pre_migration_sha256": "102f7af48a64a7aab741bb638d80ff1dc92c236fdc1980d40d19141b97eb204b",
+      "scientific_equivalence_verified": true
+    },
+    {
+      "canonicalization_rule": "portable-source-id/v1",
+      "changed_provenance_fields": [
+        "source_hashes"
+      ],
+      "dependency_hash_changes": [],
+      "migration_reason": "machine-local source provenance canonicalized without changing scientific content",
+      "path": "docs/assets/domain_vs_direction_alignment_evaluation_metadata.json",
+      "post_migration_sha256": "22e8dd624b004956fea85d09705a1eff849af91011568e55189dc3349939e58c",
+      "pre_migration_sha256": "9774acedc42a9801a470c55863a8e33af9eb0adfb3ffaa82009492a442d85789",
+      "scientific_equivalence_verified": true
+    },
+    {
+      "canonicalization_rule": "portable-source-id/v1",
+      "changed_provenance_fields": [
+        "source_file"
+      ],
+      "dependency_hash_changes": [],
+      "migration_reason": "machine-local source provenance canonicalized without changing scientific content",
+      "path": "docs/assets/individual_mu_heldout_evaluation_trial_comparison.csv",
+      "post_migration_sha256": "46548ee5ad6d1324cc93da169d9110e9eadd4f4ac2379f8281d0a6788134a90b",
+      "pre_migration_sha256": "46d79ac0896c109a9b88cc3ee672f6f755face71277caf90c127fe8fe37044af",
+      "scientific_equivalence_verified": true
+    },
+    {
+      "canonicalization_rule": "portable-source-id/v1",
+      "changed_provenance_fields": [
+        "raw_source_hashes"
+      ],
+      "dependency_hash_changes": [],
+      "migration_reason": "machine-local source provenance canonicalized without changing scientific content",
+      "path": "docs/assets/individual_mu_reliability_provenance.json",
+      "post_migration_sha256": "251eb081e16b9c5b0fc71d51d58b7d7ed6050b99e95a9bca10ea71e6a328bee8",
+      "pre_migration_sha256": "1ea2a07d0e828d1c0e24a20d87e1e66ea1cabea3166895efa28c41fbcc4ea7eb",
+      "scientific_equivalence_verified": true
+    },
+    {
+      "canonicalization_rule": "portable-source-id/v1",
+      "changed_provenance_fields": [
+        "source_hashes"
+      ],
+      "dependency_hash_changes": [
+        "config/inter_participant_domain_variability_final.json"
+      ],
+      "migration_reason": "machine-local source provenance canonicalized without changing scientific content",
+      "path": "docs/assets/inter_participant_domain_variability_development_metadata.json",
+      "post_migration_sha256": "e1ef5e772ad9a89903632d63431457c2a215bf25ce729c82cffa54ca78dbf391",
+      "pre_migration_sha256": "c2cf53cc7f47fbc7e83b6acef306de63e8004267490fd1165adc7496939eeb92",
+      "scientific_equivalence_verified": true
+    },
+    {
+      "canonicalization_rule": "portable-source-id/v1",
+      "changed_provenance_fields": [
+        "source_hashes"
+      ],
+      "dependency_hash_changes": [],
+      "migration_reason": "machine-local source provenance canonicalized without changing scientific content",
+      "path": "docs/assets/inter_participant_domain_variability_evaluation_metadata.json",
+      "post_migration_sha256": "bb2ff0e4c265e6b2c2e320d7b603b807436c247880b41bfd774e2935faf3fe7a",
+      "pre_migration_sha256": "f9e9187a63e8b70ff1fbfc05aea80c99b0c8e7b0d7f199caad1d387ee1cc5a0c",
+      "scientific_equivalence_verified": true
+    },
+    {
+      "canonicalization_rule": "portable-source-id/v1",
+      "changed_provenance_fields": [
+        "source_hashes"
+      ],
+      "dependency_hash_changes": [
+        "config/riemannian_decoding_final.json"
+      ],
+      "migration_reason": "machine-local source provenance canonicalized without changing scientific content",
+      "path": "docs/assets/riemannian_decoder_development_metadata.json",
+      "post_migration_sha256": "460536abe49d874a04f54c4d7bdd09fa87f8614bb848679e067b7dab5a58e1a1",
+      "pre_migration_sha256": "164ce571c2cc6ce4917872a7349bc47e7b459fa64a3c54d7075a117202334a52",
+      "scientific_equivalence_verified": true
+    },
+    {
+      "canonicalization_rule": "portable-source-id/v1",
+      "changed_provenance_fields": [
+        "source_file"
+      ],
+      "dependency_hash_changes": [
+        "config/riemannian_decoding_final.json"
+      ],
+      "migration_reason": "machine-local source provenance canonicalized without changing scientific content",
+      "path": "docs/assets/riemannian_decoder_development_predictions.csv",
+      "post_migration_sha256": "7ffc4b5b16be7d258db1876db146b10292ec8dfd82e8a891a74354eeac72d446",
+      "pre_migration_sha256": "06c13dd1bf988d39c602ed058800529dcfb8fd6c8703c250067bb1a80105719b",
+      "scientific_equivalence_verified": true
+    },
+    {
+      "canonicalization_rule": "portable-source-id/v1",
+      "changed_provenance_fields": [
+        "evaluation_source_hashes",
+        "training_source_hashes"
+      ],
+      "dependency_hash_changes": [
+        "config/inter_participant_domain_variability_final.json"
+      ],
+      "migration_reason": "machine-local source provenance canonicalized without changing scientific content",
+      "path": "docs/assets/riemannian_decoder_evaluation_metadata.json",
+      "post_migration_sha256": "1681b85e47828dced1bbd24f3e5c43ddd9bcf881378e5361833ca758e5737e31",
+      "pre_migration_sha256": "2133c75b0c94bda096c0f461ad084e42d95298c0126cce9a04195d0792c2214f",
+      "scientific_equivalence_verified": true
+    },
+    {
+      "canonicalization_rule": "portable-source-id/v1",
+      "changed_provenance_fields": [
+        "source_file"
+      ],
+      "dependency_hash_changes": [],
+      "migration_reason": "machine-local source provenance canonicalized without changing scientific content",
+      "path": "docs/assets/riemannian_decoder_evaluation_predictions.csv",
+      "post_migration_sha256": "9f07ea7b0cbf9ecea982e78bbf070b461d319dd6bd8320efe4aca19c07b6dbda",
+      "pre_migration_sha256": "1028c69ec8619e4b9897f1c6fa3e2395ae88ffe06d595e2cf78f12086e3dcc12",
+      "scientific_equivalence_verified": true
+    },
+    {
+      "canonicalization_rule": "portable-source-id/v1",
+      "changed_provenance_fields": [
+        "source_hashes"
+      ],
+      "dependency_hash_changes": [
+        "config/spatial_personalization_final.json"
+      ],
+      "migration_reason": "machine-local source provenance canonicalized without changing scientific content",
+      "path": "docs/assets/spatial_personalization_development_metadata.json",
+      "post_migration_sha256": "1576d2d90fce7f052776e44a998cf1927ecf55a753cc438511804cf04a0b27dd",
+      "pre_migration_sha256": "b5365e57a31aff687590bdaee9944939871aaaf07410d01017e20f444d795d62",
+      "scientific_equivalence_verified": true
+    },
+    {
+      "canonicalization_rule": "portable-source-id/v1",
+      "changed_provenance_fields": [
+        "source_file"
+      ],
+      "dependency_hash_changes": [
+        "config/spatial_personalization_final.json"
+      ],
+      "migration_reason": "machine-local source provenance canonicalized without changing scientific content",
+      "path": "docs/assets/spatial_personalization_development_predictions.csv",
+      "post_migration_sha256": "6f9469bce4719850abac55fbd98523e0a0a774e3443b1b8af1f757bf0de76172",
+      "pre_migration_sha256": "3a71019713dd6b8591d3b13f88c17bb6ab212566ef1f797ac34a3e41db89545f",
+      "scientific_equivalence_verified": true
+    },
+    {
+      "canonicalization_rule": "portable-source-id/v1",
+      "changed_provenance_fields": [
+        "evaluation_source_hashes",
+        "training_source_hashes"
+      ],
+      "dependency_hash_changes": [
+        "config/riemannian_decoding.json"
+      ],
+      "migration_reason": "machine-local source provenance canonicalized without changing scientific content",
+      "path": "docs/assets/spatial_personalization_evaluation_metadata.json",
+      "post_migration_sha256": "776ce39d5962902542a45938740c550d3eb344fa2b4edea70d3541aa70a8d3c3",
+      "pre_migration_sha256": "e554196f9546ddbe9c0180cd98759235c495821a1f54024b88ed96f7e41e049a",
+      "scientific_equivalence_verified": true
+    },
+    {
+      "canonicalization_rule": "portable-source-id/v1",
+      "changed_provenance_fields": [
+        "source_file"
+      ],
+      "dependency_hash_changes": [],
+      "migration_reason": "machine-local source provenance canonicalized without changing scientific content",
+      "path": "docs/assets/spatial_personalization_evaluation_predictions.csv",
+      "post_migration_sha256": "1dbe0ffd56e80ab9c8901bda46545f30a457dfd65dc563ab2a2bc2b21c2381f5",
+      "pre_migration_sha256": "0de3615c1a0a86fcc0cbb2c7bf9b630582df6ba3cbffbfbfdb29695a5a5cb1e5",
+      "scientific_equivalence_verified": true
+    },
+    {
+      "canonicalization_rule": "portable-source-id/v1",
+      "changed_provenance_fields": [
+        "source_hashes"
+      ],
+      "dependency_hash_changes": [
+        "config/minimal_target_calibration_final.json"
+      ],
+      "migration_reason": "machine-local source provenance canonicalized without changing scientific content",
+      "path": "docs/assets/target_calibration_development_metadata.json",
+      "post_migration_sha256": "b59a1c9e2c4e741f719f5c38d1cc6985afedcbe246d796db595df5bae55585ad",
+      "pre_migration_sha256": "05d932ba7bb529b47f4eb8a60b3446cbfdeb1f8adfa1c1895cb1568a3995f4ca",
+      "scientific_equivalence_verified": true
+    },
+    {
+      "canonicalization_rule": "portable-source-id/v1",
+      "changed_provenance_fields": [
+        "source_file"
+      ],
+      "dependency_hash_changes": [
+        "config/minimal_target_calibration_final.json"
+      ],
+      "migration_reason": "machine-local source provenance canonicalized without changing scientific content",
+      "path": "docs/assets/target_calibration_development_predictions.csv",
+      "post_migration_sha256": "3b30fbd8a5d5eddf40479a138385d01d3e11995929e6a78ee0f022ac902d1c6b",
+      "pre_migration_sha256": "4db2dfc7cde2150c4e1202ecd10aac156ac7551d204bf6bf4acb1db8c52ad51b",
+      "scientific_equivalence_verified": true
+    },
+    {
+      "canonicalization_rule": "portable-source-id/v1",
+      "changed_provenance_fields": [
+        "evaluation_source_hashes",
+        "source_hashes",
+        "training_source_hashes"
+      ],
+      "dependency_hash_changes": [
+        "config/spatial_personalization.json"
+      ],
+      "migration_reason": "machine-local source provenance canonicalized without changing scientific content",
+      "path": "docs/assets/target_calibration_evaluation_metadata.json",
+      "post_migration_sha256": "5daf92202e208dc414f599dca12fb600822cc745a7c4a3b6d1ea7412979013d8",
+      "pre_migration_sha256": "1780df8bf5c03a3622467dbab72bbc500790d95c27f10821a1ad5cce5b3cd612",
+      "scientific_equivalence_verified": true
+    },
+    {
+      "canonicalization_rule": "portable-source-id/v1",
+      "changed_provenance_fields": [
+        "source_file"
+      ],
+      "dependency_hash_changes": [
+        "config/spatial_personalization.json"
+      ],
+      "migration_reason": "machine-local source provenance canonicalized without changing scientific content",
+      "path": "docs/assets/target_calibration_evaluation_predictions.csv",
+      "post_migration_sha256": "f326c63fc663cd9f52a7f2ca1f0444d1071e30efd073f87710f67f79790758ca",
+      "pre_migration_sha256": "d978fc95475dbe6a61b50ada8d4edd5b1658378c8adcf0936f5b2c1364263d37",
+      "scientific_equivalence_verified": true
+    },
+    {
+      "canonicalization_rule": "portable-source-id/v1",
+      "changed_provenance_fields": [
+        "source_file"
+      ],
+      "dependency_hash_changes": [],
+      "migration_reason": "machine-local source provenance canonicalized without changing scientific content",
+      "path": "docs/assets/unilateral_motor_imagery_generalization_predictions.csv",
+      "post_migration_sha256": "db225e16c06d9261792934a7efe9940c0b8cd59c7dac04eef13f3567c22651e3",
+      "pre_migration_sha256": "e95559038503399b8328921b5ec2caba46aa91c7692888a2f05f9e6f4d15a4fc",
+      "scientific_equivalence_verified": true
+    },
+    {
+      "canonicalization_rule": "portable-source-id/v1",
+      "changed_provenance_fields": [
+        "raw_source_hashes"
+      ],
+      "dependency_hash_changes": [],
+      "migration_reason": "machine-local source provenance canonicalized without changing scientific content",
+      "path": "docs/assets/unilateral_motor_imagery_generalization_provenance.json",
+      "post_migration_sha256": "474c985065e6d644872590df8b353d8fa5514a3022b8f2f634ef64a5615d4e41",
+      "pre_migration_sha256": "0b62b5e6d078a0aa8f0f6f6a15f7a1d539dc739e30d1e8654bba0bdecc11d520",
+      "scientific_equivalence_verified": true
+    },
+    {
+      "canonicalization_rule": "portable-source-id/v1",
+      "changed_provenance_fields": [
+        "source_hashes"
+      ],
+      "dependency_hash_changes": [
+        "config/cross_subject_decoding.json",
+        "config/decoding_reliability.json",
+        "config/spatial_personalization.json",
+        "config/unilateral_motor_imagery_generalization.json"
+      ],
+      "migration_reason": "machine-local source provenance canonicalized without changing scientific content",
+      "path": "docs/assets/within_subject_decoder_evaluation_metadata.json",
+      "post_migration_sha256": "cd1119285b90096b282bfeeb70a51f8b8beabd7ebdffef8b74971a34538535da",
+      "pre_migration_sha256": "d4bcb010de2af91e7a05e2d7c382e567aa2c54a341dc6971e32377ef29d4c8db",
+      "scientific_equivalence_verified": true
+    },
+    {
+      "canonicalization_rule": "portable-source-id/v1",
+      "changed_provenance_fields": [
+        "source_file"
+      ],
+      "dependency_hash_changes": [
+        "config/cross_subject_decoding.json",
+        "config/decoding_reliability.json"
+      ],
+      "migration_reason": "machine-local source provenance canonicalized without changing scientific content",
+      "path": "docs/assets/within_subject_decoder_evaluation_predictions.csv",
+      "post_migration_sha256": "75aa39ceb6d9d8516a3d82e5c4e93b804658cfc9f71a2038b25726e6de6a5136",
+      "pre_migration_sha256": "49d2aefeccc0b0a8e768f126a246783f7c3db0be05ab75aafa79ce78dfca2a7f",
+      "scientific_equivalence_verified": true
+    }
+  ],
+  "migration_date": "2026-09-10",
+  "migration_id": "public_release_v1",
+  "original_private_archive_bundle_sha256": "3214cb3088d2617c2b41ef0c2bb88072f7a79df25b2b8b1c47901b5b8510d371",
+  "original_private_head": "10c6561",
+  "schema_version": 1,
+  "statement": "Old hashes identify privately archived pre-public development state; this migration changes provenance representation and dependent integrity contracts only."
+}

@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "study_id": "unilateral_motor_imagery_generalization",
+  "classification": "GENERALIZATION_REPLICATION",
+  "parent_bilateral_decoder": {
+    "config": "config/within_subject_decoding_final.json",
+    "sha256": "72494d50c56ddcd0d1e10104c4e46fcacf1d92a1de0e181aca95d89f31bcecea",
+    "metadata": "docs/assets/within_subject_decoder_evaluation_metadata.json",
+    "metadata_sha256": "cd1119285b90096b282bfeeb70a51f8b8beabd7ebdffef8b74971a34538535da"
+  },
+  "task": {
+    "identifier": "left_vs_right_fist_imagery",
+    "runs": [
+      4,
+      8,
+      12
+    ],
+    "annotation_to_label": {
+      "T1": 0,
+      "T2": 1
+    },
+    "labels": {
+      "left_fist_imagery": 0,
+      "right_fist_imagery": 1
+    },
+    "T0_excluded": true
+  },
+  "retained_trial_validation": {
+    "policy": "inherit_historical_boundary_correction_without_changing_eligibility",
+    "per_run_target_class_counts": [
+      [
+        7,
+        8
+      ],
+      [
+        7,
+        7
+      ],
+      [
+        7,
+        6
+      ],
+      [
+        6,
+        6
+      ]
+    ],
+    "reason": "the frozen minus2_to_plus4_second storage window can exclude a final recording-boundary event before the +1_to+3_second feature interval; source-validated S104R08 has seven T1 and six T2 events, and its final T1 crosses that storage boundary"
+  },
+  "cohort": {
+    "policy": "exact_historical_bilateral_evaluation_cohort_before_unilateral_outcomes",
+    "parent_technical_exclusions": [
+      88,
+      92,
+      100
+    ],
+    "smoke_subject": 1
+  },
+  "frozen_architecture": {
+    "parent_models": [
+      "spectral_baseline_6",
+      "csp_4_empirical"
+    ],
+    "task_interval_seconds": [
+      1.0,
+      3.0
+    ],
+    "primary_metric": "balanced_accuracy",
+    "secondary_metrics": [
+      "accuracy",
+      "macro_f1",
+      "roc_auc",
+      "left_recall",
+      "right_recall",
+      "confusion_matrix"
+    ],
+    "leave_one_run_out": true,
+    "qc": "all_technically_valid_trials_primary__existing_label_independent_candidates_sensitivity",
+    "riemannian": "omitted__frozen_accepted_implementation_is_cross_subject_not_participant_specific"
+  },
+  "inference": {
+    "participant_is_unit": true,
+    "chance_test": "one_sided_exact_sign_test_above_0_5",
+    "paired_test": "two_sided_wilcoxon_signed_rank",
+    "multiple_comparison": "Holm_for_CSP_vs_baseline_and_CSP_unilateral_vs_bilateral",
+    "bootstrap_resamples": 10000,
+    "bootstrap_seed": 20260908
+  },
+  "raw_data": {
+    "dataset": "PhysioNet EEG Motor Movement/Imagery Dataset EEGMMIDB 1.0.0",
+    "acquisition": "mne.datasets.eegbci.load_data",
+    "source_url": "https://physionet.org/content/eegmmidb/1.0.0/",
+    "tracked": false
+  },
+  "prohibitions": [
+    "no_unilateral_outcome_driven_architecture_or_hyperparameter_selection",
+    "no_individualized_frequency",
+    "no_participant_performance_exclusion",
+    "no_historical_artifact_mutation"
+  ]
+}
